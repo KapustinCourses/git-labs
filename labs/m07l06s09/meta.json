@@ -1,0 +1,12 @@
+{
+  "id": "m07l06s09",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 6,
+  "lesson_title": "Конфликты при cherry-pick и hotfix",
+  "step": 9,
+  "title": "Шаг 9: Простой cherry-pick без конфликта",
+  "description_html": "<p>В репозитории есть ветки <code>main</code> и <code>release</code>. На ветке <code>main</code> был создан коммит с фиксом бага — он правит файл <code>hotfix.txt</code>, которого нет в <code>release</code>. Нужно перенести этот коммит в <code>release</code>.</p>\n\n<h3>Начальное состояние</h3>\n<ul>\n  <li>Ветка <code>main</code>: три коммита, последний — «Fix critical bug»</li>\n  <li>Ветка <code>release</code>: два начальных коммита (без фикса)</li>\n</ul>\n<p>SHA коммита с фиксом записан в переменной окружения <code>FIX_SHA</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Переключитесь на ветку <code>release</code></li>\n  <li>Выполните cherry-pick коммита из <code>$FIX_SHA</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После cherry-pick проверяющий код выведет историю коммитов в ветке <code>release</code>. Ожидается:</p>\n<pre><code>Initial commit\nAdd release notes\nFix critical bug\n</code></pre>",
+  "verify_code": "2516478b",
+  "expected_output": "Initial commit\nAdd release notes\nFix critical bug\n"
+}

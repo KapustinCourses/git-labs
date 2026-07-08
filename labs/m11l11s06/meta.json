@@ -1,0 +1,12 @@
+{
+  "id": "m11l11s06",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 11,
+  "lesson_title": "Практикум production workflow",
+  "step": 6,
+  "title": "Шаг 6: Практикум — Шаг 5 из 6: Concurrency для защиты от параллельных деплоев",
+  "description_html": "<p>Представьте: два push подряд — два workflow одновременно пытаются деплоить в production. Это опасно! Нужно добавить <code>concurrency</code>, чтобы новый workflow мог начать деплой только после завершения текущего.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий содержит workflow с jobs test, docker, deploy.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Добавьте в <code>.github/workflows/release.yml</code> блок <code>concurrency</code> на уровне workflow:</p>\n<pre><code>concurrency:\n  group: deploy-${{ github.ref }}\n  cancel-in-progress: false\n</code></pre>\n<p><code>cancel-in-progress: false</code> означает «дождаться завершения текущего, не отменять».</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что на уровне workflow есть <code>concurrency.group</code> и <code>concurrency.cancel-in-progress: false</code>.</p>",
+  "verify_code": "66854b2f",
+  "expected_output": "concurrency_group_ok\ncancel_false_ok\n"
+}

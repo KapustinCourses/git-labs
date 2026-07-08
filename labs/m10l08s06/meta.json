@@ -1,0 +1,12 @@
+{
+  "id": "m10l08s06",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 8,
+  "lesson_title": "Практикум CI workflow для Go проекта",
+  "step": 6,
+  "title": "Шаг 6: Практикум — Шаг 5 из 6: добавить job build с needs",
+  "description_html": "<p><em>Это шаг 5 из 6 в практикуме «CI workflow для Go-проекта».</em></p>\n\n<p>Предыдущее состояние: два параллельных job (lint, test) с кэшем модулей. Теперь добавьте финальный job сборки, который ждёт оба.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Добавьте job <code>build</code>, который:</p>\n<ul>\n  <li>Имеет <code>needs: [lint, test]</code></li>\n  <li>Работает на <code>ubuntu-latest</code></li>\n  <li>Содержит: checkout, setup-go (1.22, cache: true), и <code>run: go build -o bin/app .</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Ожидаемый вывод:</p>\n<pre><code>jobs=build,lint,test\nbuild_needs=lint,test\nbuild_has_go_build=True</code></pre>",
+  "verify_code": "d87b508c",
+  "expected_output": "jobs=build,lint,test\nbuild_needs=lint,test\nbuild_has_go_build=True\n"
+}

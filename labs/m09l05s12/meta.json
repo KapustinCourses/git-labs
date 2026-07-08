@@ -1,0 +1,12 @@
+{
+  "id": "m09l05s12",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 5,
+  "lesson_title": "Plumbing команды",
+  "step": 12,
+  "title": "Шаг 12: Создать blob и проверить его содержимое",
+  "description_html": "<p>Первый шаг при создании коммита вручную — создать blob-объект для каждого файла. Команда <code>git hash-object -w --stdin</code> создаёт blob и возвращает его sha.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Пустой репозиторий (только <code>.git/</code>). Никаких коммитов и файлов.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Создайте blob со строкой <code>test content</code> через <code>git hash-object -w --stdin</code>. Сохраните sha в переменную <code>BLOB</code>.</li>\n  <li>Выведите первые 7 символов sha.</li>\n  <li>Выведите тип объекта через <code>git cat-file -t $BLOB</code>.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Sha blob'а строки <code>test content</code> (c переводом строки) детерминирован. Ожидается:</p>\n<pre><code>d670460\nblob\n</code></pre>",
+  "verify_code": "d20c3a3a",
+  "expected_output": "d670460\nblob\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m09l05s14",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 5,
+  "lesson_title": "Plumbing команды",
+  "step": 14,
+  "title": "Шаг 14: Создать коммит руками через commit-tree",
+  "description_html": "<p>Финальный шаг plumbing-цепочки — создать commit-объект через <code>git commit-tree</code>, затем обновить ветку через <code>git update-ref</code> и установить HEAD через <code>git symbolic-ref</code>. После этого получается полноценный git-репозиторий с историей.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Пустой репозиторий. В header уже созданы blob и tree (sha сохранены в переменных окружения <code>BLOB</code> и <code>TREE</code>).</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Создайте корневой коммит с сообщением <code>Manual commit</code> через <code>git commit-tree $TREE -m \"Manual commit\"</code>. Сохраните sha в переменную <code>COMMIT</code>.</li>\n  <li>Обновите ветку main: <code>git update-ref refs/heads/main \"$COMMIT\"</code>.</li>\n  <li>Установите HEAD на main: <code>git symbolic-ref HEAD refs/heads/main</code>.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После выполнения будет выведена история коммитов и список файлов в HEAD. Ожидается:</p>\n<pre><code>Manual commit\nhello.txt\n</code></pre>",
+  "verify_code": "99f4b6a9",
+  "expected_output": "Manual commit\nhello.txt\n"
+}

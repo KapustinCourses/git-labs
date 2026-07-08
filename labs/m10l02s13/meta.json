@@ -1,0 +1,12 @@
+{
+  "id": "m10l02s13",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 2,
+  "lesson_title": "GitHub Actions структура workflow",
+  "step": 13,
+  "title": "Шаг 13: Workflow с несколькими триггерами",
+  "description_html": "<p>Реальный CI обычно запускается и на push, и при создании Pull Request. Настройте оба триггера.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/ci.yml</code> с триггерами <code>push</code> и <code>pull_request</code> (оба должны быть в поле <code>on</code>).</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код проверит, что в <code>on</code> есть оба события. Ожидаемый вывод:</p>\n<pre><code>triggers=pull_request,push</code></pre>",
+  "verify_code": "b9425dea",
+  "expected_output": "triggers=pull_request,push\n"
+}

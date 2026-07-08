@@ -1,0 +1,12 @@
+{
+  "id": "m08l01s12",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 1,
+  "lesson_title": "git stash",
+  "step": 12,
+  "title": "Шаг 12: Спрятать правки, переключиться и вернуться",
+  "description_html": "<p>Вы работаете на ветке <code>feature</code> и в файл <code>app.py</code> добавлено незакоммиченное изменение. Нужно срочно переключиться на <code>main</code>, а затем вернуться на <code>feature</code> и восстановить правки из stash.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий с ветками <code>main</code> и <code>feature</code>. На ветке <code>feature</code> файл <code>app.py</code> содержит незакоммиченную строку <code>WIP</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Спрятать текущие правки в stash</li>\n  <li>Переключиться на ветку <code>main</code></li>\n  <li>Переключиться обратно на <code>feature</code></li>\n  <li>Применить stash (и удалить запись из стека)</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд проверяющий код выведет содержимое <code>app.py</code> и статус репозитория. Ожидается:</p>\n<pre><code>hello\nWIP\n</code></pre>",
+  "verify_code": "9b36658c",
+  "expected_output": "hello\nWIP\n"
+}

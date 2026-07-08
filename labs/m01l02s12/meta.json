@@ -1,0 +1,12 @@
+{
+  "id": "m01l02s12",
+  "module": 1,
+  "module_title": "Введение в Git",
+  "lesson": 2,
+  "lesson_title": "Три зоны и первый коммит",
+  "step": 12,
+  "title": "Шаг 12: Закоммитить только часть изменений",
+  "description_html": "<p>Одна из сильных сторон staging area — возможность выбирать, что войдёт в следующий коммит. Если вы изменили несколько файлов, но хотите закоммитить только один — это легко сделать.</p>\n\n<h3>Стартовое состояние</h3>\n<p>В репозитории один коммит «Initial commit» с двумя файлами: <code>main.py</code> и <code>utils.py</code>. Оба файла затем были изменены (добавлена строка в каждый), но ещё не закоммичены.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Добавьте в staging только файл <code>main.py</code> и создайте коммит с сообщением <code>Update main.py</code>. Файл <code>utils.py</code> должен остаться в рабочей директории с незакоммиченными изменениями.</p>\n\n<h3>Как проверяется</h3>\n<p>После ваших команд проверяющий код выполнит:</p>\n<pre><code>git log --pretty='%s' --reverse\ngit status --porcelain\n</code></pre>\n<p>Ожидаемый вывод:</p>\n<pre><code>Initial commit\nUpdate main.py\n M utils.py\n</code></pre>",
+  "verify_code": "74d582de",
+  "expected_output": "Initial commit\nUpdate main.py\n M utils.py\n"
+}

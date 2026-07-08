@@ -1,0 +1,12 @@
+{
+  "id": "m07l02s11",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 2,
+  "lesson_title": "Маркеры конфликта и ручное разрешение",
+  "step": 11,
+  "title": "Шаг 11: Разрешить конфликт при merge — взять версию из feature",
+  "description_html": "<p>Репозиторий находится в состоянии конфликта: выполнен <code>git merge feature</code>, остановившийся на файле <code>config.txt</code>. Ветка <code>main</code> содержала строку <code>env=production</code>, ветка <code>feature</code> — строку <code>env=staging</code>.</p>\n\n<h3>Начальное состояние репо</h3>\n<p>Ветки <code>main</code> и <code>feature</code> расходятся по файлу <code>config.txt</code>. Merge запущен и остановлен.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Разрешите конфликт, взяв версию из ветки <code>feature</code> (то есть <code>env=staging</code>). Для этого:</p>\n<ol>\n  <li>Запишите правильное содержимое в файл <code>config.txt</code> — без маркеров</li>\n  <li>Добавьте файл в staging: <code>git add config.txt</code></li>\n  <li>Создайте merge-коммит: <code>git commit --no-edit</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После выполнения команд проверяющий код выведет содержимое <code>config.txt</code> и историю коммитов. Ожидается:</p>\n<pre><code>env=staging\nInitial commit\nUpdate config on feature\nUpdate config on main\nMerge branch 'feature'\n</code></pre>",
+  "verify_code": "2bee3f6e",
+  "expected_output": "env=staging\nInitial commit\nUpdate config on feature\nUpdate config on main\nMerge branch 'feature'\n"
+}

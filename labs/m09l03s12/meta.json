@@ -1,0 +1,12 @@
+{
+  "id": "m09l03s12",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 3,
+  "lesson_title": "Refs и HEAD",
+  "step": 12,
+  "title": "Шаг 12: Упаковать refs через pack-refs --all",
+  "description_html": "<p>В больших репозиториях с тысячами ветвей каждый отдельный файл в <code>.git/refs/heads/</code> добавляет накладные расходы. Команда <code>git pack-refs --all</code> собирает все loose refs в один файл <code>.git/packed-refs</code>, ускоряя работу с репозиторием.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит три ветки: <code>main</code>, <code>feature/auth</code> и <code>feature/api</code>. Все ветки — loose refs в <code>.git/refs/heads/</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Упакуйте все refs командой <code>git pack-refs --all</code>.</li>\n  <li>Выведите количество строк в <code>.git/packed-refs</code>, которые содержат sha (строки без символа <code>#</code>).</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После упаковки в <code>.git/packed-refs</code> должно быть 3 записи (по одной на каждую ветку). Ожидается:</p>\n<pre><code>3\n</code></pre>",
+  "verify_code": "1121cfcc",
+  "expected_output": "3\n"
+}

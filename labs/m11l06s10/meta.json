@@ -1,0 +1,12 @@
+{
+  "id": "m11l06s10",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 6,
+  "lesson_title": "Permissions и pull request target",
+  "step": 10,
+  "title": "Шаг 10: Workflow с минимальными permissions",
+  "description_html": "<p>Вы реализуете principle of least privilege: workflow получает нулевые права по умолчанию, а каждый job явно запрашивает только то, что нужно.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/secure-ci.yml</code> с:</p>\n<ul>\n  <li>Триггером <code>pull_request</code></li>\n  <li>Блоком <code>permissions: {}</code> на уровне workflow (нулевые права)</li>\n  <li>Job <code>lint</code> на <code>ubuntu-latest</code> с локальными permissions: <code>contents: read</code></li>\n  <li>Шагом <code>actions/checkout@v6</code> в job lint</li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что на уровне workflow <code>permissions</code> пустой (или явно указан как <code>{}</code>), а у job lint есть <code>permissions.contents: read</code>.</p>",
+  "verify_code": "e5a938f8",
+  "expected_output": "workflow_perms_empty_ok\njob_contents_read_ok\n"
+}

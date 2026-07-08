@@ -1,0 +1,12 @@
+{
+  "id": "m03l02s11",
+  "module": 3,
+  "module_title": "Удалённые репозитории и GitHub",
+  "lesson": 2,
+  "lesson_title": "git clone и первый push",
+  "step": 11,
+  "title": "Шаг 11: Задача — Force push после amend",
+  "description_html": "<p>Вы внесли изменение в последний коммит через <code>git commit --amend</code>. Это создало новый коммит с другим SHA — ваша локальная ветка теперь расходится с той же веткой на <code>origin</code>. Обычный <code>git push</code> не пройдёт (non-fast-forward).</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий клонирован с <code>/tmp/origin.git</code>. На origin — коммит «Add feature». Локально этот коммит уже исправлен через amend: сообщение изменено на «Add feature (revised)». Ваша ветка <code>feature/payment</code> расходится с <code>origin/feature/payment</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Отправьте исправленный коммит в origin, используя безопасный force push (<code>--force-with-lease</code>).</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код смотрит на сообщения коммитов в bare-репозитории. Ожидается:</p>\n<pre><code>Initial commit\nAdd feature (revised)\n</code></pre>",
+  "verify_code": "e1dd1aca",
+  "expected_output": "Initial commit\nAdd feature (revised)\n"
+}

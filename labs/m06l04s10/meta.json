@@ -1,0 +1,12 @@
+{
+  "id": "m06l04s10",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 4,
+  "lesson_title": "Autosquash и fixup workflow",
+  "step": 10,
+  "title": "Шаг 10: Настроить rebase.autosquash глобально",
+  "description_html": "<p>Чтобы не писать <code>--autosquash</code> каждый раз, можно включить его глобально через git config.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Настройте глобальную опцию <code>rebase.autosquash</code> в значение <code>true</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Будет выведено значение настройки:</p>\n<pre><code>true\n</code></pre>",
+  "verify_code": "a17fcf0a",
+  "expected_output": "true\n"
+}

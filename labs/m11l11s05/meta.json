@@ -1,0 +1,12 @@
+{
+  "id": "m11l11s05",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 11,
+  "lesson_title": "Практикум production workflow",
+  "step": 5,
+  "title": "Шаг 5: Практикум — Шаг 4 из 6: OIDC-deploy (mock AWS)",
+  "description_html": "<p>Docker-образ собирается и пушится в GHCR. Теперь добавим деплой через OIDC — без долгоживущих AWS credentials.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий содержит workflow с jobs <code>test</code> и <code>docker</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Добавьте в <code>.github/workflows/release.yml</code> job <code>deploy</code> с:</p>\n<ul>\n  <li><code>needs: [docker]</code></li>\n  <li><code>environment: production</code></li>\n  <li><code>permissions: id-token: write, contents: read</code></li>\n  <li><code>runs-on: ubuntu-latest</code></li>\n  <li>Шагами: <code>actions/checkout@v6</code>, <code>aws-actions/configure-aws-credentials@v4</code> с <code>role-to-assume</code> и <code>aws-region</code>, шаг деплоя <code>run: echo \"Deploying ${{ github.sha }}\"</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что deploy-job имеет environment: production, id-token: write и использует configure-aws-credentials@v4.</p>",
+  "verify_code": "25089b10",
+  "expected_output": "needs_docker_ok\nenv_production_ok\nid_token_write_ok\naws_credentials_ok\n"
+}

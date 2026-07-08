@@ -1,0 +1,12 @@
+{
+  "id": "m07l04s11",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 4,
+  "lesson_title": "Стратегии слияния",
+  "step": 11,
+  "title": "Шаг 11: «Отметочный» merge через стратегию -s ours",
+  "description_html": "<p>В репозитории есть ветки <code>main</code> и <code>feature</code>. Ветка <code>feature</code> содержит экспериментальный код, который решено <strong>не интегрировать</strong>, но нужно оставить след в истории, что ветка была рассмотрена.</p>\n\n<p>Используйте стратегию <code>-s ours</code> для создания merge-коммита, который графически показывает слияние, но не затрагивает содержимое файлов в <code>main</code>.</p>\n\n<h3>Начальное состояние</h3>\n<ul>\n  <li>В <code>main</code>: файл <code>app.txt</code> содержит <code>stable code</code></li>\n  <li>В <code>feature</code>: файл <code>app.txt</code> содержит <code>experimental code</code></li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните merge ветки <code>feature</code> в <code>main</code> с использованием стратегии <code>-s ours</code> и сообщением <code>\"Merge feature (intentionally ignored)\"</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>После merge проверяющий код выведет содержимое <code>app.txt</code> (должен остаться <code>stable code</code>) и количество родителей merge-коммита (должно быть 2). Ожидается:</p>\n<pre><code>stable code\n2\n</code></pre>",
+  "verify_code": "7f55c598",
+  "expected_output": "stable code\n2\n"
+}

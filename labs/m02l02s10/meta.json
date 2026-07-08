@@ -1,0 +1,12 @@
+{
+  "id": "m02l02s10",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 2,
+  "lesson_title": "Работа на ветке",
+  "step": 10,
+  "title": "Шаг 10: Найти общего предка двух веток",
+  "description_html": "<p>В репозитории есть расходящийся граф: ветки <code>main</code> и <code>feature</code> имеют общий предок — коммит «Base commit». После него <code>main</code> ушла на один коммит («Main work»), а <code>feature</code> — на один коммит («Feature work»).</p>\n\n<h3>Что нужно сделать</h3>\n<p>Найдите общего предка веток <code>main</code> и <code>feature</code> с помощью команды <code>git merge-base</code>. Сохраните его sha в файл <code>/tmp/base.txt</code>.</p>\n<p>Проверяющий код прочитает файл и выведет сообщение найденного коммита.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается:</p>\n<pre><code>Base commit\n</code></pre>",
+  "verify_code": "0f2b057c",
+  "expected_output": "Base commit\n"
+}

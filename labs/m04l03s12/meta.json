@@ -1,0 +1,12 @@
+{
+  "id": "m04l03s12",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 3,
+  "lesson_title": "ref выражения и навигация",
+  "step": 12,
+  "title": "Шаг 12: Сообщение второго родителя merge-коммита",
+  "description_html": "<p>В репозитории есть merge-коммит. Вам нужно узнать, какой коммит был вершиной влитой ветки в момент merge — то есть второй родитель (<code>HEAD^2</code>).</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>На <code>main</code> сделан коммит «Initial commit». Затем создана ветка <code>feature/auth</code> с коммитом «Add auth module». После этого <code>feature/auth</code> влита обратно в <code>main</code> через <code>git merge --no-ff</code>. HEAD — merge-коммит.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите сообщение коммита, который является вторым родителем (<code>HEAD^2</code>) текущего merge-коммита.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод:</p>\n<pre><code>Add auth module\n</code></pre>",
+  "verify_code": "fef30d74",
+  "expected_output": "Add auth module\n"
+}

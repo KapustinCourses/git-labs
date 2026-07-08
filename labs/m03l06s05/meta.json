@@ -1,0 +1,12 @@
+{
+  "id": "m03l06s05",
+  "module": 3,
+  "module_title": "Удалённые репозитории и GitHub",
+  "lesson": 6,
+  "lesson_title": "Практикум fork and PR",
+  "step": 5,
+  "title": "Шаг 5: Практикум — Шаг 4 из 5: синхронизация после слияния PR",
+  "description_html": "<p><strong>Это шаг 4 из 5 в сценарии «open-source contribution».</strong></p>\n\n<p>PR принят! Мейнтейнер проекта влил вашу ветку <code>feature/translate</code> в <code>main</code> оригинального репозитория. Теперь ваш локальный <code>main</code> отстаёт от <code>upstream/main</code>.</p>\n\n<h3>Стартовое состояние</h3>\n<p>В <code>upstream</code> (<code>/tmp/original.git</code>) уже влит коммит «Add Russian translation». Ваш локальный <code>main</code> ещё на «Initial project». Вы на ветке <code>feature/translate</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Переключитесь на <code>main</code></li>\n  <li>Выполните <code>git fetch upstream</code></li>\n  <li>Слейте: <code>git merge upstream/main --ff-only</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выводит историю локального main. Ожидается:</p>\n<pre><code>Initial project\nAdd Russian translation\n</code></pre>",
+  "verify_code": "e5e00716",
+  "expected_output": "Initial project\nAdd Russian translation\n"
+}

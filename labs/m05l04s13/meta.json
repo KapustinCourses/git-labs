@@ -1,0 +1,12 @@
+{
+  "id": "m05l04s13",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 4,
+  "lesson_title": "git reset три режима",
+  "step": 13,
+  "title": "Шаг 13: Восстановление через reflog после reset --hard",
+  "description_html": "<p>Разработчик случайно выполнил <code>git reset --hard HEAD~2</code> и потерял два коммита. Нужно найти их SHA в reflog и вернуть ветку на место.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Изначально в репозитории было 3 коммита (от старого к новому):</p>\n<ol>\n  <li>Initial commit</li>\n  <li>Add feature A</li>\n  <li>Add feature B</li>\n</ol>\n<p>Затем был выполнен <code>git reset --hard HEAD~2</code> — ветка теперь указывает только на «Initial commit». Нужно вернуть её обратно на «Add feature B».</p>\n\n<h3>Что нужно сделать</h3>\n<p>Найдите в reflog SHA коммита «Add feature B» и выполните <code>git reset --hard &lt;sha&gt;</code>:</p>\n<pre><code>LOST_SHA=$(git reflog | grep \"Add feature B\" | head -1 | awk '{print $1}')\ngit reset --hard \"$LOST_SHA\"\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд проверяющий код выведет историю коммитов. Ожидается:</p>\n<pre><code>Initial commit\nAdd feature A\nAdd feature B\n</code></pre>",
+  "verify_code": "30e80501",
+  "expected_output": "Initial commit\nAdd feature A\nAdd feature B\n"
+}

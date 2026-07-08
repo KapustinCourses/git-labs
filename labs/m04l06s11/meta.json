@@ -1,0 +1,12 @@
+{
+  "id": "m04l06s11",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 6,
+  "lesson_title": "git reflog спасательный круг",
+  "step": 11,
+  "title": "Шаг 11: Подсчитать записи reflog",
+  "description_html": "<p>Reflog фиксирует каждое движение HEAD: коммит, переключение ветки, reset. Вам нужно подсчитать, сколько записей накопилось в reflog после серии операций.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>В репозитории выполнена серия операций (git init, git commit ×3, git checkout -b, git commit, git checkout main). Каждая операция, меняющая HEAD, оставляет запись в reflog.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите количество записей в reflog HEAD через <code>git reflog | wc -l</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>После серии из init + 3 коммитов на main + checkout -b + 1 коммит на feature + checkout main ожидается определённое число записей. Проверяется что число больше 0 и меньше 20 (любое разумное значение).</p>\n<p>Ожидается вывод (количество записей):</p>\n<pre><code>6\n</code></pre>",
+  "verify_code": "06e9d52c",
+  "expected_output": "6\n"
+}

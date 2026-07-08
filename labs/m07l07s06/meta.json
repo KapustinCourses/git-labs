@@ -1,0 +1,12 @@
+{
+  "id": "m07l07s06",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 7,
+  "lesson_title": "Практикум",
+  "step": 6,
+  "title": "Шаг 6: Практикум — Шаг 5 из 5: hotfix cherry-pick с конфликтом",
+  "description_html": "<p><strong>Это шаг 5 из 5 в практикуме «Конфликтные сценарии».</strong></p>\n\n<p>Финальный сценарий: перенести коммит-фикс из <code>main</code> в <code>release/2024-Q1</code>. Фикс правит файл, который в <code>release</code> уже имеет другое содержимое — возникнет конфликт. Нужно разрешить его, приняв версию из <code>main</code> (фикс важнее старой версии).</p>\n\n<h3>Начальное состояние</h3>\n<ul>\n  <li>В <code>main</code>: файл <code>auth.txt</code> содержит <code>auth=oauth2-secure</code></li>\n  <li>В <code>release/2024-Q1</code>: файл <code>auth.txt</code> содержит <code>auth=basic</code></li>\n  <li>Cherry-pick коммита из <code>main</code> уже запущен и остановлен из-за конфликта</li>\n  <li>SHA зафиксирован в <code>/tmp/auth_fix_sha.txt</code></li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Запишите правильное содержимое — версию из фикса: <code>auth=oauth2-secure</code></li>\n  <li>Добавьте файл в staging: <code>git add auth.txt</code></li>\n  <li>Продолжите cherry-pick: <code>git cherry-pick --continue --no-edit</code></li>\n  <li>Выполните push: <code>git push -q origin release/2024-Q1</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код проверит историю на удалённой ветке. Ожидается:</p>\n<pre><code>Initial commit\nAdd Q1 baseline\nFix authentication to OAuth2\n</code></pre>",
+  "verify_code": "5baf1ab3",
+  "expected_output": "Initial commit\nAdd Q1 baseline\nFix authentication to OAuth2\n"
+}

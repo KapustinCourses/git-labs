@@ -1,0 +1,12 @@
+{
+  "id": "m08l08s07",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 8,
+  "lesson_title": "Практикум",
+  "step": 7,
+  "title": "Шаг 7: Практикум — Шаг 6 из 6: Вернуться к feature и восстановить stash",
+  "description_html": "<p><em>Это шаг 6 из 6 в практикуме «Параллельная работа и hotfix».</em></p>\n\n<p>Hotfix сделан и перенесён в release. Теперь возвращаемся к feature-работе: переключаемся обратно на ветку <code>feature</code> и восстанавливаем отложенные правки из stash.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий на ветке <code>release/2024-Q1</code>. В stash лежит запись «WIP: payment validation». Ветка <code>feature</code> существует.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Переключитесь на ветку <code>feature</code></li>\n  <li>Примените и удалите запись из stash</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет имя текущей ветки и количество записей в stash. Ожидается:</p>\n<pre><code>feature\n0\n</code></pre>",
+  "verify_code": "42884f31",
+  "expected_output": "feature\n0\n"
+}

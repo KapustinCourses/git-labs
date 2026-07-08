@@ -1,0 +1,12 @@
+{
+  "id": "m06l03s12",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 3,
+  "lesson_title": "Interactive rebase",
+  "step": 12,
+  "title": "Шаг 12: Squash трёх коммитов в один",
+  "description_html": "<p>В ветке <code>feature</code> есть 4 коммита:</p>\n<ol>\n  <li><strong>Initial commit</strong></li>\n  <li><strong>WIP add payment</strong></li>\n  <li><strong>fix typo in payment</strong></li>\n  <li><strong>actually fix payment</strong></li>\n</ol>\n<p>Коммиты 2, 3, 4 описывают одну тему. Их нужно слить в один.</p>\n\n<h3>Что нужно сделать</h3>\n<p>С помощью interactive rebase объедините три последних коммита в один с сообщением <strong>«Add payment processing»</strong>.</p>\n<p>Используйте переменную <code>GIT_SEQUENCE_EDITOR</code> для автоматической замены команд в списке, и <code>GIT_EDITOR</code> для записи нового сообщения.</p>\n\n<h3>Как проверяется</h3>\n<p>Будет выведена история коммитов в хронологическом порядке. Ожидается:</p>\n<pre><code>Initial commit\nAdd payment processing\n</code></pre>",
+  "verify_code": "7754051f",
+  "expected_output": "Initial commit\nAdd payment processing\n"
+}

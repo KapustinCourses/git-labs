@@ -1,0 +1,12 @@
+{
+  "id": "m11l08s12",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 8,
+  "lesson_title": "Docker в CI",
+  "step": 12,
+  "title": "Шаг 12: Workflow для сборки Docker-образа в GHCR",
+  "description_html": "<p>Вы настраиваете автоматическую сборку Docker-образа и публикацию его в GitHub Container Registry (GHCR) при каждом push в main.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/docker-build.yml</code> с:</p>\n<ul>\n  <li>Триггером <code>push</code></li>\n  <li>Job <code>docker</code> на <code>ubuntu-latest</code> с <code>permissions: packages: write</code></li>\n  <li>Шагами в правильном порядке:\n    <ol>\n      <li><code>actions/checkout@v6</code></li>\n      <li><code>docker/setup-buildx-action@v3</code></li>\n      <li><code>docker/login-action@v3</code> с <code>registry: ghcr.io</code></li>\n      <li><code>docker/build-push-action@v6</code> с <code>push: true</code> и <code>tags: ghcr.io/myorg/myapp:latest</code></li>\n    </ol>\n  </li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что все три docker-actions присутствуют и login настроен на ghcr.io.</p>",
+  "verify_code": "d93e0e32",
+  "expected_output": "buildx_ok\nlogin_ok\nlogin_ghcr_ok\nbuild_push_ok\n"
+}

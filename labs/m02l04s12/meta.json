@@ -1,0 +1,12 @@
+{
+  "id": "m02l04s12",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 4,
+  "lesson_title": "Слияние three-way",
+  "step": 12,
+  "title": "Шаг 12: Вывести историю main без захода в merged-ветки",
+  "description_html": "<p>В репозитории ветка <code>main</code> содержит два merge-коммита: после «Initial commit» были слиты ветки <code>feature1</code> («Merge feature1» — принёс коммит «Feature1 work») и <code>feature2</code> («Merge feature2» — принёс коммит «Feature2 work»).</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите историю ветки <code>main</code> только по <strong>первой родительской линии</strong> (без захода во feature-ветки). Формат: по одному сообщению коммита на строку, от нового к старому.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается (от нового к старому, только merge-коммиты и Initial commit):</p>\n<pre><code>Merge feature2\nMerge feature1\nInitial commit\n</code></pre>",
+  "verify_code": "a64ae893",
+  "expected_output": "Merge feature2\nMerge feature1\nInitial commit\n"
+}

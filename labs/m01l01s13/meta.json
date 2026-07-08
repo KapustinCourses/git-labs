@@ -1,0 +1,12 @@
+{
+  "id": "m01l01s13",
+  "module": 1,
+  "module_title": "Введение в Git",
+  "lesson": 1,
+  "lesson_title": "Зачем нужен Git",
+  "step": 13,
+  "title": "Шаг 13: Настроить defaultBranch и проверить ветку",
+  "description_html": "<p>По умолчанию Git использует имя <code>master</code> для основной ветки. Современный стандарт — <code>main</code>. Чтобы не задавать это вручную при каждом <code>git init</code>, нужна глобальная настройка.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Пустая рабочая директория, глобальный конфиг не содержит <code>init.defaultBranch</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n<li>Установите глобальную настройку <code>init.defaultBranch</code> в значение <code>main</code>.</li>\n<li>Инициализируйте репозиторий командой <code>git init</code>.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После ваших команд проверяющий код выполнит:</p>\n<pre><code>cat .git/HEAD\n</code></pre>\n<p>Ожидаемый вывод:</p>\n<pre><code>ref: refs/heads/main\n</code></pre>",
+  "verify_code": "28d25bf8",
+  "expected_output": "ref: refs/heads/main\n"
+}

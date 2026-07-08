@@ -1,0 +1,12 @@
+{
+  "id": "m02l02s09",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 2,
+  "lesson_title": "Работа на ветке",
+  "step": 9,
+  "title": "Шаг 9: Создать ветку, сделать коммиты и убедиться, что main не сдвинулась",
+  "description_html": "<p>В репозитории есть ветка <code>main</code> с одним коммитом «Initial commit».</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Создайте ветку <code>feature</code> и переключитесь на неё.</li>\n  <li>Создайте файл <code>feature.txt</code> со строкой <code>step one</code> и закоммитьте с сообщением <code>Add step one</code>.</li>\n  <li>Добавьте строку <code>step two</code> в <code>feature.txt</code> и закоммитьте с сообщением <code>Add step two</code>.</li>\n  <li>Переключитесь обратно на <code>main</code>.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет историю коммитов <code>main</code> и <code>feature</code> в таком формате:</p>\n<pre><code>main: Initial commit\nfeature: Initial commit|Add step one|Add step two\n</code></pre>",
+  "verify_code": "aa05f8c5",
+  "expected_output": "main: Initial commit\nfeature: Initial commit|Add step one|Add step two\n"
+}

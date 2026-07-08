@@ -1,0 +1,12 @@
+{
+  "id": "m03l03s11",
+  "module": 3,
+  "module_title": "Удалённые репозитории и GitHub",
+  "lesson": 3,
+  "lesson_title": "fetch pull и синхронизация",
+  "step": 11,
+  "title": "Шаг 11: Задача — Разрешить push rejected",
+  "description_html": "<p>Классический сценарий командной работы: вы сделали коммит локально, но пока вы работали, коллега уже успел запушить свои изменения в <code>main</code>. Теперь ваш <code>git push</code> будет отклонён.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Вы находитесь в клоне репозитория. На <code>origin/main</code> уже есть коммит «Colleague work», которого у вас нет. У вас есть свой локальный коммит «My work».</p>\n\n<h3>Что нужно сделать</h3>\n<p>Разрешите ситуацию: получите изменения с сервера, объедините их со своими (используйте <code>merge</code> с сообщением «Merge origin/main»), затем отправьте результат на сервер.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код смотрит на историю в bare-репозитории. Ожидается (в порядке создания):</p>\n<pre><code>Initial commit\nColleague work\nMy work\nMerge origin/main\n</code></pre>",
+  "verify_code": "14cca5a0",
+  "expected_output": "Initial commit\nColleague work\nMy work\nMerge origin/main\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m11l10s12",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 10,
+  "lesson_title": "Jenkins обзорно",
+  "step": 12,
+  "title": "Шаг 12: Написать минимальный declarative Jenkinsfile",
+  "description_html": "<p>Вы переходите на Pipeline as Code в Jenkins. Нужно создать минимальный declarative Jenkinsfile с базовым пайплайном.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>Jenkinsfile</code> в корне репозитория с declarative синтаксом:</p>\n<ul>\n  <li>Блок <code>pipeline {</code></li>\n  <li>Директива <code>agent any</code></li>\n  <li>Блок <code>stages {</code> с тремя stages:\n    <ul>\n      <li><code>stage('Lint')</code> с шагом <code>sh 'echo linting'</code></li>\n      <li><code>stage('Test')</code> с шагом <code>sh 'echo testing'</code></li>\n      <li><code>stage('Build')</code> с шагом <code>sh 'echo building'</code></li>\n    </ul>\n  </li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код проверит через <code>grep</code>, что файл содержит ключевые конструкции декларативного синтаксиса.</p>",
+  "verify_code": "fb666a90",
+  "expected_output": "pipeline_block_ok\nagent_ok\nstages_block_ok\nstage_ok\n"
+}

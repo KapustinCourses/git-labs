@@ -1,0 +1,12 @@
+{
+  "id": "m09l04s14",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 4,
+  "lesson_title": "Index packfiles gc",
+  "step": 14,
+  "title": "Шаг 14: Найти dangling-коммит через fsck",
+  "description_html": "<p>После <code>git reset --hard HEAD~1</code> предыдущий коммит перестаёт быть достижимым через ветки. Пока он хранится в reflog, он не является мусором — но <code>git fsck</code> его видит и сообщает как «dangling commit».</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит два коммита в <code>main</code>. Выполнен <code>git reset --hard HEAD~1</code>, который убрал второй коммит из истории ветки, но оставил его объект в базе данных git.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Используйте <code>git fsck --lost-found</code> чтобы найти dangling-коммит. Выведите <code>found dangling</code>, если хотя бы один dangling commit обнаружен.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается:</p>\n<pre><code>found dangling\n</code></pre>",
+  "verify_code": "316e4661",
+  "expected_output": "found dangling\n"
+}

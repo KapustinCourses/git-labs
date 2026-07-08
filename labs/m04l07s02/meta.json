@@ -1,0 +1,12 @@
+{
+  "id": "m04l07s02",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 7,
+  "lesson_title": "Практикум расследование",
+  "step": 2,
+  "title": "Шаг 2: Практикум — Шаг 1 из 5: обзор истории",
+  "description_html": "<p>Вы только что подключились к проекту, тест сломан. Первое, что делают при расследовании — смотрят последние коммиты: кто что делал, в каком порядке.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>В репозитории 11 коммитов. Разные авторы добавляли фичи, рефакторили код и, в какой-то момент, что-то сломали. Скрипт <code>run.sh</code> сегодня возвращает ненулевой код.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите последние 10 коммитов в формате <code>автор: сообщение</code> (от нового к старому).</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод последних 10 коммитов:</p>\n<pre><code>Bob: Add logging\nAlice: Refactor core module\nBob: Fix typo in README\nAlice: Update run script\nCharlie: Add config parser\nBob: Add input validation\nAlice: Add unit tests\nCharlie: Optimize database query\nBob: Add API endpoint\nAlice: Add authentication\n</code></pre>",
+  "verify_code": "340c5bac",
+  "expected_output": "Bob: Add logging\nAlice: Refactor core module\nBob: Fix typo in README\nAlice: Update run script\nCharlie: Add config parser\nBob: Add input validation\nAlice: Add unit tests\nCharlie: Optimize database query\nBob: Add API endpoint\nAlice: Add authentication\n"
+}

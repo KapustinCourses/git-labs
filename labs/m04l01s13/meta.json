@@ -1,0 +1,12 @@
+{
+  "id": "m04l01s13",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 1,
+  "lesson_title": "git log продвинутая фильтрация",
+  "step": 13,
+  "title": "Шаг 13: Последние 3 коммита на main без merge-коммитов",
+  "description_html": "<p>В репозитории есть история с merge-коммитами. Вам нужно получить только обычные коммиты — без merge-коммитов — и взять последние три.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Ветка <code>main</code> содержит обычные коммиты и несколько merge-коммитов.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите сообщения последних <strong>3 обычных коммитов</strong> (без merge-коммитов) на ветке <code>main</code>. Формат: <code>--pretty='%s'</code>, от нового к старому (по умолчанию).</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод (от нового к старому):</p>\n<pre><code>Release v1.1\nHotfix null pointer\nAdd feature C\n</code></pre>",
+  "verify_code": "01e60fd2",
+  "expected_output": "Release v1.1\nHotfix null pointer\nAdd feature C\n"
+}

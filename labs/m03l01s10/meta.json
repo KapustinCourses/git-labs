@@ -1,0 +1,12 @@
+{
+  "id": "m03l01s10",
+  "module": 3,
+  "module_title": "Удалённые репозитории и GitHub",
+  "lesson": 1,
+  "lesson_title": "Что такое remote",
+  "step": 10,
+  "title": "Шаг 10: Задача — Два remote: origin и upstream",
+  "description_html": "<p>В реальной разработке через fork-workflow у разработчика обычно два remote: <code>origin</code> — его форк, <code>upstream</code> — оригинальный репозиторий.</p>\n<p>У вас есть локальный репозиторий и два bare-репозитория:</p>\n<ul>\n  <li><code>/tmp/origin.git</code> — ваш «форк»</li>\n  <li><code>/tmp/upstream.git</code> — оригинальный репозиторий</li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Зарегистрируйте оба remote с соответствующими именами: <code>origin</code> и <code>upstream</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>После выполнения команд проверяющий код запустит <code>git remote -v | sort</code>. Ожидается (строки отсортированы):</p>\n<pre><code>origin\tfile:///tmp/origin.git (fetch)\norigin\tfile:///tmp/origin.git (push)\nupstream\tfile:///tmp/upstream.git (fetch)\nupstream\tfile:///tmp/upstream.git (push)\n</code></pre>",
+  "verify_code": "d8ee1d23",
+  "expected_output": "origin\tfile:///tmp/origin.git (fetch)\norigin\tfile:///tmp/origin.git (push)\nupstream\tfile:///tmp/upstream.git (fetch)\nupstream\tfile:///tmp/upstream.git (push)\n"
+}

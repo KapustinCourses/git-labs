@@ -1,0 +1,12 @@
+{
+  "id": "m01l04s02",
+  "module": 1,
+  "module_title": "Введение в Git",
+  "lesson": 4,
+  "lesson_title": "Практикум",
+  "step": 2,
+  "title": "Шаг 2: Практикум — Шаг 1 из 5: инициализация репозитория",
+  "description_html": "<p>Это шаг 1 из 5 в сценарии «Стартовый проект». Вы получили папку с готовым кодом <code>todo.py</code> и хотите начать отслеживать проект с Git.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Пустая рабочая директория с файлом <code>todo.py</code> (простой Python-скрипт). Репозиторий ещё не инициализирован, глобальный <code>init.defaultBranch</code> не задан.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n<li>Установите глобальную настройку <code>init.defaultBranch</code> в значение <code>main</code>.</li>\n<li>Инициализируйте репозиторий командой <code>git init</code>.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После ваших команд проверяющий код выполнит:</p>\n<pre><code>cat .git/HEAD\ngit status --porcelain\n</code></pre>\n<p>Ожидаемый вывод:</p>\n<pre><code>ref: refs/heads/main\n?? todo.py\n</code></pre>",
+  "verify_code": "d7b4f167",
+  "expected_output": "ref: refs/heads/main\n?? todo.py\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m01l02s13",
+  "module": 1,
+  "module_title": "Введение в Git",
+  "lesson": 2,
+  "lesson_title": "Три зоны и первый коммит",
+  "step": 13,
+  "title": "Шаг 13: Просмотр истории через git log --oneline",
+  "description_html": "<p>Команда <code>git log</code> — это инструмент навигации по истории проекта. Флаг <code>--oneline</code> показывает каждый коммит одной строкой: короткий sha и сообщение. Это удобно при быстром просмотре.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий содержит три коммита:</p>\n<ol>\n<li><code>Initial commit</code></li>\n<li><code>Add app logic</code></li>\n<li><code>Add tests</code></li>\n</ol>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите историю коммитов в компактном формате: по одной строке на коммит, только сообщения без sha. Используйте форматированный вывод <code>git log --pretty='%s'</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код смотрит на вывод вашей команды. Ожидается (от нового к старому):</p>\n<pre><code>Add tests\nAdd app logic\nInitial commit\n</code></pre>",
+  "verify_code": "278e7add",
+  "expected_output": "Add tests\nAdd app logic\nInitial commit\n"
+}

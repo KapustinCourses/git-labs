@@ -1,0 +1,12 @@
+{
+  "id": "m07l04s10",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 4,
+  "lesson_title": "Стратегии слияния",
+  "step": 10,
+  "title": "Шаг 10: Merge с автоматическим разрешением в свою пользу",
+  "description_html": "<p>В репозитории есть ветки <code>main</code> и <code>feature</code>. Обе ветки изменили файл <code>app.txt</code> в одном и том же месте. Вы хотите слить ветку <code>feature</code>, но при конфликтах автоматически принимать <strong>нашу</strong> версию (из <code>main</code>).</p>\n\n<h3>Начальное состояние</h3>\n<ul>\n  <li>В <code>main</code>: <code>app.txt</code> содержит строку <code>version=2.0-main</code></li>\n  <li>В <code>feature</code>: <code>app.txt</code> содержит строку <code>version=2.0-feature</code></li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните merge ветки <code>feature</code> в <code>main</code> с опцией <code>-X ours</code>. Используйте сообщение <code>\"Merge feature, prefer our version\"</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>После merge проверяющий код выведет содержимое <code>app.txt</code> и историю коммитов. Ожидается:</p>\n<pre><code>version=2.0-main\nInitial commit\nUpdate app on feature\nUpdate app on main\nMerge feature, prefer our version\n</code></pre>",
+  "verify_code": "5f909d08",
+  "expected_output": "version=2.0-main\nInitial commit\nUpdate app on feature\nUpdate app on main\nMerge feature, prefer our version\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m08l03s11",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 3,
+  "lesson_title": "git worktree",
+  "step": 11,
+  "title": "Шаг 11: Создать worktree с новой веткой",
+  "description_html": "<p>Нужно создать новый worktree и одновременно создать в нём новую ветку <code>feature/login</code>. Worktree разместить в директории <code>../wt-login</code>.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий с одной веткой <code>main</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте worktree в <code>../wt-login</code> с новой веткой <code>feature/login</code> за одну команду.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет список локальных веток. Ожидается:</p>\n<pre><code>feature/login\nmain\n</code></pre>",
+  "verify_code": "dd899007",
+  "expected_output": "feature/login\nmain\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m07l02s12",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 2,
+  "lesson_title": "Маркеры конфликта и ручное разрешение",
+  "step": 12,
+  "title": "Шаг 12: Разрешить конфликт при rebase — объединить обе версии",
+  "description_html": "<p>Ветка <code>feature</code> перебазируется на <code>main</code>. В процессе rebase возник конфликт в файле <code>settings.txt</code>. Ветка <code>main</code> содержит строку <code>theme=dark</code>, ветка <code>feature</code> — строку <code>lang=ru</code>. Обе настройки нужны.</p>\n\n<h3>Начальное состояние</h3>\n<p>Rebase уже запущен и остановлен из-за конфликта в файле <code>settings.txt</code>. Вы находитесь в процессе rebase.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Разрешите конфликт, объединив обе строки в файле <code>settings.txt</code>:</p>\n<pre><code>theme=dark\nlang=ru\n</code></pre>\n<p>Затем выполните <code>git add settings.txt</code> и <code>git rebase --continue</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>После успешного rebase проверяющий код выведет содержимое <code>settings.txt</code> и историю коммитов в <code>feature</code>. Ожидается:</p>\n<pre><code>theme=dark\nlang=ru\nInitial commit\nAdd theme setting\nAdd lang setting\n</code></pre>",
+  "verify_code": "e2eae342",
+  "expected_output": "theme=dark\nlang=ru\nInitial commit\nAdd theme setting\nAdd lang setting\n"
+}

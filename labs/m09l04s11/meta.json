@@ -1,0 +1,12 @@
+{
+  "id": "m09l04s11",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 4,
+  "lesson_title": "Index packfiles gc",
+  "step": 11,
+  "title": "Шаг 11: Посмотреть содержимое индекса",
+  "description_html": "<p>Индекс (staging area) — бинарный файл <code>.git/index</code>, который хранит список файлов, готовых к коммиту. Команда <code>git ls-files --stage</code> выводит его содержимое в человекочитаемом виде: права, sha blob'а, stage-номер и имя файла.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит один коммит «Initial commit» с тремя файлами: <code>app.js</code>, <code>config.json</code>, <code>README.md</code>. Дополнительно, файл <code>new-feature.js</code> уже добавлен в индекс через <code>git add</code>, но не закоммичен.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Подсчитайте, сколько файлов сейчас находится в индексе, используя <code>git ls-files --stage</code>. Затем выведите их имена, отсортированные по алфавиту.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод количества файлов и их имён:</p>\n<pre><code>4\nREADME.md\napp.js\nconfig.json\nnew-feature.js\n</code></pre>",
+  "verify_code": "87eb3613",
+  "expected_output": "4\nREADME.md\napp.js\nconfig.json\nnew-feature.js\n"
+}

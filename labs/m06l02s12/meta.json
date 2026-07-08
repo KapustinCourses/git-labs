@@ -1,0 +1,12 @@
+{
+  "id": "m06l02s12",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 2,
+  "lesson_title": "Базовый rebase",
+  "step": 12,
+  "title": "Шаг 12: Убедиться, что reflog содержит запись о rebase",
+  "description_html": "<p>После rebase в reflog HEAD появляются записи о перемещении, включая запись вида <code>rebase (finish)</code>. Это подтверждает, что rebase был выполнен и зафиксирован в истории перемещений.</p>\n<p>В репозитории подготовлен сценарий: ветка <code>feature</code> с одним коммитом, <code>main</code> с одним дополнительным коммитом.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните <code>git rebase main</code> (без конфликтов). Затем подсчитайте, сколько строк в reflog содержит слово <code>rebase</code>.</p>\n<p>Выведите это число.</p>\n\n<h3>Как проверяется</h3>\n<p>После rebase в reflog должна быть минимум одна запись с «rebase». Ожидается число больше нуля:</p>\n<pre><code>3\n</code></pre>",
+  "verify_code": "1121cfcc",
+  "expected_output": "3\n"
+}

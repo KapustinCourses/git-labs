@@ -1,0 +1,12 @@
+{
+  "id": "m11l02s10",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 2,
+  "lesson_title": "Кэширование и оптимизация",
+  "step": 10,
+  "title": "Шаг 10: Workflow с встроенным npm-кэшем",
+  "description_html": "<p>Вы хотите ускорить CI для Node.js проекта, используя встроенный кэш через <code>actions/setup-node@v6</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/node-ci.yml</code> с:</p>\n<ul>\n  <li>Триггером <code>push</code></li>\n  <li>Job <code>build</code> на <code>ubuntu-latest</code></li>\n  <li>Шагами: <code>actions/checkout@v6</code>, затем <code>actions/setup-node@v6</code> с <code>node-version: '20'</code> и <code>cache: 'npm'</code></li>\n  <li>Дополнительным шагом <code>run: npm ci</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что <code>setup-node@v6</code> используется с <code>cache: npm</code>.</p>",
+  "verify_code": "a1b8e4f9",
+  "expected_output": "setup_node_ok\ncache_npm_ok\n"
+}

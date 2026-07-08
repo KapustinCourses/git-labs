@@ -1,0 +1,12 @@
+{
+  "id": "m10l01s11",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 1,
+  "lesson_title": "Что такое CI CD",
+  "step": 11,
+  "title": "Шаг 11: Создать минимальный workflow YAML",
+  "description_html": "<p>Вы настраиваете CI для нового проекта на GitHub. Первый шаг — создать минимальный валидный файл конфигурации GitHub Actions.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/ci.yml</code> с минимальной структурой workflow GitHub Actions. Файл должен быть валидным YAML.</p>\n\n<h3>Требования к содержимому</h3>\n<ul>\n  <li>Поле <code>name</code> с любым именем</li>\n  <li>Поле <code>on</code> с хотя бы одним триггером</li>\n  <li>Поле <code>jobs</code> с хотя бы одним job</li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд проверяющий код убедится, что файл существует и является валидным YAML с нужной структурой. Ожидаемый вывод:</p>\n<pre><code>ok</code></pre>",
+  "verify_code": "dc51b8c9",
+  "expected_output": "ok\n"
+}

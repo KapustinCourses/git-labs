@@ -1,0 +1,12 @@
+{
+  "id": "m06l07s05",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 7,
+  "lesson_title": "Практикум",
+  "step": 5,
+  "title": "Шаг 5: Практикум шаг 4 — rebase на актуальный main",
+  "description_html": "<p><strong>Это шаг 4 из 5 в сценарии «Причёсываем feature-ветку перед PR».</strong></p>\n<p>История причёсана. Теперь нужно синхронизироваться с актуальным <code>main</code> — он ушёл вперёд на 1 коммит, пока вы работали. Конфликтов нет (main и feature правят разные файлы).</p>\n<p>Состояние:</p>\n<ul>\n  <li><code>feature/payments</code>: 3 чистых коммита</li>\n  <li><code>main</code>: продвинулся на коммит <strong>«Update README on main»</strong></li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Переключитесь на <code>feature/payments</code> и выполните <code>git rebase main</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Будет выведена история <code>feature/payments</code> и граф (для проверки линейности). Ожидается:</p>\n<pre><code>Initial commit\nUpdate README on main\nAdd payment form\nAdd payment validation\nAdd payment docs\n</code></pre>",
+  "verify_code": "0efce242",
+  "expected_output": "Initial commit\nUpdate README on main\nAdd payment form\nAdd payment validation\nAdd payment docs\n"
+}

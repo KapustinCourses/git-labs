@@ -1,0 +1,12 @@
+{
+  "id": "m06l05s10",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 5,
+  "lesson_title": "Rebase onto",
+  "step": 10,
+  "title": "Шаг 10: Отбросить первые 2 коммита feature, остальные пересадить на main",
+  "description_html": "<p>Ветка <code>feature</code> имеет 4 коммита после общего предка с <code>main</code>:</p>\n<ol>\n  <li><strong>WIP experiment 1</strong> — нерелевантный эксперимент</li>\n  <li><strong>WIP experiment 2</strong> — нерелевантный эксперимент</li>\n  <li><strong>Add real feature</strong> — нужный коммит</li>\n  <li><strong>Polish feature</strong> — нужный коммит</li>\n</ol>\n<p>Нужно отбросить первые два «WIP» коммита и пересадить только последние два на <code>main</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Используйте <code>git rebase --onto main feature~2 feature</code>.</p>\n<p>Это возьмёт коммиты <strong>после</strong> <code>feature~2</code> (то есть последние 2) и применит их поверх <code>main</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Будет выведена история ветки <code>feature</code>. Ожидается только основные + 2 нужных коммита:</p>\n<pre><code>Initial commit\nAdd real feature\nPolish feature\n</code></pre>",
+  "verify_code": "47b2e089",
+  "expected_output": "Initial commit\nAdd real feature\nPolish feature\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m01l03s11",
+  "module": 1,
+  "module_title": "Введение в Git",
+  "lesson": 3,
+  "lesson_title": "gitignore",
+  "step": 11,
+  "title": "Шаг 11: Создать .gitignore для логов",
+  "description_html": "<p>Вы начинаете новый проект и хотите сразу предотвратить попадание лог-файлов в репозиторий.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Пустой репозиторий без коммитов.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n<li>Создайте файл <code>.gitignore</code> с одной строкой: <code>*.log</code>.</li>\n<li>Добавьте <code>.gitignore</code> в staging и создайте коммит с сообщением <code>Add .gitignore</code>.</li>\n<li>Создайте файл <code>app.log</code> с любым содержимым.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После ваших команд проверяющий код выполнит:</p>\n<pre><code>git status --porcelain --ignored\n</code></pre>\n<p>Ожидаемый вывод (файл <code>app.log</code> помечен как игнорируемый):</p>\n<pre><code>!! app.log\n</code></pre>",
+  "verify_code": "8336c30c",
+  "expected_output": "!! app.log\n"
+}

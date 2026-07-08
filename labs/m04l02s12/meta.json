@@ -1,0 +1,12 @@
+{
+  "id": "m04l02s12",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 2,
+  "lesson_title": "git diff и git show",
+  "step": 12,
+  "title": "Шаг 12: Посмотреть содержимое файла в старом коммите",
+  "description_html": "<p>В репозитории есть история из нескольких коммитов. Файл <code>README.md</code> менялся в каждом из них. Вам нужно посмотреть, как выглядел этот файл <strong>три коммита назад</strong> — не переключаясь на старый коммит.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>История содержит 4 коммита. В каждом — новая версия <code>README.md</code>:</p>\n<ul>\n<li>Коммит 1: <code>v1</code></li>\n<li>Коммит 2: <code>v2</code></li>\n<li>Коммит 3: <code>v3</code></li>\n<li>Коммит 4 (HEAD): <code>v4</code></li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите содержимое <code>README.md</code> на три коммита раньше текущего HEAD (<code>HEAD~3</code>).</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод:</p>\n<pre><code>v1\n</code></pre>",
+  "verify_code": "2d27fbdf",
+  "expected_output": "v1\n"
+}

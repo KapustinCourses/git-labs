@@ -1,0 +1,12 @@
+{
+  "id": "m08l06s10",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 6,
+  "lesson_title": "git hooks",
+  "step": 10,
+  "title": "Шаг 10: Pre-commit hook против строки DEBUG",
+  "description_html": "<p>Нужно написать pre-commit hook, который запрещает коммитить файлы, содержащие строку <code>DEBUG</code>. Затем проверить его работу: попытаться закоммитить файл с <code>DEBUG</code> (должен отказать), а потом закоммитить чистый файл (должен пройти).</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Пустой репозиторий с одним коммитом «Initial commit».</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Создайте файл <code>.git/hooks/pre-commit</code> со скриптом, проверяющим наличие <code>DEBUG</code> в staged файлах</li>\n  <li>Сделайте хук исполняемым</li>\n  <li>Попробуйте закоммитить файл с <code>DEBUG</code> — коммит должен быть отклонён</li>\n  <li>Закоммитьте файл без <code>DEBUG</code> с сообщением <code>Add clean file</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет сообщения коммитов. Ожидается ровно два коммита:</p>\n<pre><code>Initial commit\nAdd clean file\n</code></pre>",
+  "verify_code": "8b4f6313",
+  "expected_output": "Initial commit\nAdd clean file\n"
+}

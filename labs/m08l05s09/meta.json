@@ -1,0 +1,12 @@
+{
+  "id": "m08l05s09",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 5,
+  "lesson_title": "subtree и LFS",
+  "step": 9,
+  "title": "Шаг 9: Добавить subtree из локального репо",
+  "description_html": "<p>Нужно включить библиотеку в проект через механизм <code>git subtree</code>: вся история библиотеки сожмётся в один коммит и войдёт в основной репозиторий.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Основной репозиторий с коммитом «Initial commit». Библиотека находится в bare-репозитории по пути <code>$LIB_BARE</code>. В библиотеке есть файл <code>lib.txt</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Добавьте библиотеку как subtree в папку <code>vendor/lib</code> с параметром <code>--squash</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет список файлов в <code>vendor/lib</code> и сообщения коммитов. Ожидается:</p>\n<pre><code>lib.txt\nInitial commit\nSquashed 'vendor/lib/' content from commit\nAdd 'vendor/lib/' from commit\n</code></pre>\n<p>Примечание: последние две строки — сообщения, создаваемые subtree автоматически (они начинаются с этих слов).</p>",
+  "verify_code": "abd3c09f",
+  "expected_output": "lib.txt\n"
+}

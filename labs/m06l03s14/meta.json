@@ -1,0 +1,12 @@
+{
+  "id": "m06l03s14",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 3,
+  "lesson_title": "Interactive rebase",
+  "step": 14,
+  "title": "Шаг 14: Изменить сообщение коммита через reword",
+  "description_html": "<p>В ветке есть 3 коммита:</p>\n<ol>\n  <li><strong>Initial commit</strong></li>\n  <li><strong>add auth module</strong> — написано со строчной буквы, нужно исправить</li>\n  <li><strong>Add tests</strong></li>\n</ol>\n\n<h3>Что нужно сделать</h3>\n<p>С помощью interactive rebase переименуйте второй коммит на <strong>«Add auth module»</strong> (с заглавной буквы). Используйте <code>GIT_SEQUENCE_EDITOR</code> для замены <code>pick</code> на <code>reword</code> и <code>GIT_EDITOR</code> для записи нового сообщения.</p>\n\n<h3>Как проверяется</h3>\n<p>Будет выведена история коммитов. Ожидается:</p>\n<pre><code>Initial commit\nAdd auth module\nAdd tests\n</code></pre>",
+  "verify_code": "dcb1a65f",
+  "expected_output": "Initial commit\nAdd auth module\nAdd tests\n"
+}

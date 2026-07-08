@@ -1,0 +1,12 @@
+{
+  "id": "m10l06s13",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 6,
+  "lesson_title": "Marketplace actions и переиспользование",
+  "step": 13,
+  "title": "Шаг 13: Полный CI workflow для Node-проекта (5 steps)",
+  "description_html": "<p>Полноценный CI для Node.js-проекта включает: получение кода, установку Node, установку зависимостей, проверку линтером и запуск тестов.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/ci.yml</code> с job <code>test</code>, в котором ровно 5 steps:</p>\n<ol>\n  <li><code>uses: actions/checkout@v6</code></li>\n  <li><code>uses: actions/setup-node@v6</code> с <code>node-version: 20</code></li>\n  <li><code>run: npm ci</code></li>\n  <li><code>run: npm run lint</code></li>\n  <li><code>run: npm test</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет:</p>\n<pre><code>steps_count=5\nhas_checkout=True\nhas_setup_node=True\nhas_npm_ci=True</code></pre>",
+  "verify_code": "213c80f5",
+  "expected_output": "steps_count=5\nhas_checkout=True\nhas_setup_node=True\nhas_npm_ci=True\n"
+}

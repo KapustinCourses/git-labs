@@ -1,0 +1,12 @@
+{
+  "id": "m08l01s13",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 1,
+  "lesson_title": "git stash",
+  "step": 13,
+  "title": "Шаг 13: Stash с untracked файлами",
+  "description_html": "<p>В репозитории есть изменения в tracked-файле <code>app.py</code> и новый untracked файл <code>draft.py</code>. Нужно спрятать <strong>все</strong> правки, включая untracked файл.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Ветка <code>main</code>, файл <code>app.py</code> с uncommitted-изменением, новый файл <code>draft.py</code> (не добавлен в git).</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выполнить <code>git stash</code> с флагом, чтобы untracked файлы тоже попали в stash.</p>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд проверяющий код выведет количество файлов в рабочей директории (исключая <code>.git</code>) и количество записей в stash. Ожидается:</p>\n<pre><code>1\n1\n</code></pre>\n<p>То есть в рабочей директории останется только <code>app.py</code> с исходным содержимым, а <code>draft.py</code> исчезнет. В стеке stash будет одна запись.</p>",
+  "verify_code": "ad0fadf6",
+  "expected_output": "1\n1\n"
+}

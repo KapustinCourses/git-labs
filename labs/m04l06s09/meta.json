@@ -1,0 +1,12 @@
+{
+  "id": "m04l06s09",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 6,
+  "lesson_title": "git reflog спасательный круг",
+  "step": 9,
+  "title": "Шаг 9: Восстановить потерянный коммит через reflog",
+  "description_html": "<p>Разработчик случайно выполнил <code>git reset --hard HEAD~2</code> и «потерял» два коммита. На самом деле они ещё в reflog. Нужно восстановить их через reflog.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>История коммитов на ветке <code>main</code>:</p>\n<ul>\n<li>«Initial commit»</li>\n<li>«Add config file»</li>\n<li>«Add feature A»</li>\n</ul>\n<p>Затем был выполнен <code>git reset --hard HEAD~2</code>, и сейчас HEAD указывает только на «Initial commit».</p>\n\n<h3>Что нужно сделать</h3>\n<p>Используйте <code>git reflog</code>, чтобы найти sha коммита «Add feature A» и восстановить его через <code>git reset --hard &lt;sha&gt;</code>. После восстановления выведите сообщения всех коммитов от старого к новому.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод:</p>\n<pre><code>Initial commit\nAdd config file\nAdd feature A\n</code></pre>",
+  "verify_code": "0976e989",
+  "expected_output": "Initial commit\nAdd config file\nAdd feature A\n"
+}

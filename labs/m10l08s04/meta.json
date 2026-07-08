@@ -1,0 +1,12 @@
+{
+  "id": "m10l08s04",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 8,
+  "lesson_title": "Практикум CI workflow для Go проекта",
+  "step": 4,
+  "title": "Шаг 4: Практикум — Шаг 3 из 6: добавить job test",
+  "description_html": "<p><em>Это шаг 3 из 6 в практикуме «CI workflow для Go-проекта».</em></p>\n\n<p>Предыдущее состояние: workflow с job <code>lint</code> (checkout + setup-go + golangci-lint). Теперь добавьте параллельный job для запуска тестов.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Добавьте в <code>.github/workflows/ci.yml</code> параллельный job <code>test</code> (без <code>needs:</code>), который:</p>\n<ul>\n  <li>Работает на <code>ubuntu-latest</code></li>\n  <li>Первый step: <code>uses: actions/checkout@v6</code></li>\n  <li>Второй step: <code>uses: actions/setup-go@v6</code> с <code>go-version: '1.22'</code></li>\n  <li>Третий step: <code>run: go test ./...</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Ожидаемый вывод:</p>\n<pre><code>jobs=lint,test\ntest_has_go_test=True\ntest_no_needs=True</code></pre>",
+  "verify_code": "b68f8ae7",
+  "expected_output": "jobs=lint,test\ntest_has_go_test=True\ntest_no_needs=True\n"
+}

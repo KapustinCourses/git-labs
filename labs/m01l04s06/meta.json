@@ -1,0 +1,12 @@
+{
+  "id": "m01l04s06",
+  "module": 1,
+  "module_title": "Введение в Git",
+  "lesson": 4,
+  "lesson_title": "Практикум",
+  "step": 6,
+  "title": "Шаг 6: Практикум — Шаг 5 из 5: убедиться, что __pycache__ игнорируется",
+  "description_html": "<p>Это шаг 5 из 5 в сценарии «Стартовый проект». В репозитории три коммита, всё настроено. Осталось проверить, что <code>.gitignore</code> действительно защищает репозиторий от кэша Python.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий с тремя коммитами: «Add README», «Add gitignore for Python», «Add initial todo CLI». В <code>.gitignore</code> есть правила <code>__pycache__/</code> и <code>*.pyc</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n<li>Симулируйте создание кэша Python: выполните <code>mkdir __pycache__ &amp;&amp; touch __pycache__/todo.cpython-311.pyc</code>.</li>\n<li>Выполните <code>git status --porcelain --ignored</code>, чтобы убедиться, что <code>__pycache__/</code> помечена как игнорируемая.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код смотрит на вывод вашей команды. Ожидается строка:</p>\n<pre><code>!! __pycache__/\n</code></pre>",
+  "verify_code": "df884fd4",
+  "expected_output": "!! __pycache__/\n"
+}

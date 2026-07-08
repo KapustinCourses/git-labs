@@ -1,0 +1,12 @@
+{
+  "id": "m02l02s11",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 2,
+  "lesson_title": "Работа на ветке",
+  "step": 11,
+  "title": "Шаг 11: Вывести коммиты, которые есть только в feature",
+  "description_html": "<p>В репозитории есть ветка <code>main</code> с двумя коммитами («Initial commit», «Main update») и ветка <code>feature</code>, которая ушла на три коммита вперёд от «Initial commit»: «Add login», «Add logout», «Add auth check».</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите сообщения коммитов, которые есть в <code>feature</code>, но отсутствуют в <code>main</code>. Выводите по одному на строку, от старого к новому.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается:</p>\n<pre><code>Add login\nAdd logout\nAdd auth check\n</code></pre>",
+  "verify_code": "fd743e08",
+  "expected_output": "Add login\nAdd logout\nAdd auth check\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m01l01s11",
+  "module": 1,
+  "module_title": "Введение в Git",
+  "lesson": 1,
+  "lesson_title": "Зачем нужен Git",
+  "step": 11,
+  "title": "Шаг 11: Инициализировать репозиторий",
+  "description_html": "<p>Вы получили пустую рабочую директорию и хотите начать отслеживать изменения с помощью Git.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Пустая директория без репозитория.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Инициализируйте Git-репозиторий в текущей директории командой <code>git init</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>После ваших команд проверяющий код выполнит:</p>\n<pre><code>cat .git/HEAD\n</code></pre>\n<p>Ожидаемый вывод:</p>\n<pre><code>ref: refs/heads/main\n</code></pre>",
+  "verify_code": "28d25bf8",
+  "expected_output": "ref: refs/heads/main\n"
+}

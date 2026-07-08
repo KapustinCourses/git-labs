@@ -1,0 +1,12 @@
+{
+  "id": "m10l08s03",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 8,
+  "lesson_title": "Практикум CI workflow для Go проекта",
+  "step": 3,
+  "title": "Шаг 3: Практикум — Шаг 2 из 6: добавить golangci-lint",
+  "description_html": "<p><em>Это шаг 2 из 6 в практикуме «CI workflow для Go-проекта».</em></p>\n\n<p>Предыдущее состояние: workflow с job <code>lint</code>, содержащим checkout и setup-go. Теперь добавьте реальный линтер.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Дополните (или пересоздайте) <code>.github/workflows/ci.yml</code>, добавив в job <code>lint</code> третий step с <code>uses: golangci/golangci-lint-action@v9</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидаемый вывод:</p>\n<pre><code>lint_steps_count=3\nhas_golangci_lint=True</code></pre>",
+  "verify_code": "9e69cf0b",
+  "expected_output": "lint_steps_count=3\nhas_golangci_lint=True\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m10l04s11",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 4,
+  "lesson_title": "Jobs dependencies и matrix",
+  "step": 11,
+  "title": "Шаг 11: Workflow с параллельными jobs и зависимостью через needs",
+  "description_html": "<p>Стандартный паттерн CI: проверки (lint, test) выполняются параллельно, а сборка (build) ждёт их завершения.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/ci.yml</code> с тремя jobs:</p>\n<ul>\n  <li><code>lint</code> — запускается параллельно</li>\n  <li><code>test</code> — запускается параллельно</li>\n  <li><code>build</code> — зависит от <strong>обоих</strong>: <code>needs: [lint, test]</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код прочитает YAML и выведет:</p>\n<pre><code>jobs=build,lint,test\nbuild_needs=lint,test</code></pre>",
+  "verify_code": "615376ff",
+  "expected_output": "jobs=build,lint,test\nbuild_needs=lint,test\n"
+}

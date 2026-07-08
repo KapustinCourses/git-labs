@@ -1,0 +1,12 @@
+{
+  "id": "m02l01s13",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 1,
+  "lesson_title": "Что такое ветка",
+  "step": 13,
+  "title": "Шаг 13: Создать ветку от конкретного предка",
+  "description_html": "<p>В репозитории есть ветка <code>main</code> с тремя коммитами: «First commit», «Second commit», «Third commit».</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте ветку <code>hotfix</code> от предпоследнего коммита — то есть от <code>HEAD~1</code>. Оставайтесь на <code>main</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд проверяющий код выведет сообщения коммитов, доступных в <code>hotfix</code>, в порядке от старого к новому. Ожидается:</p>\n<pre><code>First commit\nSecond commit\n</code></pre>",
+  "verify_code": "88b1e18c",
+  "expected_output": "First commit\nSecond commit\n"
+}

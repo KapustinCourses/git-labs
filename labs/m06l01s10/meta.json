@@ -1,0 +1,12 @@
+{
+  "id": "m06l01s10",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 1,
+  "lesson_title": "Зачем rebase",
+  "step": 10,
+  "title": "Шаг 10: Простой rebase feature на main",
+  "description_html": "<p>В репозитории есть две ветки, разошедшиеся от общего предка:</p>\n<ul>\n  <li><code>main</code>: после разветвления добавлен коммит <strong>«Update main»</strong></li>\n  <li><code>feature</code>: добавлены два коммита <strong>«Add feature part 1»</strong> и <strong>«Add feature part 2»</strong></li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Переключитесь на ветку <code>feature</code> и выполните rebase поверх <code>main</code>, чтобы история стала линейной.</p>\n\n<h3>Как проверяется</h3>\n<p>После ваших команд проверяющий код выведет список всех сообщений коммитов ветки <code>feature</code> в хронологическом порядке. Ожидается:</p>\n<pre><code>Initial commit\nUpdate main\nAdd feature part 1\nAdd feature part 2\n</code></pre>",
+  "verify_code": "1d39f13d",
+  "expected_output": "Initial commit\nUpdate main\nAdd feature part 1\nAdd feature part 2\n"
+}

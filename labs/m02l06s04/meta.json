@@ -1,0 +1,12 @@
+{
+  "id": "m02l06s04",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 6,
+  "lesson_title": "Практикум",
+  "step": 4,
+  "title": "Шаг 4: Шаг 3 из 5 — Fast-forward merge и удаление ветки",
+  "description_html": "<p><strong>Практикум: шаг 3 из 5.</strong> В репозитории есть ветка <code>main</code> с коммитом «Initial version» и ветка <code>feature/header</code> с дополнительным коммитом «Add header». Ветка <code>main</code> не двигалась с момента создания <code>feature/header</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Переключитесь на <code>main</code>.</li>\n  <li>Слейте <code>feature/header</code> в <code>main</code> (fast-forward, подавите вывод: <code>&gt; /dev/null</code>).</li>\n  <li>Удалите ветку <code>feature/header</code> (подавите вывод: <code>&gt; /dev/null</code>).</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет историю <code>main</code> от старого к новому, затем список веток. Ожидается:</p>\n<pre><code>Initial version\nAdd header\nmain\n</code></pre>",
+  "verify_code": "d2f6233d",
+  "expected_output": "Initial version\nAdd header\nmain\n"
+}

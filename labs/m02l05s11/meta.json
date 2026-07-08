@@ -1,0 +1,12 @@
+{
+  "id": "m02l05s11",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 5,
+  "lesson_title": "Detached HEAD",
+  "step": 11,
+  "title": "Шаг 11: Найти сообщение коммита HEAD~2",
+  "description_html": "<p>В репозитории есть ветка <code>main</code> с тремя коммитами: «First commit», «Second commit», «Third commit» (последний — HEAD).</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите сообщение коммита, на который указывает <code>HEAD~2</code> (дедушка HEAD).</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается:</p>\n<pre><code>First commit\n</code></pre>",
+  "verify_code": "60617f70",
+  "expected_output": "First commit\n"
+}

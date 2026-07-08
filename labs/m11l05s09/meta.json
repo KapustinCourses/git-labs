@@ -1,0 +1,12 @@
+{
+  "id": "m11l05s09",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 5,
+  "lesson_title": "Reusable workflows и composite actions",
+  "step": 9,
+  "title": "Шаг 9: Создание reusable workflow",
+  "description_html": "<p>Вы хотите создать шаблон CI, который можно вызывать из множества других workflows в организации.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/template.yml</code> — reusable workflow с:</p>\n<ul>\n  <li>Триггером <code>on: workflow_call:</code></li>\n  <li>Блоком <code>inputs:</code> с параметром <code>node-version</code> типа <code>string</code> со значением по умолчанию <code>'20'</code></li>\n  <li>Job <code>build</code> на <code>ubuntu-latest</code> с шагом <code>actions/setup-node@v6</code>, использующим <code>node-version: ${{ inputs.node-version }}</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что в YAML есть <code>on.workflow_call</code> с блоком <code>inputs</code>, содержащим параметр <code>node-version</code>.</p>",
+  "verify_code": "b3be4dd5",
+  "expected_output": "workflow_call_ok\ninputs_ok\nnode_version_input_ok\n"
+}

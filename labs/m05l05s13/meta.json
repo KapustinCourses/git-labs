@@ -1,0 +1,12 @@
+{
+  "id": "m05l05s13",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 5,
+  "lesson_title": "git revert",
+  "step": 13,
+  "title": "Шаг 13: Revert merge-коммита с флагом -m 1",
+  "description_html": "<p>В ветке <code>main</code> есть merge-коммит. При попытке сделать обычный <code>git revert HEAD --no-edit</code> git выдаёт ошибку — у merge-коммита два родителя, нужно указать, относительно кого выполнять revert. Используйте флаг <code>-m 1</code>.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>История содержит merge-коммит: ветка <code>feature/bad</code> была слита в <code>main</code>. HEAD указывает на этот merge-коммит.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Отмените merge-коммит относительно первого родителя (главной ветки):</p>\n<pre><code>git revert -m 1 HEAD --no-edit\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>После выполнения вашей команды проверяющий код выведет историю коммитов (от старого к новому). Ожидается:</p>\n<pre><code>Initial commit\nAdd bad feature\nMerge branch 'feature/bad'\nRevert \"Merge branch 'feature/bad'\"\n</code></pre>",
+  "verify_code": "d2d32518",
+  "expected_output": "Initial commit\nAdd bad feature\nMerge branch 'feature/bad'\nRevert \"Merge branch 'feature/bad'\"\n"
+}

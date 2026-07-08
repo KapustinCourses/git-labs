@@ -1,0 +1,12 @@
+{
+  "id": "m04l07s06",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 7,
+  "lesson_title": "Практикум расследование",
+  "step": 6,
+  "title": "Шаг 6: Практикум — Шаг 5 из 5: состояние файла до поломки",
+  "description_html": "<p>Вы нашли плохой коммит. Теперь нужно посмотреть, как выглядел <code>core.go</code> до него — чтобы понять, что именно изменилось и как это исправить.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит серию коммитов. Переменная <code>BAD_SHA</code> содержит sha коммита, который сломал проект. Файл <code>core.go</code> существовал до этого коммита.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите содержимое <code>core.go</code> за коммит до плохого, используя <code>git show ${BAD_SHA}~1:core.go</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается содержимое файла до поломки:</p>\n<pre><code>package main\n\nfunc Run() error {\n    return nil\n}\n</code></pre>",
+  "verify_code": "4264a6e2",
+  "expected_output": "package main\n\nfunc Run() error {\n    return nil\n}\n"
+}

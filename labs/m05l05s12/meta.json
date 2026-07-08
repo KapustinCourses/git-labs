@@ -1,0 +1,12 @@
+{
+  "id": "m05l05s12",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 5,
+  "lesson_title": "git revert",
+  "step": 12,
+  "title": "Шаг 12: Revert диапазона коммитов",
+  "description_html": "<p>В репозиторий случайно попали три «плохих» коммита. Нужно отменить все три одной командой через диапазон.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>История коммитов (от старого к новому):</p>\n<ol>\n  <li>Initial commit</li>\n  <li>Add bug 1</li>\n  <li>Add bug 2</li>\n  <li>Add bug 3</li>\n</ol>\n\n<h3>Что нужно сделать</h3>\n<p>Отмените три коммита с «Add bug» одной командой (без открытия редактора). Git создаст один обратный коммит для каждого из трёх:</p>\n<pre><code>git revert --no-edit HEAD~3..HEAD\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>После выполнения вашей команды проверяющий код выведет историю коммитов (от старого к новому). Ожидается 7 строк:</p>\n<pre><code>Initial commit\nAdd bug 1\nAdd bug 2\nAdd bug 3\nRevert \"Add bug 3\"\nRevert \"Add bug 2\"\nRevert \"Add bug 1\"\n</code></pre>",
+  "verify_code": "9e51f6c5",
+  "expected_output": "Initial commit\nAdd bug 1\nAdd bug 2\nAdd bug 3\nRevert \"Add bug 3\"\nRevert \"Add bug 2\"\nRevert \"Add bug 1\"\n"
+}

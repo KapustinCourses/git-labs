@@ -1,0 +1,12 @@
+{
+  "id": "m08l07s10",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 7,
+  "lesson_title": "signed commits",
+  "step": 10,
+  "title": "Шаг 10: Настроить SSH signing глобально",
+  "description_html": "<p>Нужно настроить git для подписи коммитов через SSH-ключ. Выполните настройку трёх параметров: формат подписи, путь к ключу, автоматическая подпись всех коммитов.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Глобальный git config без настроек подписи. SSH-ключ доступен по пути <code>$HOME/.ssh/id_ed25519.pub</code> (создан в окружении).</p>\n\n<h3>Что нужно сделать</h3>\n<p>Настройте через <code>git config --global</code>:</p>\n<ul>\n  <li><code>gpg.format</code> = <code>ssh</code></li>\n  <li><code>user.signingkey</code> = путь к публичному ключу <code>~/.ssh/id_ed25519.pub</code></li>\n  <li><code>commit.gpgsign</code> = <code>true</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет значения настроенных параметров. Ожидается:</p>\n<pre><code>ssh\ntrue\n</code></pre>",
+  "verify_code": "0083ffa3",
+  "expected_output": "ssh\ntrue\n"
+}

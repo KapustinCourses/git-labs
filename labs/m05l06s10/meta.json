@@ -1,0 +1,12 @@
+{
+  "id": "m05l06s10",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 6,
+  "lesson_title": "Force push",
+  "step": 10,
+  "title": "Шаг 10: Amend и force-with-lease push",
+  "description_html": "<p>После push своего коммита вы обнаружили опечатку в сообщении. Нужно исправить сообщение через amend и затем выполнить <code>push --force-with-lease</code>, потому что sha изменился.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Локальный репозиторий уже клонирован из bare-репозитория. В <code>origin</code> есть коммит «Add login frm» (опечатка).</p>\n\n<h3>Что нужно сделать</h3>\n<p>Исправьте сообщение последнего коммита и обновите удалённую ветку:</p>\n<pre><code>git commit --amend -q -m \"Add login form\"\ngit push --force-with-lease origin main\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд проверяющий код проверит историю в удалённом репозитории (bare). Ожидается:</p>\n<pre><code>Initial commit\nAdd login form\n</code></pre>",
+  "verify_code": "8b93120a",
+  "expected_output": "Initial commit\nAdd login form\n"
+}

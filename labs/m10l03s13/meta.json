@@ -1,0 +1,12 @@
+{
+  "id": "m10l03s13",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 3,
+  "lesson_title": "События и фильтры триггеров",
+  "step": 13,
+  "title": "Шаг 13: Workflow с concurrency",
+  "description_html": "<p>Когда разработчик делает несколько push'ей подряд, запускаются несколько workflow. Старые запуски — уже неактуальны. Настройте автоматическую отмену устаревших запусков.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/ci.yml</code> с настройкой <code>concurrency</code>, которая:</p>\n<ul>\n  <li>Использует группу <code>ci-${{ github.ref }}</code></li>\n  <li>Отменяет предыдущие запуски при новом (<code>cancel-in-progress: true</code>)</li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код прочитает YAML и выведет:</p>\n<pre><code>has_concurrency=True\ncancel_in_progress=True</code></pre>",
+  "verify_code": "27b77daa",
+  "expected_output": "has_concurrency=True\ncancel_in_progress=True\n"
+}

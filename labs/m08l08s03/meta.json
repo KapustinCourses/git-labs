@@ -1,0 +1,12 @@
+{
+  "id": "m08l08s03",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 8,
+  "lesson_title": "Практикум",
+  "step": 3,
+  "title": "Шаг 3: Практикум — Шаг 2 из 6: Создать worktree для hotfix",
+  "description_html": "<p><em>Это шаг 2 из 6 в практикуме «Параллельная работа и hotfix».</em></p>\n\n<p>Правки на <code>feature</code> отложены. Теперь нужно создать отдельный worktree для работы над hotfix — не переключаясь в основной директории и не мешая feature-работе.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий с ветками <code>main</code> и <code>feature</code>. Stash с WIP уже сохранён. Текущая ветка — <code>feature</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте новый worktree в директории <code>../hotfix-wt</code> с новой веткой <code>hotfix/csrf</code> от <code>main</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет количество worktree и имя ветки в <code>../hotfix-wt</code>. Ожидается:</p>\n<pre><code>2\nhotfix/csrf\n</code></pre>",
+  "verify_code": "26a64d75",
+  "expected_output": "2\nhotfix/csrf\n"
+}

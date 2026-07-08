@@ -1,0 +1,12 @@
+{
+  "id": "m10l07s09",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 7,
+  "lesson_title": "Локальная отладка и линт",
+  "step": 9,
+  "title": "Шаг 9: Валидация workflow через actionlint или python yaml",
+  "description_html": "<p>Первый шаг локальной проверки workflow — убедиться, что YAML синтаксически корректен. Если <code>actionlint</code> недоступен, используем Python для базовой валидации.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/ci.yml</code> с валидным workflow, а затем проверьте его через:</p>\n<ul>\n  <li><code>actionlint</code>, если он доступен в системе</li>\n  <li>или через Python <code>yaml.safe_load</code> как fallback</li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Ваш скрипт должен вывести либо результат actionlint (без ошибок), либо:</p>\n<pre><code>yaml valid (no actionlint)</code></pre>",
+  "verify_code": "a8c5f0f1",
+  "expected_output": "yaml valid (no actionlint)\n"
+}

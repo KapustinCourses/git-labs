@@ -1,0 +1,12 @@
+{
+  "id": "m02l06s02",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 6,
+  "lesson_title": "Практикум",
+  "step": 2,
+  "title": "Шаг 2: Шаг 1 из 5 — Первый коммит на main",
+  "description_html": "<p><strong>Практикум: шаг 1 из 5.</strong> Начинаем с нуля.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Создайте файл <code>app.txt</code> с содержимым <code>version 1</code>.</li>\n  <li>Добавьте его в staging area и закоммитьте с сообщением <code>Initial version</code>.</li>\n</ol>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий уже инициализирован, настроен пользователь. Вы на ветке <code>main</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается сообщение коммита в <code>main</code>:</p>\n<pre><code>Initial version\n</code></pre>",
+  "verify_code": "2646e0b7",
+  "expected_output": "Initial version\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m05l07s04",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 7,
+  "lesson_title": "Практикум",
+  "step": 4,
+  "title": "Шаг 4: Практикум — Шаг 3 из 5: три коммита в один",
+  "description_html": "<p>Это шаг 3 из 5 в практикуме «Спасение из критических ситуаций».</p>\n\n<p>Вы сделали три «черновых» коммита во время разработки. Перед отправкой в PR нужно объединить их в один чистый коммит с сообщением «Add complete feature».</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>История коммитов (от старого к новому):</p>\n<ol>\n  <li>Initial commit</li>\n  <li>WIP: step 1</li>\n  <li>WIP: step 2</li>\n  <li>WIP: step 3</li>\n</ol>\n\n<h3>Что нужно сделать</h3>\n<p>Объедините три последних коммита в один с сообщением «Add complete feature»:</p>\n<pre><code>git reset --soft HEAD~3\ngit commit -q -m \"Add complete feature\"\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет историю коммитов (от старого к новому). Ожидается:</p>\n<pre><code>Initial commit\nAdd complete feature\n</code></pre>",
+  "verify_code": "b7c36ee3",
+  "expected_output": "Initial commit\nAdd complete feature\n"
+}

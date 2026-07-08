@@ -1,0 +1,12 @@
+{
+  "id": "m06l07s04",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 7,
+  "lesson_title": "Практикум",
+  "step": 4,
+  "title": "Шаг 4: Практикум шаг 3 — autosquash fixup-коммитов",
+  "description_html": "<p><strong>Это шаг 3 из 5 в сценарии «Причёсываем feature-ветку перед PR».</strong></p>\n<p>После предыдущего шага ветка <code>feature/payments</code> содержит 4 коммита:</p>\n<ol>\n  <li><strong>Add payment form</strong></li>\n  <li><strong>Add payment validation</strong></li>\n  <li><strong>fixup! Add payment validation</strong> — опечатка в validation, нужно слить с #2</li>\n  <li><strong>Add payment docs</strong></li>\n</ol>\n\n<h3>Что нужно сделать</h3>\n<p>Применить autosquash: <code>GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash HEAD~4</code>.</p>\n<p>Флаг <code>GIT_SEQUENCE_EDITOR=true</code> означает «принять список как есть» — autosquash уже расставил fixup! правильно.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается 3 коммита (fixup слился с «Add payment validation»):</p>\n<pre><code>Add payment form\nAdd payment validation\nAdd payment docs\n</code></pre>",
+  "verify_code": "fcc9bcb6",
+  "expected_output": "Add payment form\nAdd payment validation\nAdd payment docs\n"
+}

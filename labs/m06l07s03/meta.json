@@ -1,0 +1,12 @@
+{
+  "id": "m06l07s03",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 7,
+  "lesson_title": "Практикум",
+  "step": 3,
+  "title": "Шаг 3: Практикум шаг 2 — squash WIP-коммитов",
+  "description_html": "<p><strong>Это шаг 2 из 5 в сценарии «Причёсываем feature-ветку перед PR».</strong></p>\n<p>Ветка <code>feature/payments</code> содержит 5 коммитов после Initial. Три первых — последовательные WIP-заготовки для платёжной формы:</p>\n<ol>\n  <li><strong>WIP add payment form</strong></li>\n  <li><strong>continue payment form</strong></li>\n  <li><strong>finalize payment form</strong></li>\n  <li><strong>Add payment validation</strong></li>\n  <li><strong>Add payment docs</strong></li>\n</ol>\n<p>Нужно слить первые три коммита в один с сообщением <strong>«Add payment form»</strong>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Используйте <code>GIT_SEQUENCE_EDITOR</code> для замены строк 2 и 3 на <code>squash</code>, затем <code>GIT_EDITOR</code> для записи нового сообщения.</p>\n\n<h3>Как проверяется</h3>\n<p>Будет выведена история <code>feature/payments</code> относительно main. Ожидается 3 коммита (было 5, три слились в один):</p>\n<pre><code>Add payment form\nAdd payment validation\nAdd payment docs\n</code></pre>",
+  "verify_code": "fcc9bcb6",
+  "expected_output": "Add payment form\nAdd payment validation\nAdd payment docs\n"
+}

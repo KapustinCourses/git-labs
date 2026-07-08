@@ -1,0 +1,12 @@
+{
+  "id": "m11l11s02",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 11,
+  "lesson_title": "Практикум production workflow",
+  "step": 2,
+  "title": "Шаг 2: Практикум — Шаг 1 из 6: каркас workflow с permissions",
+  "description_html": "<p>Вы строите production-grade workflow для Go-сервиса с нуля. Первый шаг — создать правильный каркас с минимальными permissions и триггером только на <code>main</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/release.yml</code> со следующей структурой:</p>\n<ul>\n  <li>Триггер: <code>push</code>, только для ветки <code>main</code> (<code>branches: [main]</code>)</li>\n  <li>Блок <code>permissions: {}</code> на уровне workflow (нулевые права по умолчанию)</li>\n  <li>Один пустой job <code>placeholder</code> на <code>ubuntu-latest</code> с шагом <code>run: echo \"placeholder\"</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что <code>permissions: {}</code> задан на уровне workflow и триггер настроен только на main.</p>",
+  "verify_code": "c5ec47ab",
+  "expected_output": "permissions_empty_ok\npush_main_ok\n"
+}

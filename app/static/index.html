@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Playground</title>
+  <!-- Собственный favicon (inline SVG) — перебивает иконку, закешированную
+       браузером для localhost от других приложений. -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1017'/%3E%3Cg fill='none' stroke='%23f0612e' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='10' cy='9' r='2.6'/%3E%3Ccircle cx='10' cy='23' r='2.6'/%3E%3Ccircle cx='22' cy='16' r='2.6'/%3E%3Cpath d='M10 11.6v8.8'/%3E%3Cpath d='M10 16h6.5a3 3 0 0 0 3-3v0' /%3E%3C/g%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/fonts.css">
+  <link rel="stylesheet" href="/static/xterm.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <!-- Тема применяется до отрисовки, чтобы не было вспышки тёмного при загрузке светлой. -->
+  <script>document.documentElement.dataset.theme = localStorage.getItem('git_playground_theme') || 'dark';</script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <circle cx="10" cy="9" r="2.6"/>
+          <circle cx="10" cy="23" r="2.6"/>
+          <circle cx="22" cy="16" r="2.6"/>
+          <path d="M10 11.6v8.8"/>
+          <path d="M10 16h6.5a3 3 0 0 0 3-3"/>
+        </g>
+      </svg>
+      <span class="logo-text">git&nbsp;playground</span>
+      <span class="logo-tag">CI/CD</span>
+    </div>
+    <div class="lab-header-title" id="currentLabTitle"><span class="prompt-sign">$</span> выберите задание</div>
+    <button class="btn-icon" id="btnTheme" title="Сменить тему" aria-label="Сменить тему">
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></g></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8 8 0 1 1 9.5 4a6.3 6.3 0 0 0 10.5 10.5z"/></svg>
+    </button>
+    <button class="btn-secondary" id="btnReset" title="Сбросить лабу к началу" disabled>
+      <svg viewBox="0 0 16 16" aria-hidden="true" width="13" height="13"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8a5.5 5.5 0 1 1 1.6 3.9"/><path d="M2.2 12.2l.5-3 3 .5"/></g></svg>
+      Сбросить
+    </button>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 16 16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></g></svg>
+        <input type="search" id="searchInput" placeholder="Поиск задания…" autocomplete="off">
+      </div>
+      <div id="labList"></div>
+    </aside>
+
+    <!-- Main area -->
+    <main>
+      <!-- Description panel -->
+      <section id="descPanel">
+        <div id="descContent">
+          <div class="placeholder">
+            <div class="placeholder-graph" aria-hidden="true">
+              <svg viewBox="0 0 120 60">
+                <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M14 46h28a12 12 0 0 0 12-12v0a12 12 0 0 1 12-12h26"/>
+                  <path d="M14 14v32"/>
+                </g>
+                <circle cx="14" cy="14" r="4.2"/>
+                <circle cx="14" cy="46" r="4.2"/>
+                <circle cx="106" cy="22" r="4.2"/>
+              </svg>
+            </div>
+            <h2>Лаборатории Git&nbsp;+&nbsp;CI/CD</h2>
+            <p>Выберите задание из списка слева — откроется описание и терминал с уже подготовленным репозиторием.</p>
+            <p>Когда выполните, нажмите <strong>«Проверить»</strong> и введите полученный код в ответ на&nbsp;Stepik.</p>
+          </div>
+        </div>
+        <div id="verifyBar" class="hidden">
+          <button class="btn-primary" id="btnVerify">
+            <svg viewBox="0 0 16 16" aria-hidden="true" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 8.5l3.2 3.2L13 5"/></svg>
+            Проверить
+          </button>
+          <div id="verifyResult" class="hidden">
+            <span class="verify-label">Код для Stepik</span>
+            <code id="verifyCode"></code>
+            <button class="btn-copy" id="btnCopy" title="Скопировать код">Копировать</button>
+          </div>
+          <div id="verifyFail" class="hidden">
+            <span class="verify-fail-label">Задание ещё не выполнено — код появится после правильного решения.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Terminal -->
+      <section id="termSection">
+        <div class="term-bar">
+          <span class="term-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="term-bar-title">student@git-playground:&nbsp;~/repo</span>
+          <span class="term-bar-hint">bash</span>
+        </div>
+        <div id="terminalContainer"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/xterm.js"></script>
+  <script src="/static/addon-fit.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

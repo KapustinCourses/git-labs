@@ -1,0 +1,12 @@
+{
+  "id": "m09l06s03",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 6,
+  "lesson_title": "Практикум plumbing",
+  "step": 3,
+  "title": "Шаг 3: Практикум — Шаг 2: создать tree из blob'а",
+  "description_html": "<p><strong>Это шаг 2 из 5 в практикуме «Собрать коммит руками».</strong></p>\n\n<p>Blob создан. Теперь нужно собрать tree-объект, который описывает «директорию» с одним файлом — и этот tree станет снимком состояния проекта в первом коммите.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Пустой репозиторий. В header уже создан blob со строкой <code>Hello, plumbing!</code>. Его sha хранится в переменной <code>BLOB</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте tree с одним файлом <code>hello.txt</code>, ссылающимся на blob <code>$BLOB</code>. Используйте <code>git mktree</code>. Выведите первые 7 символов sha созданного tree.</p>\n\n<h3>Как проверяется</h3>\n<p>После выполнения команды должно быть выведено содержимое tree — имена файлов. Ожидается:</p>\n<pre><code>hello.txt\n</code></pre>",
+  "verify_code": "0b182d7b",
+  "expected_output": "hello.txt\n"
+}

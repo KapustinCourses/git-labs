@@ -1,0 +1,12 @@
+{
+  "id": "m08l02s13",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 2,
+  "lesson_title": "cherry-pick углублённо",
+  "step": 13,
+  "title": "Шаг 13: Cherry-pick -n и объединение в один коммит",
+  "description_html": "<p>На ветке <code>main</code> есть три отдельных коммита с мелкими фиксами. Нужно перенести их на ветку <code>release</code>, но объединить в <strong>один</strong> коммит с сообщением «Backport fixes».</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Ветка <code>release</code> содержит «Initial commit». На <code>main</code> — «Initial commit», «Fix auth», «Fix logging», «Fix timeout». Текущая ветка — <code>release</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Применить все три коммита фиксов с помощью <code>cherry-pick -n</code> (без создания коммитов)</li>\n  <li>Сделать один итоговый коммит с сообщением <code>Backport fixes</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет список сообщений коммитов ветки <code>release</code>. Ожидается ровно два коммита:</p>\n<pre><code>Initial commit\nBackport fixes\n</code></pre>",
+  "verify_code": "4eb34989",
+  "expected_output": "Initial commit\nBackport fixes\n"
+}

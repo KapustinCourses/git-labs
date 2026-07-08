@@ -1,0 +1,12 @@
+{
+  "id": "m06l02s11",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 2,
+  "lesson_title": "Базовый rebase",
+  "step": 11,
+  "title": "Шаг 11: Rebase с конфликтом — отменить через abort",
+  "description_html": "<p>Иногда после начала rebase лучше отменить его и вернуться в исходное состояние. В репозитории <code>main</code> и <code>feature</code> правят одну и ту же строку — при rebase гарантированно возникнет конфликт.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Попробуйте выполнить <code>git rebase main</code>. Когда возникнет конфликт — отмените rebase командой <code>git rebase --abort</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>После ваших команд будет выведен статус рабочей директории и история ветки <code>feature</code>. Репо должно вернуться в исходное состояние:</p>\n<pre><code>Initial commit\nAdd feature\n</code></pre>\n<p>Дополнительно статус должен быть чистым (пустая строка от <code>git status --porcelain</code>).</p>",
+  "verify_code": "ceed6f11",
+  "expected_output": "Initial commit\nAdd feature\n"
+}

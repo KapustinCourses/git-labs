@@ -1,0 +1,12 @@
+{
+  "id": "m02l04s10",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 4,
+  "lesson_title": "Слияние three-way",
+  "step": 10,
+  "title": "Шаг 10: Выполнить three-way merge",
+  "description_html": "<p>В репозитории расходящийся граф: от общего предка («Base commit») ветка <code>main</code> ушла на один коммит («Main work» — изменение файла <code>main.txt</code>), а ветка <code>feature</code> — на один коммит («Feature work» — изменение файла <code>feature.txt</code>). Файлы разные, конфликта нет.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Переключитесь на <code>main</code> и слейте <code>feature</code> с сообщением merge-коммита <code>Merge feature into main</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается граф истории с merge-коммитом («ромб»):</p>\n<pre><code>*   Merge feature into main\n|\\\n| * Feature work\n* | Main work\n|/\n* Base commit\n</code></pre>",
+  "verify_code": "a7ff135d",
+  "expected_output": "*   Merge feature into main\n|\\  \n| * Feature work\n* | Main work\n|/  \n* Base commit\n"
+}

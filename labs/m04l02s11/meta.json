@@ -1,0 +1,12 @@
+{
+  "id": "m04l02s11",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 2,
+  "lesson_title": "git diff и git show",
+  "step": 11,
+  "title": "Шаг 11: Diff ветки relative to main",
+  "description_html": "<p>Вы работаете над веткой <code>feature/payment</code>, которая была создана от <code>main</code>. С тех пор <code>main</code> получил ещё один коммит, а ваша ветка — два своих.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>История выглядит так:</p>\n<pre><code>A (Initial)  ← общий предок\n├── B (Add payment module)   ← feature/payment\n│   └── C (Fix payment validation)  ← feature/payment HEAD\n└── D (Update README)        ← main HEAD\n</code></pre>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите статистику (<code>--stat</code>) diff от общего предка до вершины <code>feature/payment</code>. Используйте синтаксис с тремя точками: <code>git diff main...HEAD</code>.</p>\n<p>Нужно выводить только имена файлов и статистику (флаг <code>--name-only</code>), без построчного diff.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод имён изменённых файлов (в порядке появления):</p>\n<pre><code>payment.py\n</code></pre>",
+  "verify_code": "e2eeb541",
+  "expected_output": "payment.py\n"
+}

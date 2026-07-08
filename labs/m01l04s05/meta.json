@@ -1,0 +1,12 @@
+{
+  "id": "m01l04s05",
+  "module": 1,
+  "module_title": "Введение в Git",
+  "lesson": 4,
+  "lesson_title": "Практикум",
+  "step": 5,
+  "title": "Шаг 5: Практикум — Шаг 4 из 5: добавить код проекта",
+  "description_html": "<p>Это шаг 4 из 5 в сценарии «Стартовый проект». В репозитории уже два коммита: «Add README» и «Add gitignore for Python». В рабочей директории лежит файл <code>todo.py</code> с кодом. Пора добавить его в репозиторий.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий с двумя коммитами. В рабочей директории: <code>todo.py</code>, <code>README.md</code> (закоммичен), <code>.gitignore</code> (закоммичен). Файл <code>todo.py</code> не закоммичен.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Добавьте <code>todo.py</code> в staging и создайте коммит с сообщением <code>Add initial todo CLI</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>После ваших команд проверяющий код выполнит:</p>\n<pre><code>git log --pretty='%s' --reverse\ngit ls-files | LC_ALL=C sort\n</code></pre>\n<p>Ожидаемый вывод:</p>\n<pre><code>Add README\nAdd gitignore for Python\nAdd initial todo CLI\n.gitignore\nREADME.md\ntodo.py\n</code></pre>",
+  "verify_code": "92cfa929",
+  "expected_output": "Add README\nAdd gitignore for Python\nAdd initial todo CLI\n.gitignore\nREADME.md\ntodo.py\n"
+}

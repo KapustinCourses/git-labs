@@ -1,0 +1,12 @@
+{
+  "id": "m08l08s06",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 8,
+  "lesson_title": "Практикум",
+  "step": 6,
+  "title": "Шаг 6: Практикум — Шаг 5 из 6: Pre-commit hook против WIP-коммитов",
+  "description_html": "<p><em>Это шаг 5 из 6 в практикуме «Параллельная работа и hotfix».</em></p>\n\n<p>Команда договорилась: коммиты с сообщением, начинающимся с «WIP», не должны попадать в историю. Нужно автоматизировать это через commit-msg hook.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий с одним коммитом «Initial commit».</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Создайте <code>.git/hooks/commit-msg</code>, проверяющий что первая строка сообщения не начинается с «WIP»</li>\n  <li>Сделайте хук исполняемым</li>\n  <li>Проверьте: попытка закоммитить с «WIP: test» должна провалиться</li>\n  <li>Закоммитьте с сообщением <code>Add feature code</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет сообщения коммитов. Ожидается:</p>\n<pre><code>Initial commit\nAdd feature code\n</code></pre>",
+  "verify_code": "686f81d9",
+  "expected_output": "Initial commit\nAdd feature code\n"
+}

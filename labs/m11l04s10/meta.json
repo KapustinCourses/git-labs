@@ -1,0 +1,12 @@
+{
+  "id": "m11l04s10",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 4,
+  "lesson_title": "OIDC безсекретный деплой",
+  "step": 10,
+  "title": "Шаг 10: Workflow с OIDC для AWS deploy",
+  "description_html": "<p>Вы переходите от долгоживущих AWS credentials к OIDC. Это значит — никакого <code>AWS_ACCESS_KEY_ID</code> в secrets, только временный JWT-токен от GitHub.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/oidc-deploy.yml</code> с:</p>\n<ul>\n  <li>Триггером <code>push</code></li>\n  <li>Job <code>deploy</code> на <code>ubuntu-latest</code></li>\n  <li>Блоком <code>permissions</code> на уровне job: <code>id-token: write</code> и <code>contents: read</code></li>\n  <li>Шагами: <code>actions/checkout@v6</code>, <code>aws-actions/configure-aws-credentials@v4</code> с <code>role-to-assume</code> и <code>aws-region</code>, затем deploy-шаг</li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что в job <code>deploy</code> есть <code>permissions.id-token: write</code> и используется <code>aws-actions/configure-aws-credentials@v4</code>.</p>",
+  "verify_code": "2544b60f",
+  "expected_output": "id_token_write_ok\naws_credentials_ok\n"
+}

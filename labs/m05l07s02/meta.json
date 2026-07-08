@@ -1,0 +1,12 @@
+{
+  "id": "m05l07s02",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 7,
+  "lesson_title": "Практикум",
+  "step": 2,
+  "title": "Шаг 2: Практикум — Шаг 1 из 5: забытый файл в коммите",
+  "description_html": "<p>Это шаг 1 из 5 в практикуме «Спасение из критических ситуаций».</p>\n\n<p>Вы закоммитили «Add config» и сразу заметили: в коммит не попал важный файл <code>forgotten.txt</code>. Коммит ещё не запушен.</p>\n\n<h3>Стартовое состояние репо</h3>\n<ul>\n  <li>Коммит «Add config» с файлом <code>config.yaml</code></li>\n  <li>Файл <code>forgotten.txt</code> существует в рабочей директории, но не в коммите</li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Добавьте <code>forgotten.txt</code> к последнему коммиту, не меняя его сообщение:</p>\n<pre><code>git add forgotten.txt\ngit commit --amend --no-edit -q\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет список файлов в последнем коммите. Ожидается:</p>\n<pre><code>config.yaml\nforgotten.txt\n</code></pre>",
+  "verify_code": "ac29e3a7",
+  "expected_output": "config.yaml\nforgotten.txt\n"
+}

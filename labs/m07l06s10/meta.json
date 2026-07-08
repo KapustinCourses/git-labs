@@ -1,0 +1,12 @@
+{
+  "id": "m07l06s10",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 6,
+  "lesson_title": "Конфликты при cherry-pick и hotfix",
+  "step": 10,
+  "title": "Шаг 10: Cherry-pick с конфликтом — разрешить и продолжить",
+  "description_html": "<p>Вы переносите коммит-фикс из ветки <code>main</code> в ветку <code>release</code>, но коммит правит строку, которая в <code>release</code> уже изменена — возникает конфликт. Нужно разрешить конфликт и завершить cherry-pick.</p>\n\n<h3>Начальное состояние</h3>\n<ul>\n  <li>В <code>main</code>: файл <code>version.txt</code> содержит <code>version=2.1-hotfix</code></li>\n  <li>В <code>release</code>: тот же файл содержит <code>version=2.0-release</code></li>\n  <li>Cherry-pick уже запущен и остановлен из-за конфликта</li>\n  <li>Правильное разрешение: принять версию из main — <code>version=2.1-hotfix</code></li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Запишите правильное содержимое в <code>version.txt</code> — <code>version=2.1-hotfix</code></li>\n  <li>Добавьте файл в staging: <code>git add version.txt</code></li>\n  <li>Продолжите cherry-pick: <code>git cherry-pick --continue --no-edit</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После завершения проверяющий код выведет историю коммитов в <code>release</code> и содержимое <code>version.txt</code>. Ожидается:</p>\n<pre><code>Initial commit\nAdd release version\nApply hotfix version\nversion=2.1-hotfix\n</code></pre>",
+  "verify_code": "d7fa2c37",
+  "expected_output": "Initial commit\nAdd release version\nApply hotfix version\nversion=2.1-hotfix\n"
+}

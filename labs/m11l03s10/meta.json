@@ -1,0 +1,12 @@
+{
+  "id": "m11l03s10",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 3,
+  "lesson_title": "Secrets и environments",
+  "step": 10,
+  "title": "Шаг 10: Секрет через переменную окружения",
+  "description_html": "<p>Вам нужно использовать токен в CI безопасно — не вставлять его напрямую в команду <code>run</code>, а передавать через переменную окружения (env). Это защищает от случайной утечки в логи процесса.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/deploy.yml</code> с:</p>\n<ul>\n  <li>Триггером <code>push</code></li>\n  <li>Job <code>deploy</code> на <code>ubuntu-latest</code></li>\n  <li>Шагом, который использует секрет <code>MY_TOKEN</code> через <code>env</code>, а не напрямую в <code>run</code>:</li>\n</ul>\n<pre><code>- name: Deploy\n  env:\n    TOKEN: ${{ secrets.MY_TOKEN }}\n  run: echo \"Deploying with token\"\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что секрет используется через <code>env</code> в шаге, а не встроен напрямую в строку <code>run</code>.</p>",
+  "verify_code": "a0c495ed",
+  "expected_output": "secret_in_env_ok\n"
+}

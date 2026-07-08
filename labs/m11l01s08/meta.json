@@ -1,0 +1,12 @@
+{
+  "id": "m11l01s08",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 1,
+  "lesson_title": "Matrix advanced и артефакты",
+  "step": 8,
+  "title": "Шаг 8: Matrix и загрузка артефакта",
+  "description_html": "<p>Вы настраиваете CI-сборку для Node.js библиотеки, которая должна работать на нескольких операционных системах и версиях Node.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/ci.yml</code> со следующей структурой:</p>\n<ul>\n  <li>Триггер: <code>push</code></li>\n  <li>Job <code>build</code> с matrix: <code>os: [ubuntu-latest, macos-latest, windows-latest]</code> и <code>node: [18, 20, 22]</code></li>\n  <li>Параметр <code>fail-fast: false</code></li>\n  <li><code>runs-on: ${{ matrix.os }}</code></li>\n  <li>Шаги: <code>actions/checkout@v6</code>, <code>actions/setup-node@v6</code> с <code>node-version: ${{ matrix.node }}</code>, и загрузка артефакта через <code>actions/upload-artifact@v4</code> с именем <code>build-${{ matrix.os }}-${{ matrix.node }}</code> и путём <code>dist/</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд проверяющий код распарсит <code>.github/workflows/ci.yml</code> и проверит:</p>\n<ul>\n  <li>Наличие matrix с os и node</li>\n  <li><code>fail-fast: false</code> в strategy</li>\n  <li>Использование <code>actions/upload-artifact@v4</code></li>\n</ul>",
+  "verify_code": "7b5974e8",
+  "expected_output": "matrix_ok\nfail_fast_ok\nupload_artifact_ok\n"
+}

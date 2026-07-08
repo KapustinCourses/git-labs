@@ -1,0 +1,12 @@
+{
+  "id": "m05l03s10",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 3,
+  "lesson_title": "git restore",
+  "step": 10,
+  "title": "Шаг 10: Убрать файл из staging, сохранив правки",
+  "description_html": "<p>Разработчик сделал <code>git add app.txt</code>, добавив файл в staging. Передумал — хочет убрать файл из staging, но сохранить правки в рабочей директории.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит коммит с <code>app.txt</code> (содержимое: «initial»). В рабочей директории файл изменён (содержимое: «updated») и добавлен в staging.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Уберите <code>app.txt</code> из staging, оставив правки в рабочей директории:</p>\n<pre><code>git restore --staged app.txt\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>После выполнения вашей команды проверяющий код выведет статус репозитория. Ожидается, что файл будет показан как изменённый, но не подготовленный к коммиту:</p>\n<pre><code> M app.txt\n</code></pre>",
+  "verify_code": "8b733b1c",
+  "expected_output": " M app.txt\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m10l08s07",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 8,
+  "lesson_title": "Практикум CI workflow для Go проекта",
+  "step": 7,
+  "title": "Шаг 7: Практикум — Шаг 6 из 6: финальная валидация workflow",
+  "description_html": "<p><em>Это шаг 6 из 6 в практикуме «CI workflow для Go-проекта».</em></p>\n\n<p>Предыдущее состояние: полный workflow с тремя jobs (lint, test, build), кэшем и зависимостью через needs. Последний шаг — убедиться, что всё корректно.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Запустите финальную проверку готового workflow. Код уже создан в предыдущих шагах — осталось только проверить его через <code>actionlint</code> (если есть) или <code>python3 yaml.safe_load</code> и вывести <code>OK</code>.</p>\n\n<details>\n<summary>Подсказка: финальный workflow</summary>\n<pre><code>name: CI\non: [push, pull_request]\njobs:\n  lint:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v6\n      - uses: actions/setup-go@v6\n        with:\n          go-version: '1.22'\n          cache: true\n      - uses: golangci/golangci-lint-action@v9\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v6\n      - uses: actions/setup-go@v6\n        with:\n          go-version: '1.22'\n          cache: true\n      - run: go test ./...\n  build:\n    needs: [lint, test]\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v6\n      - uses: actions/setup-go@v6\n        with:\n          go-version: '1.22'\n          cache: true\n      - run: go build -o bin/app .\n</code></pre>\n</details>\n\n<h3>Как проверяется</h3>\n<p>Ожидаемый вывод:</p>\n<pre><code>OK</code></pre>",
+  "verify_code": "a12b7cb4",
+  "expected_output": "OK\n"
+}

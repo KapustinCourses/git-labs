@@ -1,0 +1,12 @@
+{
+  "id": "m10l05s14",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 5,
+  "lesson_title": "Контексты выражения и переменные",
+  "step": 14,
+  "title": "Шаг 14: Безопасный паттерн — интерполяция через env",
+  "description_html": "<p>Прямая интерполяция значений из GitHub Events в shell-команду открывает уязвимость script injection. Безопасный паттерн — передавать значение через env-переменную.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/ci.yml</code> со step, который:</p>\n<ul>\n  <li>Устанавливает env-переменную <code>COMMIT_MSG</code> через <code>env:</code> блок с значением <code>${{ github.event.head_commit.message }}</code></li>\n  <li>В <code>run:</code> использует переменную через <code>$COMMIT_MSG</code> (shell-синтаксис), а не через выражение <code>${{ }}</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет:</p>\n<pre><code>has_env_block=True\nrun_uses_shell_var=True\nrun_no_expression=True</code></pre>",
+  "verify_code": "046b8024",
+  "expected_output": "has_env_block=True\nrun_uses_shell_var=True\nrun_no_expression=True\n"
+}

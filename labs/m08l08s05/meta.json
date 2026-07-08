@@ -1,0 +1,12 @@
+{
+  "id": "m08l08s05",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 8,
+  "lesson_title": "Практикум",
+  "step": 5,
+  "title": "Шаг 5: Практикум — Шаг 4 из 6: Cherry-pick hotfix в release",
+  "description_html": "<p><em>Это шаг 4 из 6 в практикуме «Параллельная работа и hotfix».</em></p>\n\n<p>Hotfix готов на ветке <code>hotfix/csrf</code>. Нужно перенести его коммит в ветку <code>release/2024-Q1</code> с пометкой для аудита.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Ветки <code>main</code>, <code>feature</code>, <code>hotfix/csrf</code> (с коммитом «Fix CSRF vulnerability»), <code>release/2024-Q1</code>. Текущая ветка — основная директория.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Переключитесь на ветку <code>release/2024-Q1</code></li>\n  <li>Выполните cherry-pick коммита «Fix CSRF vulnerability» с флагом <code>-x</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет список сообщений коммитов ветки <code>release/2024-Q1</code>. Ожидается:</p>\n<pre><code>Initial commit\nFix CSRF vulnerability\n</code></pre>",
+  "verify_code": "97215bf8",
+  "expected_output": "Initial commit\nFix CSRF vulnerability\n"
+}

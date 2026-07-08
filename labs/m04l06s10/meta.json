@@ -1,0 +1,12 @@
+{
+  "id": "m04l06s10",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 6,
+  "lesson_title": "git reflog спасательный круг",
+  "step": 10,
+  "title": "Шаг 10: Отменить merge через ORIG_HEAD",
+  "description_html": "<p>Вы выполнили merge ветки <code>feature/sidebar</code> в <code>main</code>, но передумали и хотите откатить его. Git сохранил состояние до merge в <code>ORIG_HEAD</code>.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>История <code>main</code> до merge: «Initial commit», «Add main logic». Потом слита ветка <code>feature/sidebar</code> с коммитом «Add sidebar». Текущий HEAD — merge-коммит «Merge feature/sidebar into main».</p>\n\n<h3>Что нужно сделать</h3>\n<p>Откатите merge через <code>git reset --hard ORIG_HEAD</code>. После отмены выведите сообщения всех коммитов от старого к новому.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод (без merge-коммита):</p>\n<pre><code>Initial commit\nAdd main logic\n</code></pre>",
+  "verify_code": "e76103da",
+  "expected_output": "Initial commit\nAdd main logic\n"
+}

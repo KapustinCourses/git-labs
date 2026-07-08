@@ -1,0 +1,12 @@
+{
+  "id": "m05l02s08",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 2,
+  "lesson_title": "git commit amend",
+  "step": 8,
+  "title": "Шаг 8: Добавить забытый файл к последнему коммиту",
+  "description_html": "<p>Разработчик создал коммит «Add login», но забыл добавить в него файл <code>login.css</code>. Файл уже существует в рабочей директории, но не вошёл в коммит.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит один коммит «Add login» с файлами <code>login.html</code> и <code>login.js</code>. В рабочей директории лежит неотслеживаемый файл <code>login.css</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Добавьте <code>login.css</code> к последнему коммиту, не меняя его сообщение. Используйте команды:</p>\n<pre><code>git add login.css\ngit commit --amend --no-edit\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд проверяющий код выведет сообщение последнего коммита и список файлов в нём. Ожидается:</p>\n<pre><code>Add login\nlogin.css\nlogin.html\nlogin.js\n</code></pre>",
+  "verify_code": "5fb49e5f",
+  "expected_output": "Add login\nlogin.css\nlogin.html\nlogin.js\n"
+}

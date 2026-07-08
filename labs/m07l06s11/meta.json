@@ -1,0 +1,12 @@
+{
+  "id": "m07l06s11",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 6,
+  "lesson_title": "Конфликты при cherry-pick и hotfix",
+  "step": 11,
+  "title": "Шаг 11: Hotfix-сценарий: cherry-pick из main в release + push",
+  "description_html": "<p>Классический hotfix-сценарий: в production деплоена ветка <code>release/2024-Q1</code>. Разработка ушла вперёд в <code>main</code>. На <code>main</code> найден и исправлен критический баг — нужно перенести этот коммит в <code>release/2024-Q1</code> и выполнить push.</p>\n\n<h3>Начальное состояние</h3>\n<ul>\n  <li>Есть «удалённый» bare-репозиторий (эмуляция origin)</li>\n  <li>На нём есть ветки <code>main</code> и <code>release/2024-Q1</code></li>\n  <li>На <code>main</code> последний коммит — «Fix security vulnerability»</li>\n  <li>SHA этого коммита записан в файле <code>/tmp/fix_sha.txt</code></li>\n  <li>Вы уже находитесь в локальном клоне репозитория на ветке <code>release/2024-Q1</code></li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Выполните cherry-pick коммита с фиксом (SHA в <code>/tmp/fix_sha.txt</code>)</li>\n  <li>Выполните push ветки <code>release/2024-Q1</code> на <code>origin</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код проверит историю коммитов на удалённой ветке <code>release/2024-Q1</code>. Ожидается:</p>\n<pre><code>Initial commit\nAdd Q1 release notes\nFix security vulnerability\n</code></pre>",
+  "verify_code": "40135ff3",
+  "expected_output": "Initial commit\nAdd Q1 release notes\nFix security vulnerability\n"
+}

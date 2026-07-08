@@ -1,0 +1,12 @@
+{
+  "id": "m05l06s12",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 6,
+  "lesson_title": "Force push",
+  "step": 12,
+  "title": "Шаг 12: Rebase feature-ветки и force-with-lease push",
+  "description_html": "<p>Классический сценарий: вы сделали PR с ветки <code>feature/auth</code>. После этого в <code>main</code> добавили новые коммиты. Вы сделали <code>rebase feature/auth</code> на новый <code>main</code> — теперь SHA коммитов изменились. Нужно обновить удалённую ветку через <code>--force-with-lease</code>.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>В bare-репо («сервер») есть:</p>\n<ul>\n  <li>Ветка <code>main</code> с коммитами «Initial commit» и «Update main»</li>\n  <li>Ветка <code>feature/auth</code> с коммитом «Add auth», ответвлённым от старого <code>main</code></li>\n</ul>\n<p>Локально уже выполнен <code>git rebase main</code> на ветке <code>feature/auth</code> — SHA коммита изменился.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Обновите удалённую ветку <code>feature/auth</code>:</p>\n<pre><code>git push --force-with-lease origin feature/auth -q\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>После выполнения вашей команды проверяющий код выведет историю ветки <code>feature/auth</code> на сервере (от старого к новому). Ожидается:</p>\n<pre><code>Initial commit\nUpdate main\nAdd auth\n</code></pre>",
+  "verify_code": "b7282752",
+  "expected_output": "Initial commit\nUpdate main\nAdd auth\n"
+}

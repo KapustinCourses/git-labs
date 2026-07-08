@@ -1,0 +1,12 @@
+{
+  "id": "m11l02s12",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 2,
+  "lesson_title": "Кэширование и оптимизация",
+  "step": 12,
+  "title": "Шаг 12: Docker сборка с кэшем GHA",
+  "description_html": "<p>Вы хотите ускорить Docker-сборку в CI, используя встроенный кэш GitHub Actions (GHA). Без кэша каждая сборка занимает 5 минут, с кэшем — 30 секунд.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/docker.yml</code> с:</p>\n<ul>\n  <li>Триггером <code>push</code></li>\n  <li>Job <code>docker</code> на <code>ubuntu-latest</code></li>\n  <li>Шагами: <code>actions/checkout@v6</code>, <code>docker/setup-buildx-action@v3</code>, <code>docker/build-push-action@v6</code> с:\n    <ul>\n      <li><code>context: .</code></li>\n      <li><code>push: false</code></li>\n      <li><code>cache-from: type=gha</code></li>\n      <li><code>cache-to: type=gha,mode=max</code></li>\n    </ul>\n  </li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что используется <code>docker/build-push-action@v6</code> с параметрами <code>cache-from: type=gha</code> и <code>cache-to</code> содержащим <code>type=gha</code>.</p>",
+  "verify_code": "ef89948f",
+  "expected_output": "buildx_ok\nbuild_push_ok\ncache_from_ok\ncache_to_ok\n"
+}

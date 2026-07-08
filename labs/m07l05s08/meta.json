@@ -1,0 +1,12 @@
+{
+  "id": "m07l05s08",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 5,
+  "lesson_title": "git rerere",
+  "step": 8,
+  "title": "Шаг 8: Включить rerere глобально",
+  "description_html": "<p>Вы хотите включить автоматическое запоминание разрешений конфликтов для всех своих репозиториев.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Включите <code>rerere</code> глобально через <code>git config</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет значение настройки. Ожидается:</p>\n<pre><code>true\n</code></pre>",
+  "verify_code": "a17fcf0a",
+  "expected_output": "true\n"
+}

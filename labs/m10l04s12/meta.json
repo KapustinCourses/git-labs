@@ -1,0 +1,12 @@
+{
+  "id": "m10l04s12",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 4,
+  "lesson_title": "Jobs dependencies и matrix",
+  "step": 12,
+  "title": "Шаг 12: Matrix workflow на три версии Node.js",
+  "description_html": "<p>Matrix strategy позволяет запустить один и тот же job на нескольких конфигурациях одновременно. Это ключевой инструмент для проверки совместимости.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/ci.yml</code> с job <code>test</code>, который использует matrix по трём версиям Node.js: 18, 20, 22.</p>\n\n<h3>Требования</h3>\n<ul>\n  <li>Job <code>test</code> с полем <code>strategy.matrix.node</code></li>\n  <li>Три значения: 18, 20, 22</li>\n  <li>Step с <code>actions/setup-node@v6</code>, использующий <code>${{ matrix.node }}</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет:</p>\n<pre><code>matrix_node=[18, 20, 22]\nuses_setup_node=True</code></pre>",
+  "verify_code": "766dbc45",
+  "expected_output": "matrix_node=[18, 20, 22]\nuses_setup_node=True\n"
+}

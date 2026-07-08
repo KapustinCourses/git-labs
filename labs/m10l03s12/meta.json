@@ -1,0 +1,12 @@
+{
+  "id": "m10l03s12",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 3,
+  "lesson_title": "События и фильтры триггеров",
+  "step": 12,
+  "title": "Шаг 12: Workflow с workflow_dispatch и input",
+  "description_html": "<p><code>workflow_dispatch</code> позволяет запускать workflow вручную из UI GitHub, передавая параметры. Это удобно для ручных деплоев и ad-hoc задач.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/deploy.yml</code> с триггером <code>workflow_dispatch</code> и одним input-параметром <code>environment</code> (тип: choice, варианты: staging и production).</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код прочитает YAML и выведет:</p>\n<pre><code>has_dispatch=True\ninput_name=environment\ninput_type=choice</code></pre>",
+  "verify_code": "82654f2f",
+  "expected_output": "has_dispatch=True\ninput_name=environment\ninput_type=choice\n"
+}

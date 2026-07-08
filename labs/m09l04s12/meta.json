@@ -1,0 +1,12 @@
+{
+  "id": "m09l04s12",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 4,
+  "lesson_title": "Index packfiles gc",
+  "step": 12,
+  "title": "Шаг 12: Статистика объектов через count-objects",
+  "description_html": "<p>Команда <code>git count-objects -v</code> выводит подробную статистику о количестве и размере объектов в репозитории. Это полезный инструмент для диагностики размера репо до и после gc.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит серию из пяти коммитов. Все объекты — loose (ещё не упакованы через gc).</p>\n\n<h3>Что нужно сделать</h3>\n<p>Получите статистику объектов и выведите значения полей <code>count</code> (количество loose объектов) и <code>packs</code> (количество packfiles):</p>\n<pre><code>git count-objects -v | grep -E '^(count|packs):'\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>До запуска gc все объекты loose, поэтому <code>packs</code> должен быть 0, а <code>count</code> — положительным числом. Для пяти коммитов каждый даёт blob + tree + commit = 15 объектов в loose-форме. Пример ожидаемого вывода:</p>\n<pre><code>count: 15\npacks: 0\n</code></pre>",
+  "verify_code": "e5a79344",
+  "expected_output": "count: 15\npacks: 0\n"
+}

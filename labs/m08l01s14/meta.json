@@ -1,0 +1,12 @@
+{
+  "id": "m08l01s14",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 1,
+  "lesson_title": "git stash",
+  "step": 14,
+  "title": "Шаг 14: Создать ветку из stash",
+  "description_html": "<p>В stash хранится правка. С тех пор ветка <code>main</code> продвинулась вперёд. Применить stash напрямую будет сложно из-за потенциального конфликта. Воспользуйтесь командой <code>git stash branch</code>, чтобы создать отдельную ветку из коммита, на котором был сделан stash, и сразу применить правки там.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий с одним коммитом. В стеке stash лежит одна запись <code>stash@{0}</code> с изменением файла <code>feature.py</code>. На текущей ветке уже есть новый коммит после создания stash.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте ветку <code>feature/saved</code> из stash и убедитесь, что:</p>\n<ul>\n  <li>текущая ветка — <code>feature/saved</code></li>\n  <li>рабочая директория «грязная» (изменения из stash применены)</li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет имя текущей ветки и статус рабочей директории. Ожидается:</p>\n<pre><code>feature/saved\nM feature.py\n</code></pre>",
+  "verify_code": "65e5d08d",
+  "expected_output": "feature/saved\nM feature.py\n"
+}

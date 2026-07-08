@@ -1,0 +1,12 @@
+{
+  "id": "m05l07s03",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 7,
+  "lesson_title": "Практикум",
+  "step": 3,
+  "title": "Шаг 3: Практикум — Шаг 2 из 5: отмена правок в файле",
+  "description_html": "<p>Это шаг 2 из 5 в практикуме «Спасение из критических ситуаций».</p>\n\n<p>Вы случайно испортили файл <code>config.yaml</code> — добавили лишние настройки. Файл ещё не в staging. Нужно вернуть его к версии из HEAD.</p>\n\n<h3>Стартовое состояние репо</h3>\n<ul>\n  <li>Коммит с файлом <code>config.yaml</code> (содержимое: «host: localhost»)</li>\n  <li>В рабочей директории <code>config.yaml</code> изменён — содержит лишние строки</li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Верните <code>config.yaml</code> к версии из HEAD:</p>\n<pre><code>git restore config.yaml\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет содержимое файла. Ожидается:</p>\n<pre><code>host: localhost\n</code></pre>",
+  "verify_code": "a429b272",
+  "expected_output": "host: localhost\n"
+}

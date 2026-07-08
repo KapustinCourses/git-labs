@@ -1,0 +1,12 @@
+{
+  "id": "m09l01s13",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 1,
+  "lesson_title": "Workflow модели",
+  "step": 13,
+  "title": "Шаг 13: Sparse-checkout — работать только с частью дерева",
+  "description_html": "<p>В monorepo с большим количеством директорий разработчик часто работает только с одной частью дерева. Инструмент <code>git sparse-checkout</code> позволяет ограничить рабочую директорию выбранными поддиректориями, не трогая остальное содержимое.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий уже клонирован в директорию <code>work/</code>. В нём есть три директории верхнего уровня: <code>services/</code>, <code>libs/</code> и <code>docs/</code>, а также файл <code>README.md</code> в корне.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Настройте sparse-checkout в <code>work/</code> так, чтобы в рабочей директории отображалась только директория <code>services/</code> (и файлы корневого уровня, которые cone-режим включает автоматически).</p>\n\n<ol>\n  <li>Перейдите в директорию <code>work</code>.</li>\n  <li>Инициализируйте sparse-checkout в cone-режиме: <code>git sparse-checkout init --cone</code></li>\n  <li>Выберите директорию: <code>git sparse-checkout set services</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд будет выведен список директорий и файлов верхнего уровня в <code>work/</code> (только директории). Ожидается:</p>\n<pre><code>services\n</code></pre>",
+  "verify_code": "45677038",
+  "expected_output": "docs\nlibs\nservices\n"
+}

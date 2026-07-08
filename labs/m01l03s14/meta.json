@@ -1,0 +1,12 @@
+{
+  "id": "m01l03s14",
+  "module": 1,
+  "module_title": "Введение в Git",
+  "lesson": 3,
+  "lesson_title": "gitignore",
+  "step": 14,
+  "title": "Шаг 14: Найти правило, которое игнорирует файл",
+  "description_html": "<p>Иногда файл оказывается проигнорированным, но непонятно, какое именно правило за это отвечает. Команда <code>git check-ignore -v</code> показывает, из какого <code>.gitignore</code> и по какому паттерну файл был исключён.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий с файлом <code>.gitignore</code>, содержащим два правила: <code>*.log</code> и <code>tmp/</code>. Коммит с <code>.gitignore</code> уже создан. В рабочей директории есть файл <code>server.log</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните команду <code>git check-ignore -v server.log</code>, чтобы узнать, какое правило игнорирует этот файл.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код смотрит на вывод вашей команды. Ожидается строка вида:</p>\n<pre><code>.gitignore:1:*.log\tserver.log\n</code></pre>",
+  "verify_code": "81ec5cbd",
+  "expected_output": ".gitignore:1:*.log\tserver.log\n"
+}

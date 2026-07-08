@@ -1,0 +1,12 @@
+{
+  "id": "m09l03s11",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 3,
+  "lesson_title": "Refs и HEAD",
+  "step": 11,
+  "title": "Шаг 11: Определить текущую ветку через symbolic-ref",
+  "description_html": "<p>Команда <code>git symbolic-ref HEAD</code> возвращает полный путь ref, на который указывает HEAD. Это надёжный способ узнать текущую ветку в скриптах — в отличие от <code>git branch --show-current</code>, который работает только в porcelain-режиме.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий с одним коммитом «Initial commit». Текущая ветка называется <code>feature/login</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Узнайте, на какую ветку указывает HEAD, используя plumbing-команду <code>git symbolic-ref HEAD</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается:</p>\n<pre><code>refs/heads/feature/login\n</code></pre>",
+  "verify_code": "007d79f8",
+  "expected_output": "refs/heads/feature/login\n"
+}

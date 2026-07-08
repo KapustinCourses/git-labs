@@ -1,0 +1,12 @@
+{
+  "id": "m11l09s12",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 9,
+  "lesson_title": "GitLab CI CD сравнительно",
+  "step": 12,
+  "title": "Шаг 12: GitLab CI с rules для deploy",
+  "description_html": "<p>Вам нужно настроить деплой в GitLab CI так, чтобы он запускался только при push в ветку <code>main</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.gitlab-ci.yml</code> с:</p>\n<ul>\n  <li>Объявлением <code>stages: [build, deploy]</code></li>\n  <li>Job <code>build-job</code> со <code>stage: build</code> и <code>script: echo \"building\"</code></li>\n  <li>Job <code>deploy-job</code> со <code>stage: deploy</code>, <code>script: echo \"deploying\"</code> и блоком <code>rules:</code>:\n    <ul>\n      <li>Правило: <code>if: $CI_COMMIT_BRANCH == \"main\"</code>, <code>when: on_success</code></li>\n      <li>Иначе: <code>when: never</code></li>\n    </ul>\n  </li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что deploy-job использует синтаксис <code>rules:</code> с условием по ветке main.</p>",
+  "verify_code": "4aae136b",
+  "expected_output": "stages_ok\ndeploy_job_ok\nrules_ok\nmain_condition_ok\n"
+}

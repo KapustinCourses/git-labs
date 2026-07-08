@@ -1,0 +1,12 @@
+{
+  "id": "m11l11s07",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 11,
+  "lesson_title": "Практикум production workflow",
+  "step": 7,
+  "title": "Шаг 7: Практикум — Шаг 6 из 6: Финальная валидация workflow",
+  "description_html": "<p>Все компоненты добавлены. Последний шаг — убедиться, что финальный workflow YAML валиден и содержит все необходимые production-grade компоненты.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий содержит почти готовый <code>.github/workflows/release.yml</code> с permissions, concurrency, и jobs test/docker/deploy — но без одного элемента. Нужно добавить недостающий <code>concurrency</code> блок.</p>\n\n<h3>Что нужно сделать</h3>\n<p>В файле <code>.github/workflows/release.yml</code> есть все jobs но отсутствует <code>concurrency</code>. Добавьте его на уровень workflow:</p>\n<pre><code>concurrency:\n  group: ${{ github.workflow }}-${{ github.ref }}\n  cancel-in-progress: false\n</code></pre>\n<p>После этого запустите валидацию: <code>python3 -c \"import yaml; yaml.safe_load(open('.github/workflows/release.yml'))\" && echo \"YAML_VALID\"</code></p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится что YAML валиден, есть concurrency, все 3 jobs, и permissions: {}.</p>",
+  "verify_code": "749ed961",
+  "expected_output": "yaml_valid\nconcurrency_ok\nall_jobs_ok\npermissions_empty_ok\n"
+}

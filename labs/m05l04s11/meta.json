@@ -1,0 +1,12 @@
+{
+  "id": "m05l04s11",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 4,
+  "lesson_title": "git reset три режима",
+  "step": 11,
+  "title": "Шаг 11: Превратить три коммита в один через --soft + commit",
+  "description_html": "<p>В ветке <code>main</code> накопилось 4 коммита: «Initial commit» и 3 рабочих («Add feature part 1/2/3»). Нужно «сжать» три рабочих коммита в один с сообщением «Add complete feature».</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>История коммитов (от старого к новому):</p>\n<ol>\n  <li>Initial commit</li>\n  <li>Add feature part 1</li>\n  <li>Add feature part 2</li>\n  <li>Add feature part 3</li>\n</ol>\n\n<h3>Что нужно сделать</h3>\n<p>Объедините три последних коммита в один:</p>\n<pre><code>git reset --soft HEAD~3\ngit commit -m \"Add complete feature\"\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд проверяющий код выведет историю коммитов (от старого к новому). Ожидается:</p>\n<pre><code>Initial commit\nAdd complete feature\n</code></pre>",
+  "verify_code": "b7c36ee3",
+  "expected_output": "Initial commit\nAdd complete feature\n"
+}

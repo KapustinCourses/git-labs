@@ -1,0 +1,12 @@
+{
+  "id": "m11l08s13",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 8,
+  "lesson_title": "Docker в CI",
+  "step": 13,
+  "title": "Шаг 13: Multi-arch Docker сборка",
+  "description_html": "<p>Ваш сервис должен работать как на обычных Intel/AMD серверах (<code>linux/amd64</code>), так и на ARM-серверах AWS Graviton и Apple Silicon Mac (<code>linux/arm64</code>). Buildx с QEMU позволяет сделать это прямо в CI.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/multi-arch.yml</code> с:</p>\n<ul>\n  <li>Триггером <code>push</code></li>\n  <li>Job <code>docker</code> на <code>ubuntu-latest</code></li>\n  <li>Шагами в правильном порядке:\n    <ol>\n      <li><code>actions/checkout@v6</code></li>\n      <li><code>docker/setup-qemu-action@v3</code> (для cross-compile)</li>\n      <li><code>docker/setup-buildx-action@v3</code></li>\n      <li><code>docker/build-push-action@v6</code> с <code>platforms: linux/amd64,linux/arm64</code> и <code>push: false</code></li>\n    </ol>\n  </li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что используется <code>docker/setup-qemu-action@v3</code> и в <code>build-push-action</code> есть поле <code>platforms</code> с обеими архитектурами.</p>",
+  "verify_code": "4eabe4a3",
+  "expected_output": "qemu_ok\nbuildx_ok\nplatforms_ok\n"
+}

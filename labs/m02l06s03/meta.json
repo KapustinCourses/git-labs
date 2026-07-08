@@ -1,0 +1,12 @@
+{
+  "id": "m02l06s03",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 6,
+  "lesson_title": "Практикум",
+  "step": 3,
+  "title": "Шаг 3: Шаг 2 из 5 — Первая feature-ветка",
+  "description_html": "<p><strong>Практикум: шаг 2 из 5.</strong> Репозиторий содержит ветку <code>main</code> с коммитом «Initial version».</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Создайте ветку <code>feature/header</code> и переключитесь на неё.</li>\n  <li>Создайте файл <code>header.txt</code> с содержимым <code>Welcome</code>.</li>\n  <li>Добавьте его и закоммитьте с сообщением <code>Add header</code>.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Ожидаются сообщения коммитов в ветке <code>feature/header</code> от старого к новому:</p>\n<pre><code>Initial version\nAdd header\n</code></pre>",
+  "verify_code": "f848515c",
+  "expected_output": "Initial version\nAdd header\n"
+}

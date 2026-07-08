@@ -1,0 +1,12 @@
+{
+  "id": "m03l04s14",
+  "module": 3,
+  "module_title": "Удалённые репозитории и GitHub",
+  "lesson": 4,
+  "lesson_title": "GitHub и Pull Request workflow",
+  "step": 14,
+  "title": "Шаг 14: Задача — Синхронизация после слияния PR",
+  "description_html": "<p>PR влит. В upstream (original) <code>main</code> теперь содержит ваши изменения из <code>feature/dark-mode</code>. Нужно синхронизировать локальный <code>main</code>, удалить feature-ветку локально и на origin (форке).</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий содержит: локальная ветка <code>feature/dark-mode</code>, <code>main</code>. Remote <code>upstream</code> уже содержит commit «Add dark mode CSS» в main (PR влит). Вы находитесь на <code>feature/dark-mode</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Переключитесь на <code>main</code></li>\n  <li>Синхронизируйте с upstream: <code>git fetch upstream && git merge upstream/main --ff-only</code></li>\n  <li>Удалите локальную ветку <code>feature/dark-mode</code></li>\n  <li>Удалите ветку <code>feature/dark-mode</code> на origin</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код проверяет историю main и список веток в fork. Ожидается:</p>\n<pre><code>Initial commit\nAdd dark mode CSS\nmain\n</code></pre>",
+  "verify_code": "79480426",
+  "expected_output": "Initial commit\nAdd dark mode CSS\nmain\n"
+}

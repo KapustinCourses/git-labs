@@ -1,0 +1,12 @@
+{
+  "id": "m11l02s11",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 2,
+  "lesson_title": "Кэширование и оптимизация",
+  "step": 11,
+  "title": "Шаг 11: Явный кэш через actions/cache@v4",
+  "description_html": "<p>Ваш проект использует нестандартный инструмент сборки, хранящий кэш в директории <code>.cache/myapp</code>. Встроенный кэш в <code>setup-*</code> не поддерживает этот инструмент, поэтому нужно использовать <code>actions/cache@v4</code> напрямую.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/custom-cache.yml</code> с:</p>\n<ul>\n  <li>Триггером <code>push</code></li>\n  <li>Job <code>build</code> на <code>ubuntu-latest</code></li>\n  <li>Шагами: <code>actions/checkout@v6</code>, затем <code>actions/cache@v4</code> с:\n    <ul>\n      <li><code>path: .cache/myapp</code></li>\n      <li><code>key: myapp-${{ runner.os }}-${{ hashFiles('myapp.lock') }}</code></li>\n      <li><code>restore-keys: myapp-${{ runner.os }}-</code></li>\n    </ul>\n  </li>\n  <li>Дополнительным шагом <code>run: echo \"building\"</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что используется <code>actions/cache@v4</code> с полями <code>path</code>, <code>key</code> и <code>restore-keys</code>.</p>",
+  "verify_code": "9f299a1d",
+  "expected_output": "cache_action_ok\npath_ok\nkey_ok\nrestore_keys_ok\n"
+}

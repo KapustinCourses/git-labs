@@ -1,0 +1,12 @@
+{
+  "id": "m09l06s02",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 6,
+  "lesson_title": "Практикум plumbing",
+  "step": 2,
+  "title": "Шаг 2: Практикум — Шаг 1: создать blob через hash-object -w",
+  "description_html": "<p><strong>Это шаг 1 из 5 в практикуме «Собрать коммит руками».</strong></p>\n\n<p>Вы будете создавать репозиторий с двумя коммитами, используя только plumbing-команды — без <code>git add</code>, <code>git commit</code>, <code>git branch</code> и <code>git switch</code>.</p>\n\n<p>На этом шаге создайте blob-объект для файла, который войдёт в первый коммит.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Пустой репозиторий (только <code>.git/</code>).</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте blob со строкой <code>Hello, plumbing!</code> через <code>git hash-object -w --stdin</code> и выведите его sha (полный, 40 символов).</p>\n\n<h3>Как проверяется</h3>\n<p>Sha blob'а для строки <code>Hello, plumbing!\\n</code> детерминирован. Ожидается:</p>\n<pre><code>c62d9a3ea77d5c0e1ab7d0a8abfdd94e5f6e8d05\n</code></pre>",
+  "verify_code": "166dc686",
+  "expected_output": "cbbd742a6016d80ed8cde650aec0ba8b3be8555c\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m10l08s02",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 8,
+  "lesson_title": "Практикум CI workflow для Go проекта",
+  "step": 2,
+  "title": "Шаг 2: Практикум — Шаг 1 из 6: каркас с триггерами и job lint",
+  "description_html": "<p><em>Это шаг 1 из 6 в практикуме «CI workflow для Go-проекта».</em></p>\n\n<p>Стартовое состояние: Go-проект с файлами <code>main.go</code>, <code>go.mod</code>, <code>main_test.go</code>. Workflow ещё нет.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/ci.yml</code> с:</p>\n<ul>\n  <li>Триггерами <code>push</code> и <code>pull_request</code></li>\n  <li>Одним job <code>lint</code>, который:\n    <ul>\n      <li>Работает на <code>ubuntu-latest</code></li>\n      <li>Первый step: <code>uses: actions/checkout@v6</code></li>\n      <li>Второй step: <code>uses: actions/setup-go@v6</code> с параметром <code>go-version: '1.22'</code></li>\n    </ul>\n  </li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Ожидаемый вывод:</p>\n<pre><code>triggers=pull_request,push\nhas_lint_job=True\nlint_has_checkout=True\nlint_has_setup_go=True</code></pre>",
+  "verify_code": "d240f570",
+  "expected_output": "triggers=pull_request,push\nhas_lint_job=True\nlint_has_checkout=True\nlint_has_setup_go=True\n"
+}

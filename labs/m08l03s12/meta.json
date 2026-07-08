@@ -1,0 +1,12 @@
+{
+  "id": "m08l03s12",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 3,
+  "lesson_title": "git worktree",
+  "step": 12,
+  "title": "Шаг 12: Попытка переключиться на ветку, занятую worktree",
+  "description_html": "<p>Ветка <code>feature</code> уже чекаутнута в дополнительном worktree. Нужно убедиться, что git запрещает переключиться на эту ветку из основной директории, и вывести слово <code>blocked</code>.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий с ветками <code>main</code> и <code>feature</code>. Worktree для <code>feature</code> уже создан в <code>../wt-feature</code>. Текущая ветка в основной директории — <code>main</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Попробуйте выполнить <code>git switch feature</code> и перехватите ошибку. Если git отказал — выведите <code>blocked</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод:</p>\n<pre><code>blocked\n</code></pre>",
+  "verify_code": "4cdc4523",
+  "expected_output": "blocked\n"
+}

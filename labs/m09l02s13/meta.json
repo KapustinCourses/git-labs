@@ -1,0 +1,12 @@
+{
+  "id": "m09l02s13",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 2,
+  "lesson_title": "Объектная модель",
+  "step": 13,
+  "title": "Шаг 13: Определить тип объекта через git cat-file",
+  "description_html": "<p>Команда <code>git cat-file -t &lt;sha&gt;</code> позволяет узнать тип любого объекта в репозитории: <code>blob</code>, <code>tree</code>, <code>commit</code> или <code>tag</code>. Это фундаментальный инструмент для понимания объектной модели git.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит один коммит «Initial commit». Текущий HEAD указывает на этот коммит.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите тип объекта, на который указывает <code>HEAD</code>.</p>\n<p>Используйте команду: <code>git cat-file -t HEAD</code></p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод:</p>\n<pre><code>commit\n</code></pre>",
+  "verify_code": "50836eee",
+  "expected_output": "commit\n"
+}

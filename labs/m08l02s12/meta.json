@@ -1,0 +1,12 @@
+{
+  "id": "m08l02s12",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 2,
+  "lesson_title": "cherry-pick углублённо",
+  "step": 12,
+  "title": "Шаг 12: Cherry-pick диапазона коммитов",
+  "description_html": "<p>В репозитории есть ветка <code>main</code> с тремя коммитами-фиксами. Нужно перенести все три на ветку <code>release</code> через диапазонный cherry-pick.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Ветка <code>release</code> содержит только «Initial commit». На <code>main</code> — четыре коммита: «Initial commit», «Fix auth», «Fix logging», «Fix timeout». Текущая ветка — <code>release</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Перенесите три коммита фиксов с <code>main</code> на текущую ветку <code>release</code> за одну команду, используя синтаксис диапазона <code>A..B</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет список сообщений коммитов ветки <code>release</code>. Ожидается:</p>\n<pre><code>Initial commit\nFix auth\nFix logging\nFix timeout\n</code></pre>",
+  "verify_code": "8d3fe171",
+  "expected_output": "Initial commit\nFix auth\nFix logging\nFix timeout\n"
+}

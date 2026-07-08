@@ -1,0 +1,12 @@
+{
+  "id": "m10l04s13",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 4,
+  "lesson_title": "Jobs dependencies и matrix",
+  "step": 13,
+  "title": "Шаг 13: Conditional job — deploy только при push в main",
+  "description_html": "<p>В реальном CI деплой должен выполняться только при push в основную ветку, но не при push в feature-ветки или при создании PR.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/ci.yml</code> с двумя jobs:</p>\n<ul>\n  <li><code>test</code> — выполняется всегда</li>\n  <li><code>deploy</code> — выполняется только если <code>github.ref == 'refs/heads/main'</code> (через поле <code>if:</code>)</li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет:</p>\n<pre><code>has_if_condition=True\nif_contains_main=True</code></pre>",
+  "verify_code": "780bb64a",
+  "expected_output": "has_if_condition=True\nif_contains_main=True\n"
+}

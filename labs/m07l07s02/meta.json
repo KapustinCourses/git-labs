@@ -1,0 +1,12 @@
+{
+  "id": "m07l07s02",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 7,
+  "lesson_title": "Практикум",
+  "step": 2,
+  "title": "Шаг 2: Практикум — Шаг 1 из 5: content conflict при merge",
+  "description_html": "<p><strong>Это шаг 1 из 5 в практикуме «Конфликтные сценарии».</strong></p>\n\n<p>Самый частый тип конфликта: обе ветки изменили одну и ту же строку файла. Нужно разрешить конфликт, сохранив <strong>нашу</strong> версию (из <code>main</code>).</p>\n\n<h3>Начальное состояние</h3>\n<ul>\n  <li>Ветки <code>main</code> и <code>feature/ui</code> расходятся по файлу <code>ui-config.txt</code></li>\n  <li>В <code>main</code>: строка <code>theme=corporate-blue</code></li>\n  <li>В <code>feature/ui</code>: строка <code>theme=dark-mode</code></li>\n  <li>Merge уже запущен и остановлен из-за конфликта</li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Разрешите конфликт, оставив тему <code>corporate-blue</code> (нашу версию из <code>main</code>). Создайте merge-коммит.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается содержимое файла после разрешения:</p>\n<pre><code>theme=corporate-blue\n</code></pre>",
+  "verify_code": "7637e93f",
+  "expected_output": "theme=corporate-blue\n"
+}

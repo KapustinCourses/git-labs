@@ -1,0 +1,12 @@
+{
+  "id": "m05l07s05",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 7,
+  "lesson_title": "Практикум",
+  "step": 5,
+  "title": "Шаг 5: Практикум — Шаг 4 из 5: отмена опубликованного коммита",
+  "description_html": "<p>Это шаг 4 из 5 в практикуме «Спасение из критических ситуаций».</p>\n\n<p>Коммит «Add payment bug» уже запушен в origin. Другие разработчики могут его видеть. Нужно отменить этот коммит через <code>revert</code> и запушить исправление.</p>\n\n<h3>Стартовое состояние репо</h3>\n<ul>\n  <li>В bare-репо (origin): «Initial commit» и «Add payment bug»</li>\n  <li>Локально: те же коммиты, remote tracking настроен</li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Отмените последний коммит через revert и запушите в origin:</p>\n<pre><code>git revert HEAD --no-edit > /dev/null\ngit push -q origin main\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет историю ветки <code>main</code> в origin (от старого к новому). Ожидается:</p>\n<pre><code>Initial commit\nAdd payment bug\nRevert \"Add payment bug\"\n</code></pre>",
+  "verify_code": "4ec8fcce",
+  "expected_output": "Initial commit\nAdd payment bug\nRevert \"Add payment bug\"\n"
+}

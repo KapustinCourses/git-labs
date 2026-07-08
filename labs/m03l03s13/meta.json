@@ -1,0 +1,12 @@
+{
+  "id": "m03l03s13",
+  "module": 3,
+  "module_title": "Удалённые репозитории и GitHub",
+  "lesson": 3,
+  "lesson_title": "fetch pull и синхронизация",
+  "step": 13,
+  "title": "Шаг 13: Задача — git fetch --prune",
+  "description_html": "<p>Ветка <code>feature/deprecated</code> была удалена с сервера, но у вас локально ещё видна remote-tracking ветка <code>origin/feature/deprecated</code>. Нужно очистить устаревшие ссылки.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий клонирован. На origin ветка <code>feature/deprecated</code> уже удалена, но ваша remote-tracking ссылка <code>origin/feature/deprecated</code> ещё существует.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните <code>git fetch --prune</code>, чтобы удалить устаревшие remote-tracking ветки.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выводит список remote-tracking веток (без учёта <code>HEAD</code>). Ожидается только <code>main</code>:</p>\n<pre><code>main\n</code></pre>",
+  "verify_code": "6403203d",
+  "expected_output": "main\n"
+}

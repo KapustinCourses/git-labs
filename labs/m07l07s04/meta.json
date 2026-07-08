@@ -1,0 +1,12 @@
+{
+  "id": "m07l07s04",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 7,
+  "lesson_title": "Практикум",
+  "step": 4,
+  "title": "Шаг 4: Практикум — Шаг 3 из 5: rebase-конфликт",
+  "description_html": "<p><strong>Это шаг 3 из 5 в практикуме «Конфликтные сценарии».</strong></p>\n\n<p>Ветка <code>feature/payments</code> содержит три коммита. При rebase на <code>main</code> возник конфликт на втором коммите: оба коммита правят файл <code>payments.txt</code>.</p>\n\n<p>Rebase уже остановлен на конфликтном коммите. Нужно разрешить конфликт, приняв версию «main + feature» (объединив строки), и продолжить перебазирование.</p>\n\n<h3>Начальное состояние</h3>\n<ul>\n  <li>Rebase запущен и остановлен</li>\n  <li>Файл <code>payments.txt</code> в конфликте</li>\n  <li>В <code>main</code>: строка <code>gateway=stripe</code></li>\n  <li>В коммите <code>feature</code>: строка <code>currency=USD</code></li>\n  <li>Нужно объединить: оба значения в одном файле</li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Запишите в <code>payments.txt</code> обе строки:<br><code>gateway=stripe</code><br><code>currency=USD</code></li>\n  <li>Выполните <code>git add payments.txt</code></li>\n  <li>Продолжите rebase: <code>git rebase --continue</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После успешного rebase проверяющий код выведет историю коммитов в <code>feature/payments</code>. Ожидается:</p>\n<pre><code>Initial commit\nSwitch to paypal gateway\nAdd payment config\nAdd currency setting\nAdd payment limits\n</code></pre>",
+  "verify_code": "09992e2e",
+  "expected_output": "Initial commit\nSwitch to paypal gateway\nAdd payment config\nAdd currency setting\nAdd payment limits\n"
+}

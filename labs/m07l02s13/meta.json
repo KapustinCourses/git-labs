@@ -1,0 +1,12 @@
+{
+  "id": "m07l02s13",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 2,
+  "lesson_title": "Маркеры конфликта и ручное разрешение",
+  "step": 13,
+  "title": "Шаг 13: Разрешить modify/delete конфликт",
+  "description_html": "<p>В репозитории произошёл <strong>modify/delete</strong> конфликт: ветка <code>main</code> удалила файл <code>legacy.txt</code>, а ветка <code>feature</code> его изменила (добавила важную строку). При merge возник конфликт типа <code>deleted by us</code>.</p>\n\n<h3>Начальное состояние</h3>\n<p>Merge уже запущен и остановлен из-за конфликта. Файл <code>legacy.txt</code> существует в ветке <code>feature</code>, но удалён в <code>main</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Решите сохранить файл с изменениями из <code>feature</code>. Для этого:</p>\n<ol>\n  <li>Восстановите файл из ветки <code>feature</code>: <code>git checkout feature -- legacy.txt</code></li>\n  <li>Добавьте в staging: <code>git add legacy.txt</code></li>\n  <li>Создайте merge-коммит: <code>git commit --no-edit</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После слияния проверяющий код проверит, что файл <code>legacy.txt</code> присутствует в коммите HEAD. Ожидается:</p>\n<pre><code>legacy.txt\n</code></pre>",
+  "verify_code": "caca9480",
+  "expected_output": "legacy.txt\n"
+}

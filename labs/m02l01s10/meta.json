@@ -1,0 +1,12 @@
+{
+  "id": "m02l01s10",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 1,
+  "lesson_title": "Что такое ветка",
+  "step": 10,
+  "title": "Шаг 10: Создать две ветки от текущего коммита",
+  "description_html": "<p>В репозитории есть одна ветка <code>main</code> с одним коммитом.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте две ветки от текущего коммита:</p>\n<ul>\n  <li><code>feature/login</code></li>\n  <li><code>bugfix/csrf</code></li>\n</ul>\n<p>Переключаться на эти ветки не нужно — оставайтесь на <code>main</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд проверяющий код выведет список всех веток в алфавитном порядке. Ожидается:</p>\n<pre><code>bugfix/csrf\nfeature/login\nmain\n</code></pre>",
+  "verify_code": "6e04284a",
+  "expected_output": "bugfix/csrf\nfeature/login\nmain\n"
+}

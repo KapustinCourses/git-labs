@@ -1,0 +1,12 @@
+{
+  "id": "m11l07s13",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 7,
+  "lesson_title": "Pinning supply chain dependabot",
+  "step": 13,
+  "title": "Шаг 13: Настройка dependabot для github-actions",
+  "description_html": "<p>Вы хотите, чтобы Dependabot автоматически следил за обновлениями actions в вашем workflow и создавал PR раз в неделю.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/dependabot.yml</code> со следующей конфигурацией:</p>\n<ul>\n  <li>Версия схемы: <code>version: 2</code></li>\n  <li>В блоке <code>updates</code> — одна запись:\n    <ul>\n      <li><code>package-ecosystem: github-actions</code></li>\n      <li><code>directory: /</code></li>\n      <li><code>schedule.interval: weekly</code></li>\n    </ul>\n  </li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что в YAML есть `version: 2`, используется `package-ecosystem: github-actions` и задано расписание.</p>",
+  "verify_code": "3e60f28b",
+  "expected_output": "version_2_ok\ngithub_actions_ecosystem_ok\nschedule_ok\n"
+}

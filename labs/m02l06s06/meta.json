@@ -1,0 +1,12 @@
+{
+  "id": "m02l06s06",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 6,
+  "lesson_title": "Практикум",
+  "step": 6,
+  "title": "Шаг 6: Шаг 5 из 5 — Three-way merge и финальный граф",
+  "description_html": "<p><strong>Практикум: шаг 5 из 5.</strong> В репозитории расходящийся граф: ветка <code>main</code> имеет коммит «Bump version to 2» (после «Add header»), а ветка <code>feature/footer</code> имеет коммит «Add footer» (тоже после «Add header»).</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Переключитесь на <code>main</code>.</li>\n  <li>Слейте <code>feature/footer</code> через <code>--no-ff</code> с сообщением <code>Merge feature/footer into main</code> (подавите вывод: <code>&gt; /dev/null</code>).</li>\n  <li>Удалите ветку <code>feature/footer</code> (подавите вывод: <code>&gt; /dev/null</code>).</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Ожидается финальный граф истории с merge-коммитом:</p>\n<pre><code>*   Merge feature/footer into main\n|\\\n| * Add footer\n* | Bump version to 2\n|/\n* Add header\n* Initial version\n</code></pre>",
+  "verify_code": "94a91dff",
+  "expected_output": "*   Merge feature/footer into main\n|\\  \n| * Add footer\n* | Bump version to 2\n|/  \n* Add header\n* Initial version\n"
+}

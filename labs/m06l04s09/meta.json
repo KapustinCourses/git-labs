@@ -1,0 +1,12 @@
+{
+  "id": "m06l04s09",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 4,
+  "lesson_title": "Autosquash и fixup workflow",
+  "step": 9,
+  "title": "Шаг 9: Создать fixup-коммит и применить autosquash",
+  "description_html": "<p>В репозитории 3 коммита:</p>\n<ol>\n  <li><strong>Initial commit</strong></li>\n  <li><strong>Add feature</strong></li>\n  <li><strong>Add tests</strong></li>\n</ol>\n<p>Вы нашли опечатку в файле <code>feature.txt</code> из коммита «Add feature» и хотите исправить её, сохраняя чистую историю.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Исправьте содержимое <code>feature.txt</code> (запишите <code>fixed content</code>)</li>\n  <li>Создайте fixup-коммит для коммита «Add feature»: <code>git commit --fixup=HEAD~1</code></li>\n  <li>Примените autosquash: <code>GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash HEAD~3</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Будет выведена история коммитов. Ожидается только 3 коммита (fixup слился с «Add feature»):</p>\n<pre><code>Initial commit\nAdd feature\nAdd tests\n</code></pre>",
+  "verify_code": "ea25e2d5",
+  "expected_output": "Initial commit\nAdd feature\nAdd tests\n"
+}

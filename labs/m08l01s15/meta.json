@@ -1,0 +1,12 @@
+{
+  "id": "m08l01s15",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 1,
+  "lesson_title": "git stash",
+  "step": 15,
+  "title": "Шаг 15: Добавить третью запись в stash",
+  "description_html": "<p>В stash уже лежат две записи. Нужно добавить ещё одно изменение в stash.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий с двумя записями в stash. В рабочей директории есть новое изменение в файле <code>new_feature.py</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Спрячьте текущие правки в stash с сообщением <code>WIP: new feature</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет количество записей в stash. Ожидается:</p>\n<pre><code>3\n</code></pre>",
+  "verify_code": "1121cfcc",
+  "expected_output": "3\n"
+}

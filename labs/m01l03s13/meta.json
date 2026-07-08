@@ -1,0 +1,12 @@
+{
+  "id": "m01l03s13",
+  "module": 1,
+  "module_title": "Введение в Git",
+  "lesson": 3,
+  "lesson_title": "gitignore",
+  "step": 13,
+  "title": "Шаг 13: Перестать отслеживать файл, не удаляя его",
+  "description_html": "<p>Бывает, что файл попал в репозиторий случайно — например, <code>.env</code> с паролями. Чтобы исправить ситуацию, нужно убрать его из отслеживания Git, сохранив файл на диске, и добавить в <code>.gitignore</code>.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий содержит один коммит с двумя файлами: <code>app.py</code> и <code>.env</code> (с содержимым <code>SECRET=hunter2</code>).</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n<li>Добавьте строку <code>.env</code> в файл <code>.gitignore</code>.</li>\n<li>Уберите <code>.env</code> из отслеживания Git командой <code>git rm --cached .env</code>.</li>\n<li>Создайте коммит с сообщением <code>Stop tracking .env</code>.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После ваших команд проверяющий код проверит два условия:</p>\n<ol>\n<li>Файл <code>.env</code> существует на диске (не удалён).</li>\n<li>Команда <code>git ls-files .env</code> не выводит ничего (файл не в индексе).</li>\n</ol>\n<p>Ожидаемый вывод:</p>\n<pre><code>exists\nnot tracked\n</code></pre>",
+  "verify_code": "aa6e1f4a",
+  "expected_output": "exists\nnot tracked\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m10l05s12",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 5,
+  "lesson_title": "Контексты выражения и переменные",
+  "step": 12,
+  "title": "Шаг 12: Workflow с переменными окружения на трёх уровнях",
+  "description_html": "<p>В GitHub Actions можно задавать переменные окружения на трёх уровнях: workflow, job и step. Каждый следующий уровень переопределяет предыдущий для своей области видимости.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/ci.yml</code> с переменными окружения на трёх уровнях:</p>\n<ul>\n  <li>На уровне workflow: <code>APP_ENV: production</code></li>\n  <li>На уровне job <code>test</code>: <code>NODE_ENV: test</code></li>\n  <li>На уровне хотя бы одного step: любая env-переменная</li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет:</p>\n<pre><code>workflow_env=True\njob_env=True\nstep_env=True</code></pre>",
+  "verify_code": "5287adbf",
+  "expected_output": "workflow_env=True\njob_env=True\nstep_env=True\n"
+}

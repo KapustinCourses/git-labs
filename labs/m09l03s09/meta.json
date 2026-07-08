@@ -1,0 +1,12 @@
+{
+  "id": "m09l03s09",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 3,
+  "lesson_title": "Refs и HEAD",
+  "step": 9,
+  "title": "Шаг 9: Прочитать содержимое .git/HEAD и symbolic-ref",
+  "description_html": "<p>Понимание того, что хранится в <code>.git/HEAD</code>, помогает разобраться в механизме веток. В обычном состоянии HEAD содержит symbolic reference на текущую ветку.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий с одним коммитом «Initial commit». Текущая ветка — <code>main</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните две команды:</p>\n<ol>\n  <li>Выведите содержимое файла <code>.git/HEAD</code></li>\n  <li>Выведите имя ветки, на которую указывает HEAD через <code>git symbolic-ref HEAD</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Ожидается:</p>\n<pre><code>ref: refs/heads/main\nrefs/heads/main\n</code></pre>",
+  "verify_code": "214791cf",
+  "expected_output": "ref: refs/heads/main\nrefs/heads/main\n"
+}

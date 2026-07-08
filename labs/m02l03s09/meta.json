@@ -1,0 +1,12 @@
+{
+  "id": "m02l03s09",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 3,
+  "lesson_title": "Слияние fast-forward",
+  "step": 9,
+  "title": "Шаг 9: Выполнить fast-forward merge",
+  "description_html": "<p>В репозитории есть ветка <code>main</code> с одним коммитом «Initial commit». От неё создана ветка <code>feature</code> с тремя дополнительными коммитами: «Add feature A», «Add feature B», «Add feature C». Ветка <code>main</code> с тех пор не двигалась.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Переключитесь на <code>main</code> и слейте ветку <code>feature</code> в неё. История должна остаться линейной (fast-forward).</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет сообщения всех коммитов в <code>main</code> от старого к новому. Ожидается:</p>\n<pre><code>Initial commit\nAdd feature A\nAdd feature B\nAdd feature C\n</code></pre>",
+  "verify_code": "56b9cece",
+  "expected_output": "Initial commit\nAdd feature A\nAdd feature B\nAdd feature C\n"
+}

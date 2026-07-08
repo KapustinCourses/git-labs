@@ -1,0 +1,12 @@
+{
+  "id": "m09l02s16",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 2,
+  "lesson_title": "Объектная модель",
+  "step": 16,
+  "title": "Шаг 16: Вычислить sha строки через git hash-object",
+  "description_html": "<p>Команда <code>git hash-object --stdin</code> вычисляет sha blob'а для данных из stdin без записи в репозиторий. Результат детерминирован: для фиксированного содержимого sha всегда одинаков — это основа content-addressable storage.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий инициализирован, но пуст (нет коммитов). Достаточно самого <code>.git/</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Вычислите sha blob'а строки <code>hello</code> (без завершающего перевода строки):</p>\n<pre><code>echo -n \"hello\" | git hash-object --stdin\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>Sha blob'а строки <code>hello</code> детерминирован и равен:</p>\n<pre><code>b6fc4c620b67d95f953a5c1c1230aaab5db5a1b0\n</code></pre>",
+  "verify_code": "dd0753ef",
+  "expected_output": "b6fc4c620b67d95f953a5c1c1230aaab5db5a1b0\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m09l06s05",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 6,
+  "lesson_title": "Практикум plumbing",
+  "step": 5,
+  "title": "Шаг 5: Практикум — Шаг 4: создать второй коммит-наследник",
+  "description_html": "<p><strong>Это шаг 4 из 5 в практикуме «Собрать коммит руками».</strong></p>\n\n<p>Первый коммит создан. Теперь добавьте второй файл и создайте второй коммит, который станет наследником первого. В <code>commit-tree</code> это указывается флагом <code>-p &lt;sha-родителя&gt;</code>.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий после шага 3: есть ветка <code>main</code> с одним коммитом «Initial commit». Переменные <code>BLOB</code> (sha первого blob'а), <code>TREE</code> (sha первого tree) и <code>COMMIT</code> (sha первого коммита) доступны в окружении.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Создайте второй blob со строкой <code>Bye, plumbing!</code>. Сохраните sha в <code>BLOB2</code>.</li>\n  <li>Создайте новый tree, содержащий оба файла: <code>hello.txt</code> (sha <code>$BLOB</code>) и <code>bye.txt</code> (sha <code>$BLOB2</code>). Сохраните sha в <code>TREE2</code>.</li>\n  <li>Создайте второй коммит с сообщением <code>Add bye</code> и родителем <code>$COMMIT</code>.</li>\n  <li>Обновите ветку main: <code>git update-ref refs/heads/main \"$COMMIT2\"</code>.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После выполнения будет выведена история коммитов в хронологическом порядке. Ожидается:</p>\n<pre><code>Initial commit\nAdd bye\n</code></pre>",
+  "verify_code": "5b0e2439",
+  "expected_output": "Initial commit\nAdd bye\n"
+}

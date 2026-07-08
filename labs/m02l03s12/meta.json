@@ -1,0 +1,12 @@
+{
+  "id": "m02l03s12",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 3,
+  "lesson_title": "Слияние fast-forward",
+  "step": 12,
+  "title": "Шаг 12: Настроить merge.ff=only глобально",
+  "description_html": "<p>Вы хотите защитить себя от случайных merge-коммитов при выполнении <code>git pull</code> или <code>git merge</code>. Для этого нужно запретить git создавать merge-коммиты, разрешив только fast-forward.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Настройте глобальный параметр <code>merge.ff</code> в значение <code>only</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд проверяющий код выведет текущее значение <code>merge.ff</code>. Ожидается:</p>\n<pre><code>only\n</code></pre>",
+  "verify_code": "321b4285",
+  "expected_output": "only\n"
+}

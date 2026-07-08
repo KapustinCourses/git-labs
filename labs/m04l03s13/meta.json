@@ -1,0 +1,12 @@
+{
+  "id": "m04l03s13",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 3,
+  "lesson_title": "ref выражения и навигация",
+  "step": 13,
+  "title": "Шаг 13: Коммиты feature, которых нет в main",
+  "description_html": "<p>В репозитории есть ветки <code>main</code>, <code>feature</code> и <code>release</code>. Вам нужно найти коммиты, которые есть в <code>feature</code>, но отсутствуют одновременно и в <code>main</code>, и в <code>release</code>.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>История:</p>\n<ul>\n<li><code>main</code>: коммиты «Initial commit», «Add main feature»</li>\n<li><code>release</code>: создана от «Initial commit», содержит «Prepare release»</li>\n<li><code>feature</code>: создана от «Initial commit», содержит «Add new widget», «Fix widget bug»</li>\n</ul>\n<p>Вы находитесь на ветке <code>feature</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите сообщения коммитов, которые есть в <code>feature</code>, но не в <code>main</code> и не в <code>release</code>. Вывод — от старого к новому (<code>--reverse</code>).</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод:</p>\n<pre><code>Add new widget\nFix widget bug\n</code></pre>",
+  "verify_code": "28ddcdc1",
+  "expected_output": "Add new widget\nFix widget bug\n"
+}

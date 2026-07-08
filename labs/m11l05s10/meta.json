@@ -1,0 +1,12 @@
+{
+  "id": "m11l05s10",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 5,
+  "lesson_title": "Reusable workflows и composite actions",
+  "step": 10,
+  "title": "Шаг 10: Вызов reusable workflow из другого workflow",
+  "description_html": "<p>У вас уже есть шаблонный workflow в <code>.github/workflows/template.yml</code> (подготовлен заранее). Теперь нужно создать основной workflow, который его вызывает.</p>\n\n<h3>Стартовое состояние</h3>\n<p>В репозитории уже создан <code>.github/workflows/template.yml</code> с <code>on: workflow_call</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/main.yml</code> с:</p>\n<ul>\n  <li>Триггером <code>push</code></li>\n  <li>Job <code>call-ci</code>, который через <code>uses: ./.github/workflows/template.yml</code> вызывает локальный reusable workflow</li>\n  <li>Блоком <code>with:</code> с параметром <code>node-version: '22'</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что в <code>main.yml</code> есть job с <code>uses: ./.github/workflows/template.yml</code> и блоком <code>with</code>.</p>",
+  "verify_code": "c8588399",
+  "expected_output": "uses_template_ok\nwith_ok\n"
+}

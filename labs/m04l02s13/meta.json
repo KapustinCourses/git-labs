@@ -1,0 +1,12 @@
+{
+  "id": "m04l02s13",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 2,
+  "lesson_title": "git diff и git show",
+  "step": 13,
+  "title": "Шаг 13: Подсчёт коммитов между тегами по конкретному файлу",
+  "description_html": "<p>В репозитории есть два тега: <code>v1.0</code> и <code>v1.1</code>. Между ними файл <code>CHANGELOG.md</code> был изменён несколькими коммитами.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>История:</p>\n<ul>\n<li>Коммит 1: <code>CHANGELOG.md</code> с записью об <code>v1.0</code> → тег <code>v1.0</code></li>\n<li>Коммит 2: <code>app.py</code> изменён (не затрагивает <code>CHANGELOG.md</code>)</li>\n<li>Коммит 3: <code>CHANGELOG.md</code> с новой записью об <code>v1.1</code> → тег <code>v1.1</code></li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Подсчитайте, сколько коммитов между тегами <code>v1.0</code> и <code>v1.1</code> меняли файл <code>CHANGELOG.md</code>. Выведите это число.</p>\n<p>Используйте <code>git log v1.0..v1.1 -- CHANGELOG.md</code> и подсчитайте строки.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод (количество коммитов, затронувших <code>CHANGELOG.md</code> в диапазоне <code>v1.0..v1.1</code>):</p>\n<pre><code>1\n</code></pre>",
+  "verify_code": "4355a46b",
+  "expected_output": "1\n"
+}

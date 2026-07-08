@@ -1,0 +1,12 @@
+{
+  "id": "m03l03s10",
+  "module": 3,
+  "module_title": "Удалённые репозитории и GitHub",
+  "lesson": 3,
+  "lesson_title": "fetch pull и синхронизация",
+  "step": 10,
+  "title": "Шаг 10: Задача — Fetch и просмотр новых коммитов",
+  "description_html": "<p>Вы склонировали репозиторий. Пока вы работали, коллега добавил коммит на <code>main</code> в origin. Вам нужно получить его изменения и проверить, что они появились в remote-tracking ветке.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Вы находитесь в клоне репозитория. В origin уже появился новый коммит «Add server config», которого у вас локально нет.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните <code>git fetch</code>, чтобы обновить remote-tracking ветки.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выводит историю <code>origin/main</code>. Ожидается:</p>\n<pre><code>Initial commit\nAdd server config\n</code></pre>",
+  "verify_code": "5d80c396",
+  "expected_output": "Initial commit\nAdd server config\n"
+}

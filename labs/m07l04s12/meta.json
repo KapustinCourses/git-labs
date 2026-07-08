@@ -1,0 +1,12 @@
+{
+  "id": "m07l04s12",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 4,
+  "lesson_title": "Стратегии слияния",
+  "step": 12,
+  "title": "Шаг 12: Octopus merge — слить три ветки одновременно",
+  "description_html": "<p>В репозитории есть ветка <code>main</code> и три ветки: <code>feature1</code>, <code>feature2</code>, <code>feature3</code>. Каждая ветка добавляет <strong>отдельный файл</strong>, поэтому конфликтов нет. Вы хотите слить все три ветки в <code>main</code> одной операцией.</p>\n\n<h3>Начальное состояние</h3>\n<ul>\n  <li><code>feature1</code> добавила файл <code>module1.txt</code></li>\n  <li><code>feature2</code> добавила файл <code>module2.txt</code></li>\n  <li><code>feature3</code> добавила файл <code>module3.txt</code></li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните merge всех трёх веток в <code>main</code> одной командой с сообщением <code>\"Octopus merge\"</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>После merge проверяющий код выведет список файлов в HEAD и историю коммитов в <code>main</code>. Ожидается:</p>\n<pre><code>README.md\nmodule1.txt\nmodule2.txt\nmodule3.txt\nInitial commit\nAdd module3\nAdd module2\nAdd module1\nOctopus merge\n</code></pre>",
+  "verify_code": "2719675e",
+  "expected_output": "README.md\nmodule1.txt\nmodule2.txt\nmodule3.txt\nInitial commit\nAdd module3\nAdd module2\nAdd module1\nOctopus merge\n"
+}

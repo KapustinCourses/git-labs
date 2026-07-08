@@ -1,0 +1,12 @@
+{
+  "id": "m06l06s09",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 6,
+  "lesson_title": "Pull rebase и интеграция",
+  "step": 9,
+  "title": "Шаг 9: git pull --rebase: получить линейную историю",
+  "description_html": "<p>В репозитории:</p>\n<ul>\n  <li>Создан bare-репо как <code>origin</code></li>\n  <li>Создан рабочий клон</li>\n  <li>В клоне добавлен локальный коммит <strong>«Local work»</strong></li>\n  <li>В origin (параллельно) добавлен коммит <strong>«Server update»</strong></li>\n</ul>\n<p>Обычный <code>git pull</code> создал бы merge-коммит. Но с <code>--rebase</code> история останется линейной.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните <code>git pull --rebase origin main</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Будет выведена история ветки <code>main</code>. Ожидается линейная последовательность без merge-коммитов:</p>\n<pre><code>Initial commit\nServer update\nLocal work\n</code></pre>",
+  "verify_code": "761a702c",
+  "expected_output": "Initial commit\nServer update\nLocal work\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m05l05s11",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 5,
+  "lesson_title": "git revert",
+  "step": 11,
+  "title": "Шаг 11: Revert конкретного коммита из середины истории",
+  "description_html": "<p>В репозитории 4 коммита. Второй коммит («Add broken config») содержит ошибку, которую нужно отменить, не затрагивая более поздние коммиты.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>История коммитов (от старого к новому):</p>\n<ol>\n  <li>Initial commit</li>\n  <li>Add broken config</li>\n  <li>Add feature X</li>\n  <li>Update docs</li>\n</ol>\n\n<h3>Что нужно сделать</h3>\n<p>Отмените коммит «Add broken config», который находится на позиции <code>HEAD~2</code>:</p>\n<pre><code>git revert HEAD~2 --no-edit\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>После выполнения вашей команды проверяющий код выведет историю коммитов (от старого к новому). Ожидается:</p>\n<pre><code>Initial commit\nAdd broken config\nAdd feature X\nUpdate docs\nRevert \"Add broken config\"\n</code></pre>",
+  "verify_code": "78798bd1",
+  "expected_output": "Initial commit\nAdd broken config\nAdd feature X\nUpdate docs\nRevert \"Add broken config\"\n"
+}

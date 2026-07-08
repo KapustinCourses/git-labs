@@ -1,0 +1,12 @@
+{
+  "id": "m05l04s12",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 4,
+  "lesson_title": "git reset три режима",
+  "step": 12,
+  "title": "Шаг 12: Сброс трёх коммитов через --mixed",
+  "description_html": "<p>В ветке накопилось несколько «грязных» коммитов. Нужно вернуть изменения в рабочую директорию в состояние unstaged, чтобы пересобрать коммиты заново.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>История коммитов (от старого к новому):</p>\n<ol>\n  <li>Initial commit</li>\n  <li>WIP: start feature</li>\n  <li>WIP: continue feature</li>\n  <li>WIP: finish feature</li>\n</ol>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните <code>git reset --mixed HEAD~3</code>, чтобы вернуть изменения из трёх «WIP» коммитов обратно в рабочую директорию:</p>\n<pre><code>git reset --mixed HEAD~3\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>После выполнения вашей команды проверяющий код выведет сообщение единственного оставшегося коммита и количество unstaged файлов. Ожидается:</p>\n<pre><code>Initial commit\n3\n</code></pre>",
+  "verify_code": "704d0051",
+  "expected_output": "Initial commit\n3\n"
+}

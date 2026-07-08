@@ -1,0 +1,12 @@
+{
+  "id": "m04l01s11",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 1,
+  "lesson_title": "git log продвинутая фильтрация",
+  "step": 11,
+  "title": "Шаг 11: Найти коммиты, изменявшие файл config/db.yaml",
+  "description_html": "<p>В репозитории есть история изменений нескольких файлов. Вам нужно найти коммиты, которые затрагивали конкретный файл.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит файлы <code>config/db.yaml</code>, <code>src/app.go</code> и <code>README.md</code>. Часть коммитов меняла <code>config/db.yaml</code>, часть — другие файлы.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите сообщения коммитов, которые изменяли файл <code>config/db.yaml</code>. Используйте синтаксис с <code>--</code> для явного указания пути. Формат: <code>--pretty='%s'</code>, старые сверху (<code>--reverse</code>).</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод:</p>\n<pre><code>Add db config\nUpdate db connection pool\n</code></pre>",
+  "verify_code": "535ff1bb",
+  "expected_output": "Add db config\nUpdate db connection pool\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m01l02s10",
+  "module": 1,
+  "module_title": "Введение в Git",
+  "lesson": 2,
+  "lesson_title": "Три зоны и первый коммит",
+  "step": 10,
+  "title": "Шаг 10: Добавить файл в staging и создать первый коммит",
+  "description_html": "<p>Репозиторий инициализирован, но пуст — нет ни одного коммита. В рабочей директории уже лежит файл <code>README.md</code>. Вам нужно сделать первый коммит.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Пустой репозиторий (без коммитов) с файлом <code>README.md</code> в рабочей директории.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n<li>Добавьте <code>README.md</code> в staging area командой <code>git add</code>.</li>\n<li>Создайте коммит с сообщением <code>Initial commit</code>.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После ваших команд проверяющий код выполнит:</p>\n<pre><code>git log --pretty='%s'\n</code></pre>\n<p>Ожидаемый вывод:</p>\n<pre><code>Initial commit\n</code></pre>",
+  "verify_code": "11996441",
+  "expected_output": "Initial commit\n"
+}

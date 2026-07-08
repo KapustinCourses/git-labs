@@ -1,0 +1,12 @@
+{
+  "id": "m08l04s09",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 4,
+  "lesson_title": "submodule",
+  "step": 9,
+  "title": "Шаг 9: Добавить submodule из локального репо",
+  "description_html": "<p>Нужно добавить стороннюю библиотеку как submodule в папку <code>vendor/lib</code>. Библиотека находится в локальном bare-репозитории (в реальном проекте это был бы GitHub URL).</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Основной репозиторий с одним коммитом «Initial commit». Локальный bare-репозиторий библиотеки доступен по пути <code>$LIB_BARE</code> (переменная задана в окружении). Библиотека содержит файл <code>lib.txt</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Добавьте submodule из <code>$LIB_BARE</code> в папку <code>vendor/lib</code></li>\n  <li>Зафиксируйте изменение коммитом <code>Add lib submodule</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет содержимое <code>.gitmodules</code> (путь к submodule) и список файлов в <code>vendor/lib</code>. Ожидается:</p>\n<pre><code>vendor/lib\nlib.txt\n</code></pre>",
+  "verify_code": "ff3bdf41",
+  "expected_output": "vendor/lib\nlib.txt\n"
+}

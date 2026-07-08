@@ -1,0 +1,12 @@
+{
+  "id": "m08l07s12",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 7,
+  "lesson_title": "signed commits",
+  "step": 12,
+  "title": "Шаг 12: Отключить автоподпись для одного коммита",
+  "description_html": "<p>Глобально настроена автоматическая подпись (<code>commit.gpgsign=true</code>). Но скрипт автоматизации должен сделать коммит без подписи (ключ недоступен). Нужно отключить подпись для одной команды через <code>-c</code> опцию git.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий с одним коммитом. Глобально включён <code>commit.gpgsign=true</code>, но SSH-ключа нет (подпись будет завершаться с ошибкой).</p>\n\n<h3>Что нужно сделать</h3>\n<p>Сделайте коммит с сообщением <code>Automated commit</code>, передав локальный override <code>commit.gpgsign=false</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет сообщения коммитов. Ожидается:</p>\n<pre><code>Initial commit\nAutomated commit\n</code></pre>",
+  "verify_code": "e647fca9",
+  "expected_output": "Initial commit\nAutomated commit\n"
+}

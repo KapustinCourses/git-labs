@@ -1,0 +1,12 @@
+{
+  "id": "m02l03s10",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 3,
+  "lesson_title": "Слияние fast-forward",
+  "step": 10,
+  "title": "Шаг 10: Слить ветку с принудительным merge-коммитом",
+  "description_html": "<p>В репозитории есть ветка <code>main</code> с одним коммитом «Initial commit» и ветка <code>feature</code> с двумя дополнительными коммитами: «Add A» и «Add B». Fast-forward был бы возможен, но вам нужно сохранить след ветки в истории.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Переключитесь на <code>main</code> и слейте <code>feature</code> принудительно через merge-коммит (не fast-forward), с сообщением <code>Merge feature into main</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет граф истории. Ожидается «ромбовидная» структура с merge-коммитом:</p>\n<pre><code>*   Merge feature into main\n|\\\n| * Add B\n| * Add A\n|/\n* Initial commit\n</code></pre>",
+  "verify_code": "0dc21c7f",
+  "expected_output": "*   Merge feature into main\n|\\  \n| * Add B\n| * Add A\n|/  \n* Initial commit\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m08l06s11",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 6,
+  "lesson_title": "git hooks",
+  "step": 11,
+  "title": "Шаг 11: Пропустить pre-commit через --no-verify",
+  "description_html": "<p>В репозитории установлен pre-commit hook, который всегда завершается с ошибкой. Иногда нужно сделать коммит в обход хука (например, для hotfix в экстренной ситуации). Используйте <code>--no-verify</code>.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий с одним коммитом и pre-commit хуком, который всегда возвращает exit 1.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте коммит с сообщением <code>Emergency fix</code>, обойдя pre-commit хук.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет сообщения коммитов. Ожидается:</p>\n<pre><code>Initial commit\nEmergency fix\n</code></pre>",
+  "verify_code": "7a546f98",
+  "expected_output": "Initial commit\nEmergency fix\n"
+}

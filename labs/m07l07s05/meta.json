@@ -1,0 +1,12 @@
+{
+  "id": "m07l07s05",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 7,
+  "lesson_title": "Практикум",
+  "step": 5,
+  "title": "Шаг 5: Практикум — Шаг 4 из 5: merge -X theirs",
+  "description_html": "<p><strong>Это шаг 4 из 5 в практикуме «Конфликтные сценарии».</strong></p>\n\n<p>Ветка <code>feature/formatter</code> провела массовое переформатирование кода. Все файлы правильные, но конфликтуют с незначительными изменениями в <code>main</code>. Вы решили принимать версии из <code>feature/formatter</code> при любых конфликтах.</p>\n\n<h3>Начальное состояние</h3>\n<ul>\n  <li>Ветки <code>main</code> и <code>feature/formatter</code> расходятся по файлу <code>code-style.txt</code></li>\n  <li>В <code>main</code>: строка <code>indent=tabs</code></li>\n  <li>В <code>feature/formatter</code>: строка <code>indent=spaces-4</code></li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните merge ветки <code>feature/formatter</code> с опцией <code>-X theirs</code>, чтобы при конфликтах автоматически принималась версия из <code>feature/formatter</code>. Используйте сообщение <code>\"Merge formatter changes\"</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет содержимое <code>code-style.txt</code>. Ожидается:</p>\n<pre><code>indent=spaces-4\n</code></pre>",
+  "verify_code": "66439d18",
+  "expected_output": "indent=spaces-4\n"
+}

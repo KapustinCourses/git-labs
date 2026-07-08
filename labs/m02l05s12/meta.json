@@ -1,0 +1,12 @@
+{
+  "id": "m02l05s12",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 5,
+  "lesson_title": "Detached HEAD",
+  "step": 12,
+  "title": "Шаг 12: Найти первого родителя merge-коммита",
+  "description_html": "<p>В репозитории ветка <code>main</code> с merge-коммитом на вершине (HEAD). Merge-коммит объединил ветки <code>main</code> (с коммитом «Main work») и <code>feature</code> (с коммитом «Feature work»). Первый родитель merge-коммита (<code>HEAD^1</code>) — это последний коммит ветки <code>main</code> до слияния, то есть «Main work».</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите сообщение первого родителя merge-коммита HEAD.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается:</p>\n<pre><code>Main work\n</code></pre>",
+  "verify_code": "ccd68f79",
+  "expected_output": "Main work\n"
+}

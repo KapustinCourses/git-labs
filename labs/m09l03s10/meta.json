@@ -1,0 +1,12 @@
+{
+  "id": "m09l03s10",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 3,
+  "lesson_title": "Refs и HEAD",
+  "step": 10,
+  "title": "Шаг 10: Создать ветку через update-ref",
+  "description_html": "<p>Команда <code>git update-ref</code> — это plumbing-инструмент для прямой установки ref на конкретный sha. С её помощью можно создавать ветки, указывающие на любой коммит, без использования porcelain-команды <code>git branch</code>.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит два коммита в ветке <code>main</code>:</p>\n<ul>\n  <li>«Initial commit» (более старый)</li>\n  <li>«Second commit» (текущий HEAD)</li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте ветку <code>old-state</code>, указывающую на родителя текущего HEAD (первый коммит), используя <code>git update-ref</code>:</p>\n<pre><code>OLD_SHA=$(git rev-parse HEAD~1)\ngit update-ref refs/heads/old-state \"$OLD_SHA\"\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>После выполнения будет выведен список веток и последнее сообщение коммита в <code>old-state</code>. Ожидается:</p>\n<pre><code>main\nold-state\nInitial commit\n</code></pre>",
+  "verify_code": "2ded56b8",
+  "expected_output": "main\nold-state\nInitial commit\n"
+}

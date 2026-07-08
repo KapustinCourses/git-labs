@@ -1,0 +1,12 @@
+{
+  "id": "m01l03s12",
+  "module": 1,
+  "module_title": "Введение в Git",
+  "lesson": 3,
+  "lesson_title": "gitignore",
+  "step": 12,
+  "title": "Шаг 12: Игнорировать содержимое папки, но сохранить один файл",
+  "description_html": "<p>Иногда нужно игнорировать всё содержимое директории, но сохранить в репозитории один конкретный файл. Наивный способ — написать <code>build/</code> и потом <code>!build/keep.txt</code> — <strong>не работает</strong>: если директория целиком исключена, Git не просматривает её содержимое, и отрицающий паттерн не имеет эффекта.</p>\n\n<p>Правильный подход — игнорировать <strong>содержимое</strong> директории через маску <code>build/*</code>, оставив саму директорию «видимой» для Git, а затем явно исключить нужный файл через <code>!</code>:</p>\n\n<pre><code>build/*\n!build/keep.txt\n</code></pre>\n\n<h3>Стартовое состояние</h3>\n<p>Пустой репозиторий. В рабочей директории есть папка <code>build/</code> с двумя файлами: <code>build/output.bin</code> и <code>build/keep.txt</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n<li>Создайте <code>.gitignore</code> с двумя правилами: <code>build/*</code> и <code>!build/keep.txt</code>.</li>\n<li>Добавьте все неигнорируемые файлы в staging и создайте коммит с сообщением <code>Add .gitignore and keep.txt</code>.</li>\n</ol>\n<p><strong>Ожидаемый результат:</strong> файл <code>build/output.bin</code> должен быть проигнорирован, а <code>build/keep.txt</code> и <code>.gitignore</code> должны войти в коммит.</p>\n\n<h3>Как проверяется</h3>\n<p>После ваших команд проверяющий код выполнит:</p>\n<pre><code>git ls-tree -r --name-only HEAD | LC_ALL=C sort\n</code></pre>\n<p>Ожидаемый вывод:</p>\n<pre><code>.gitignore\nbuild/keep.txt\n</code></pre>",
+  "verify_code": "46ee8e2b",
+  "expected_output": ".gitignore\nbuild/keep.txt\n"
+}

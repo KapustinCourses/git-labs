@@ -1,0 +1,12 @@
+{
+  "id": "m04l05s08",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 5,
+  "lesson_title": "git bisect бинарный поиск",
+  "step": 8,
+  "title": "Шаг 8: Автоматический bisect run",
+  "description_html": "<p>В репозитории произошла регрессия: скрипт <code>test.sh</code> сломался в одном из коммитов. Вам нужно найти этот коммит с помощью <code>git bisect run</code>.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит 9 коммитов. В коммите «Introduce bug» файл <code>test.sh</code> стал возвращать код 1. В остальных — возвращает 0. Переменная <code>GOOD_SHA</code> содержит sha первого хорошего коммита, <code>BISECT_LOG</code> — путь к файлу для записи вывода bisect.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Запустите bisect run, запишите его вывод в файл <code>$BISECT_LOG</code>, выполните reset, затем выведите сообщение найденного плохого коммита.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяется последняя непустая строка вывода (сообщение коммита):</p>\n<pre><code>Introduce bug\n</code></pre>",
+  "verify_code": "f2778603",
+  "expected_output": "Introduce bug\n"
+}

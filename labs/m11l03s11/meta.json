@@ -1,0 +1,12 @@
+{
+  "id": "m11l03s11",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 3,
+  "lesson_title": "Secrets и environments",
+  "step": 11,
+  "title": "Шаг 11: Workflow с двумя environments",
+  "description_html": "<p>Вы строите пайплайн деплоя с двумя средами: сначала staging, потом production. Деплой в production происходит только после успешного деплоя в staging.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/deploy-envs.yml</code> с двумя jobs:</p>\n<ul>\n  <li><strong>Job <code>deploy-staging</code>:</strong> <code>environment: staging</code>, <code>runs-on: ubuntu-latest</code>, шаг <code>run: echo \"deploying to staging\"</code></li>\n  <li><strong>Job <code>deploy-production</code>:</strong> <code>environment: production</code>, <code>needs: [deploy-staging]</code>, <code>runs-on: ubuntu-latest</code>, шаг <code>run: echo \"deploying to production\"</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что оба job имеют правильные environment и что deploy-production зависит от deploy-staging.</p>",
+  "verify_code": "aa8f9809",
+  "expected_output": "staging_env_ok\nproduction_env_ok\nneeds_ok\n"
+}

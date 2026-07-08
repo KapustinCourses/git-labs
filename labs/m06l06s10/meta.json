@@ -1,0 +1,12 @@
+{
+  "id": "m06l06s10",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 6,
+  "lesson_title": "Pull rebase и интеграция",
+  "step": 10,
+  "title": "Шаг 10: Настроить pull.rebase и pull.ff глобально",
+  "description_html": "<p>Чтобы сделать поведение <code>git pull</code> предсказуемым и безопасным во всех репозиториях, настройте два параметра глобально:</p>\n<ul>\n  <li><code>pull.rebase = true</code> — rebase при pull</li>\n  <li><code>pull.ff = only</code> — разрешать fast-forward, запрещать merge-коммиты</li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Установите обе настройки через <code>git config --global</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Будут выведены значения обеих настроек:</p>\n<pre><code>true\nonly\n</code></pre>",
+  "verify_code": "7d575cc8",
+  "expected_output": "true\nonly\n"
+}

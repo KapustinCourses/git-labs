@@ -1,0 +1,12 @@
+{
+  "id": "m02l05s10",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 5,
+  "lesson_title": "Detached HEAD",
+  "step": 10,
+  "title": "Шаг 10: Спасти коммит сделанный в detached HEAD",
+  "description_html": "<p>В репозитории есть ветка <code>main</code> с двумя коммитами: «First commit» и «Second commit».</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Переключитесь в режим detached HEAD на коммит <code>HEAD~1</code>.</li>\n  <li>Создайте файл <code>rescue.txt</code> со строкой <code>saved</code> и закоммитьте с сообщением <code>Rescue commit</code>.</li>\n  <li>Создайте ветку <code>rescue</code> из этой позиции и переключитесь на неё.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет сообщения коммитов в ветке <code>rescue</code> от старого к новому. Ожидается:</p>\n<pre><code>First commit\nRescue commit\n</code></pre>",
+  "verify_code": "82096af3",
+  "expected_output": "First commit\nRescue commit\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m02l06s05",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 6,
+  "lesson_title": "Практикум",
+  "step": 5,
+  "title": "Шаг 5: Шаг 4 из 5 — Расходящиеся ветки",
+  "description_html": "<p><strong>Практикум: шаг 4 из 5.</strong> В репозитории ветка <code>main</code> с двумя коммитами: «Initial version» и «Add header». Нужно создать расходящуюся историю.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>На ветке <code>main</code>: измените <code>app.txt</code> на содержимое <code>version 2</code> и закоммитьте с сообщением <code>Bump version to 2</code>.</li>\n  <li>Создайте ветку <code>feature/footer</code> от предыдущего коммита (<code>HEAD~1</code>, то есть «Add header») и переключитесь на неё.</li>\n  <li>Создайте файл <code>footer.txt</code> с содержимым <code>Bye</code> и закоммитьте с сообщением <code>Add footer</code>.</li>\n</ol>\n<p>Теперь <code>main</code> и <code>feature/footer</code> разошлись — у обеих есть коммиты после «Add header».</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет граф с обеими ветками. Ожидается расходящийся граф (ромб без слияния):</p>\n<pre><code>* Add footer\n| * Bump version to 2\n|/\n* Add header\n* Initial version\n</code></pre>",
+  "verify_code": "138e5a7b",
+  "expected_output": "* Add footer\n| * Bump version to 2\n|/  \n* Add header\n* Initial version\n"
+}

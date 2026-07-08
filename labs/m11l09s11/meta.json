@@ -1,0 +1,12 @@
+{
+  "id": "m11l09s11",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 9,
+  "lesson_title": "GitLab CI CD сравнительно",
+  "step": 11,
+  "title": "Шаг 11: Минимальный .gitlab-ci.yml с тремя stages",
+  "description_html": "<p>Вы переходите на GitLab CI/CD и создаёте базовый пайплайн с тремя стадиями: lint, test и build.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.gitlab-ci.yml</code> в корне репозитория со:</p>\n<ul>\n  <li>Объявлением <code>stages: [lint, test, build]</code></li>\n  <li>Тремя jobs:\n    <ul>\n      <li><code>lint-job</code> со <code>stage: lint</code> и <code>script: echo \"linting\"</code></li>\n      <li><code>test-job</code> со <code>stage: test</code> и <code>script: echo \"testing\"</code></li>\n      <li><code>build-job</code> со <code>stage: build</code> и <code>script: echo \"building\"</code></li>\n    </ul>\n  </li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что в YAML есть все три stages и у каждого job правильно указана stage.</p>",
+  "verify_code": "ef7f3bfd",
+  "expected_output": "stages_ok\nlint_job_ok\ntest_job_ok\nbuild_job_ok\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m01l01s10",
+  "module": 1,
+  "module_title": "Введение в Git",
+  "lesson": 1,
+  "lesson_title": "Зачем нужен Git",
+  "step": 10,
+  "title": "Шаг 10: Настройить имя и email автора",
+  "description_html": "<p>Перед первым коммитом Git должен знать, кто вы. Без настройки <code>user.name</code> и <code>user.email</code> создать коммит не получится.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Задайте глобальные настройки:</p>\n<ul>\n<li><code>user.name</code> — значение <code>Alice Smith</code></li>\n<li><code>user.email</code> — значение <code>alice@example.com</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд проверяющий код выполнит:</p>\n<pre><code>git config --global --get user.name\ngit config --global --get user.email\n</code></pre>\n<p>Ожидаемый вывод:</p>\n<pre><code>Alice Smith\nalice@example.com\n</code></pre>",
+  "verify_code": "cf430d2c",
+  "expected_output": "Alice Smith\nalice@example.com\n"
+}

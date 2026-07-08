@@ -1,0 +1,12 @@
+{
+  "id": "m06l07s02",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 7,
+  "lesson_title": "Практикум",
+  "step": 2,
+  "title": "Шаг 2: Практикум шаг 1 — посмотреть коммиты feature/payments",
+  "description_html": "<p><strong>Это шаг 1 из 5 в сценарии «Причёсываем feature-ветку перед PR».</strong></p>\n<p>Ветка <code>feature/payments</code> содержит 7 коммитов. Некоторые помечены как WIP, некоторые — fixup-правки.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите список сообщений коммитов <code>feature/payments</code>, которых нет в <code>main</code>, в порядке от старого к новому.</p>\n<p>Используйте команду: <code>git log --pretty='%s' --reverse main..feature/payments</code></p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается список из 7 коммитов:</p>\n<pre><code>WIP add payment form\nAdd payment validation\nfix typo in form\nWIP payment tests\nfixup! Add payment validation\nAdd payment docs\nfixup! WIP add payment form\n</code></pre>",
+  "verify_code": "ecec249a",
+  "expected_output": "WIP add payment form\nAdd payment validation\nfix typo in form\nWIP payment tests\nfixup! Add payment validation\nAdd payment docs\nfixup! WIP add payment form\n"
+}

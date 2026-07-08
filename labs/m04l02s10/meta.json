@@ -1,0 +1,12 @@
+{
+  "id": "m04l02s10",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 2,
+  "lesson_title": "git diff и git show",
+  "step": 10,
+  "title": "Шаг 10: Посмотреть, что закоммитится",
+  "description_html": "<p>В репозитории есть файл <code>app.py</code>. Часть изменений уже добавлена в staging area через <code>git add</code>, часть — нет.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит один коммит. Файл <code>app.py</code> изменён: строка <code>version = \"2.0\"</code> добавлена в staging area, а строка <code># TODO: cleanup</code> остаётся только в рабочей директории (не staged).</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите список имён файлов, изменения которых готовы к коммиту (находятся в staging area).</p>\n<p>Используйте флаги <code>--staged</code> и <code>--name-only</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод:</p>\n<pre><code>app.py\n</code></pre>",
+  "verify_code": "b6cd92a8",
+  "expected_output": "app.py\n"
+}

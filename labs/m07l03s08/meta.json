@@ -1,0 +1,12 @@
+{
+  "id": "m07l03s08",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 3,
+  "lesson_title": "git mergetool",
+  "step": 8,
+  "title": "Шаг 8: Настроить mergetool и проверить конфигурацию",
+  "description_html": "<p>Вы хотите настроить git для работы с mergetool. Нужно задать инструмент по умолчанию и отключить создание <code>.orig</code> backup-файлов после разрешения конфликтов.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Установите <code>vimdiff</code> как инструмент разрешения конфликтов по умолчанию</li>\n  <li>Отключите создание backup-файлов (<code>.orig</code>)</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет значения двух настроек. Ожидается:</p>\n<pre><code>vimdiff\nfalse\n</code></pre>",
+  "verify_code": "7560abe8",
+  "expected_output": "vimdiff\nfalse\n"
+}

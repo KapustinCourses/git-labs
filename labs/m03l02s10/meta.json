@@ -1,0 +1,12 @@
+{
+  "id": "m03l02s10",
+  "module": 3,
+  "module_title": "Удалённые репозитории и GitHub",
+  "lesson": 2,
+  "lesson_title": "git clone и первый push",
+  "step": 10,
+  "title": "Шаг 10: Задача — Удалить удалённую ветку",
+  "description_html": "<p>В вашем репозитории и на remote <code>origin</code> существует ветка <code>feature/old-experiment</code>. Работа по ней завершена, PR влит, ветку нужно убрать с сервера.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий клонирован с bare-репо <code>/tmp/origin.git</code>. На origin существуют ветки <code>main</code> и <code>feature/old-experiment</code>. Вы уже находитесь в рабочей директории (клоне).</p>\n\n<h3>Что нужно сделать</h3>\n<p>Удалите ветку <code>feature/old-experiment</code> на remote <code>origin</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код смотрит на ветки в bare-репозитории. Ожидается только:</p>\n<pre><code>main\n</code></pre>",
+  "verify_code": "6403203d",
+  "expected_output": "main\n"
+}

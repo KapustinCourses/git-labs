@@ -1,0 +1,12 @@
+{
+  "id": "m06l05s09",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 5,
+  "lesson_title": "Rebase onto",
+  "step": 9,
+  "title": "Шаг 9: Пересадить feature/B с устаревшей базы на main",
+  "description_html": "<p>Репозиторий имеет структуру:</p>\n<pre><code>Initial --- Add to main  (main)\n     \\\n      Add A1 --- Add A2  (feature/A)\n                       \\\n                        Add B1 --- Add B2  (feature/B)\n</code></pre>\n<p>Работа из <code>feature/A</code> уже попала в <code>main</code> (коммит «Add to main»), поэтому коммиты A1 и A2 в новой истории не нужны. Нужно пересадить только свои коммиты ветки <code>feature/B</code> (B1 и B2) прямо на <code>main</code>, минуя <code>feature/A</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните: <code>git rebase --onto main feature/A feature/B</code></p>\n\n<h3>Как проверяется</h3>\n<p>Будет выведена история коммитов ветки <code>feature/B</code> в хронологическом порядке. Ожидается (все 4 коммита main + 2 своих):</p>\n<pre><code>Initial commit\nAdd to main\nAdd B1\nAdd B2\n</code></pre>",
+  "verify_code": "1e65156c",
+  "expected_output": "Initial commit\nAdd to main\nAdd B1\nAdd B2\n"
+}

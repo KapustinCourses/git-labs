@@ -1,0 +1,12 @@
+{
+  "id": "m10l06s12",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 6,
+  "lesson_title": "Marketplace actions и переиспользование",
+  "step": 12,
+  "title": "Шаг 12: Workflow с checkout и setup-node",
+  "description_html": "<p>Основа любого Node.js CI-пайплайна: checkout репозитория, затем установка нужной версии Node.js.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/ci.yml</code> с job, в котором:</p>\n<ul>\n  <li>Step 1: <code>uses: actions/checkout@v6</code></li>\n  <li>Step 2: <code>uses: actions/setup-node@v6</code> с параметром <code>node-version: 20</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет:</p>\n<pre><code>uses_checkout_v6=True\nuses_setup_node_v6=True\nnode_version=20</code></pre>",
+  "verify_code": "ac31318c",
+  "expected_output": "uses_checkout_v6=True\nuses_setup_node_v6=True\nnode_version=20\n"
+}

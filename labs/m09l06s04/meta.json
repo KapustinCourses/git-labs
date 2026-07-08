@@ -1,0 +1,12 @@
+{
+  "id": "m09l06s04",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 6,
+  "lesson_title": "Практикум plumbing",
+  "step": 4,
+  "title": "Шаг 4: Практикум — Шаг 3: создать первый коммит через commit-tree",
+  "description_html": "<p><strong>Это шаг 3 из 5 в практикуме «Собрать коммит руками».</strong></p>\n\n<p>Blob и tree созданы. Пришло время создать первый коммит — root commit (без родителя). После создания коммита нужно зарегистрировать ветку <code>main</code> и установить HEAD.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Пустой репозиторий. В header созданы blob и tree. Sha обоих сохранены в переменных <code>BLOB</code> и <code>TREE</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Создайте root commit с сообщением <code>Initial commit</code> через <code>git commit-tree $TREE -m \"Initial commit\"</code>. Sha сохраните в переменную <code>COMMIT</code>.</li>\n  <li>Обновите ветку main: <code>git update-ref refs/heads/main \"$COMMIT\"</code>.</li>\n  <li>Установите HEAD: <code>git symbolic-ref HEAD refs/heads/main</code>.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После выполнения будет выведена история коммитов. Ожидается:</p>\n<pre><code>Initial commit\n</code></pre>",
+  "verify_code": "11996441",
+  "expected_output": "Initial commit\n"
+}

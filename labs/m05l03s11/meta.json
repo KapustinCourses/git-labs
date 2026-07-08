@@ -1,0 +1,12 @@
+{
+  "id": "m05l03s11",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 3,
+  "lesson_title": "git restore",
+  "step": 11,
+  "title": "Шаг 11: Восстановить файл из коммита 3 шага назад",
+  "description_html": "<p>Разработчик обнаружил, что файл <code>app.txt</code> несколько коммитов назад содержал правильную версию. Нужно восстановить именно ту версию.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит 4 коммита. В каждом файл <code>app.txt</code> получал новое содержимое:</p>\n<ul>\n  <li>Коммит 1 (самый старый): «version 1»</li>\n  <li>Коммит 2: «version 2»</li>\n  <li>Коммит 3: «version 3»</li>\n  <li>Коммит 4 (HEAD): «version 4»</li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Восстановите <code>app.txt</code> к версии из коммита 3 шага назад (то есть <code>HEAD~3</code> — это коммит 1):</p>\n<pre><code>git restore --source=HEAD~3 app.txt\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>После выполнения вашей команды проверяющий код выведет содержимое файла. Ожидается:</p>\n<pre><code>version 1\n</code></pre>",
+  "verify_code": "3a79bf37",
+  "expected_output": "version 1\n"
+}

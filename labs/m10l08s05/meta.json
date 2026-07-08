@@ -1,0 +1,12 @@
+{
+  "id": "m10l08s05",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 8,
+  "lesson_title": "Практикум CI workflow для Go проекта",
+  "step": 5,
+  "title": "Шаг 5: Практикум — Шаг 4 из 6: добавить кэш Go-модулей",
+  "description_html": "<p><em>Это шаг 4 из 6 в практикуме «CI workflow для Go-проекта».</em></p>\n\n<p>Предыдущее состояние: два параллельных jobs — lint и test. Каждый скачивает зависимости заново. Добавьте кэш через встроенный параметр <code>actions/setup-go</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>В обоих jobs (<code>lint</code> и <code>test</code>) добавьте в step <code>actions/setup-go@v6</code> параметр <code>cache: true</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидаемый вывод:</p>\n<pre><code>lint_setup_go_cache=True\ntest_setup_go_cache=True</code></pre>",
+  "verify_code": "e59d6b39",
+  "expected_output": "lint_setup_go_cache=True\ntest_setup_go_cache=True\n"
+}

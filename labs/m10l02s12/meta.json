@@ -1,0 +1,12 @@
+{
+  "id": "m10l02s12",
+  "module": 10,
+  "module_title": "CI CD и GitHub Actions",
+  "lesson": 2,
+  "lesson_title": "GitHub Actions структура workflow",
+  "step": 12,
+  "title": "Шаг 12: Workflow с checkout и run step",
+  "description_html": "<p>Большинство реальных CI-пайплайнов начинаются с клонирования репозитория через <code>actions/checkout</code>, а затем выполняют команды.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Создайте файл <code>.github/workflows/ci.yml</code> с одним job, в котором два шага:</p>\n<ol>\n  <li>Первый шаг: <code>uses: actions/checkout@v6</code></li>\n  <li>Второй шаг: любой <code>run:</code> с командой</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что в job ровно два steps и первый использует <code>actions/checkout@v6</code>. Ожидаемый вывод:</p>\n<pre><code>steps_count=2\nfirst_uses=actions/checkout@v6</code></pre>",
+  "verify_code": "d9657fdb",
+  "expected_output": "steps_count=2\nfirst_uses=actions/checkout@v6\n"
+}

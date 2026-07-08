@@ -1,0 +1,12 @@
+{
+  "id": "m04l01s12",
+  "module": 4,
+  "module_title": "История навигация поиск",
+  "lesson": 1,
+  "lesson_title": "git log продвинутая фильтрация",
+  "step": 12,
+  "title": "Шаг 12: Найти коммит, добавивший функцию parseConfig",
+  "description_html": "<p>В репозитории в одном из коммитов была добавлена функция <code>parseConfig</code>. Вам нужно найти этот коммит с помощью «pickaxe» — поиска по содержимому изменений.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит несколько коммитов. В одном из них в файл был добавлен текст <code>parseConfig</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Используйте флаг <code>-S</code> для поиска коммита, в котором изменилось количество вхождений строки <code>parseConfig</code>. Выведите сообщение этого коммита в формате <code>--pretty='%s'</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод:</p>\n<pre><code>Add config parser module\n</code></pre>",
+  "verify_code": "2299fb2d",
+  "expected_output": "Add config parser module\n"
+}

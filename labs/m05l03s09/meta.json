@@ -1,0 +1,12 @@
+{
+  "id": "m05l03s09",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 3,
+  "lesson_title": "git restore",
+  "step": 9,
+  "title": "Шаг 9: Отменить правки в файле через restore",
+  "description_html": "<p>В рабочей директории файл <code>app.txt</code> был изменён, но в staging не добавлен. Нужно вернуть его к версии в HEAD.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит коммит с файлом <code>app.txt</code> (содержимое: «initial content»). В рабочей директории файл изменён — содержит «modified content».</p>\n\n<h3>Что нужно сделать</h3>\n<p>Отмените правки в <code>app.txt</code>, вернув его к версии из последнего коммита:</p>\n<pre><code>git restore app.txt\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>После выполнения вашей команды проверяющий код выведет содержимое файла. Ожидается:</p>\n<pre><code>initial content\n</code></pre>",
+  "verify_code": "d52672e7",
+  "expected_output": "initial content\n"
+}

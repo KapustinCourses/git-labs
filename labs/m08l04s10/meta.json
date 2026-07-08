@@ -1,0 +1,12 @@
+{
+  "id": "m08l04s10",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 4,
+  "lesson_title": "submodule",
+  "step": 10,
+  "title": "Шаг 10: Клонировать репо с submodule'ами",
+  "description_html": "<p>Основной проект включает submodule. Нужно клонировать его так, чтобы submodule тоже был инициализирован и заполнен.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Существует bare-репозиторий основного проекта <code>$MAIN_BARE</code> с подключённым submodule в <code>vendor/lib</code>. В submodule лежит файл <code>lib.txt</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Клонируйте <code>$MAIN_BARE</code> в директорию <code>work</code> вместе со всеми submodule'ами за одну команду.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет список файлов в <code>work/vendor/lib</code>. Ожидается:</p>\n<pre><code>lib.txt\n</code></pre>",
+  "verify_code": "abd3c09f",
+  "expected_output": "lib.txt\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m09l05s13",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 5,
+  "lesson_title": "Plumbing команды",
+  "step": 13,
+  "title": "Шаг 13: Собрать tree из двух blob'ов",
+  "description_html": "<p>После создания blob'ов следующий шаг — собрать tree-объект, который описывает структуру директории. Команда <code>git mktree</code> принимает записи в формате <code>&lt;права&gt; &lt;тип&gt; &lt;sha&gt;&lt;TAB&gt;&lt;имя&gt;</code> и создаёт tree.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Пустой репозиторий (только <code>.git/</code>).</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Создайте два blob'а: для файла <code>hello.txt</code> со строкой <code>Hello!</code> и для файла <code>world.txt</code> со строкой <code>World!</code>.</li>\n  <li>Создайте tree, содержащий оба файла, через <code>git mktree</code>.</li>\n  <li>Выведите содержимое созданного tree через <code>git ls-tree &lt;TREE&gt;</code>: вывести только имена файлов (4-е поле), отсортированные.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Ожидается:</p>\n<pre><code>hello.txt\nworld.txt\n</code></pre>",
+  "verify_code": "15faaef8",
+  "expected_output": "hello.txt\nworld.txt\n"
+}

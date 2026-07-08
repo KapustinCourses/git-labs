@@ -1,0 +1,12 @@
+{
+  "id": "m06l02s09",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 2,
+  "lesson_title": "Базовый rebase",
+  "step": 9,
+  "title": "Шаг 9: Простой rebase без конфликтов",
+  "description_html": "<p>В репозитории:</p>\n<ul>\n  <li><code>main</code> — добавлен коммит <strong>«Update README»</strong> (изменён <code>README.md</code>)</li>\n  <li><code>feature</code> — добавлен коммит <strong>«Add feature.txt»</strong> (создан новый файл <code>feature.txt</code>)</li>\n</ul>\n<p>Ветки разошлись от общего предка, но правят <strong>разные файлы</strong> — конфликтов не будет.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Переключитесь на <code>feature</code> и выполните rebase поверх <code>main</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Будет выведена история ветки <code>feature</code> и граф всех веток. Ожидаемые сообщения коммитов в порядке создания:</p>\n<pre><code>Initial commit\nUpdate README\nAdd feature.txt\n</code></pre>",
+  "verify_code": "abc61d0f",
+  "expected_output": "Initial commit\nUpdate README\nAdd feature.txt\n"
+}

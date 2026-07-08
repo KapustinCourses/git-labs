@@ -1,0 +1,12 @@
+{
+  "id": "m03l06s04",
+  "module": 3,
+  "module_title": "Удалённые репозитории и GitHub",
+  "lesson": 6,
+  "lesson_title": "Практикум fork and PR",
+  "step": 4,
+  "title": "Шаг 4: Практикум — Шаг 3 из 5: push feature-ветки в fork",
+  "description_html": "<p><strong>Это шаг 3 из 5 в сценарии «open-source contribution».</strong></p>\n\n<p>Feature-ветка готова (шаг 2). Теперь нужно отправить её в свой форк, чтобы на GitHub (в нашем случае — в bare-репо форка) появилась ветка <code>feature/translate</code>. Это момент, после которого на GitHub можно было бы нажать «Compare & pull request».</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий после шагов 1 и 2: ветка <code>feature/translate</code> с коммитом «Add Russian translation» существует локально. Remote <code>origin</code> → <code>/tmp/fork.git</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Отправьте ветку <code>feature/translate</code> в свой fork с установкой tracking: <code>git push -u origin feature/translate</code></p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код смотрит на ветки в bare-репо форка (отсортированы). Ожидается:</p>\n<pre><code>feature/translate\nmain\n</code></pre>",
+  "verify_code": "f08575df",
+  "expected_output": "feature/translate\nmain\n"
+}

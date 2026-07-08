@@ -1,0 +1,12 @@
+{
+  "id": "m06l03s15",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 3,
+  "lesson_title": "Interactive rebase",
+  "step": 15,
+  "title": "Шаг 15: Изменить содержимое коммита через edit",
+  "description_html": "<p>В ветке есть 3 коммита:</p>\n<ol>\n  <li><strong>Initial commit</strong></li>\n  <li><strong>Add app logic</strong> — файл <code>app.go</code> содержит строку <code>oldline</code>, которую нужно исправить</li>\n  <li><strong>Add tests</strong></li>\n</ol>\n\n<h3>Что нужно сделать</h3>\n<p>С помощью interactive rebase остановитесь на втором коммите (<code>edit</code>), замените строку <code>oldline</code> на <code>newline</code> в файле <code>app.go</code>, сохраните изменение через <code>git commit --amend --no-edit</code> и продолжите rebase.</p>\n<p>Используйте <code>GIT_SEQUENCE_EDITOR</code> для замены <code>pick</code> на <code>edit</code> на нужной строке, затем выполните правку файла и завершите rebase.</p>\n\n<h3>Как проверяется</h3>\n<p>Будет выведено содержимое <code>app.go</code> и история коммитов. Ожидается:</p>\n<pre><code>newline\nInitial commit\nAdd app logic\nAdd tests\n</code></pre>",
+  "verify_code": "4b96e950",
+  "expected_output": "newline\nInitial commit\nAdd app logic\nAdd tests\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m03l04s13",
+  "module": 3,
+  "module_title": "Удалённые репозитории и GitHub",
+  "lesson": 4,
+  "lesson_title": "GitHub и Pull Request workflow",
+  "step": 13,
+  "title": "Шаг 13: Задача — Push feature-ветки в свой fork (подготовка PR)",
+  "description_html": "<p>Это имитация шага «Push в свой fork перед открытием Pull Request». Вы работаете в клоне своего форка, создали feature-ветку и сделали коммит. Теперь нужно отправить её в свой форк.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий клонирован из <code>/tmp/fork.git</code>. Remote <code>upstream</code> указывает на <code>/tmp/original.git</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Создайте ветку <code>feature/dark-mode</code></li>\n  <li>Создайте файл <code>dark_mode.css</code> с содержимым <code>body { background: #1e1e1e; }</code></li>\n  <li>Добавьте файл и закоммитьте с сообщением <code>Add dark mode CSS</code></li>\n  <li>Отправьте ветку в origin: <code>git push -u origin feature/dark-mode</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код смотрит на ветки в bare-репо форка (отсортированы). Ожидается:</p>\n<pre><code>feature/dark-mode\nmain\n</code></pre>",
+  "verify_code": "6c886c26",
+  "expected_output": "feature/dark-mode\nmain\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m03l01s09",
+  "module": 3,
+  "module_title": "Удалённые репозитории и GitHub",
+  "lesson": 1,
+  "lesson_title": "Что такое remote",
+  "step": 9,
+  "title": "Шаг 9: Задача — Зарегистрировать remote origin",
+  "description_html": "<p>У вас есть локальный git-репозиторий. В системе уже создан bare-репозиторий по пути <code>/tmp/myremote.git</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Зарегистрируйте bare-репозиторий как remote с именем <code>origin</code>, используя URL <code>file:///tmp/myremote.git</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд проверяющий код запустит <code>git remote -v</code> и отсортирует вывод. Ожидается:</p>\n<pre><code>origin\tfile:///tmp/myremote.git (fetch)\norigin\tfile:///tmp/myremote.git (push)\n</code></pre>",
+  "verify_code": "5183cf9f",
+  "expected_output": "origin\tfile:///tmp/myremote.git (fetch)\norigin\tfile:///tmp/myremote.git (push)\n"
+}

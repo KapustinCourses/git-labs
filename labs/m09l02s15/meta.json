@@ -1,0 +1,12 @@
+{
+  "id": "m09l02s15",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 2,
+  "lesson_title": "Объектная модель",
+  "step": 15,
+  "title": "Шаг 15: Найти sha blob конкретного файла",
+  "description_html": "<p>Команда <code>git ls-tree HEAD &lt;файл&gt;</code> выводит информацию о конкретном файле в текущем коммите. Из этой информации можно извлечь sha blob'а — и затем работать с ним напрямую через <code>git cat-file</code>.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит один коммит «Initial commit» с файлом <code>README.md</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Получите sha blob'а файла <code>README.md</code>, используя <code>git ls-tree HEAD README.md</code>, и выведите только первые 7 символов этого sha.</p>\n\n<p>Используйте команды:</p>\n<pre><code>BLOB_SHA=$(git ls-tree HEAD README.md | awk '{print $3}')\necho \"${BLOB_SHA:0:7}\"\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>Вы увидите первые 7 символов sha blob'а файла README.md — значение детерминировано (фиксированное содержимое файла).</p>",
+  "verify_code": "61f8d2a4",
+  "expected_output": "f395431\n"
+}

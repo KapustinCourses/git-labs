@@ -1,0 +1,12 @@
+{
+  "id": "m06l06s11",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 6,
+  "lesson_title": "Pull rebase и интеграция",
+  "step": 11,
+  "title": "Шаг 11: git pull --rebase с конфликтом: разрешить и продолжить",
+  "description_html": "<p>Ситуация: локальный коммит и серверный коммит правят одну строку в файле <code>config.txt</code>.</p>\n<ul>\n  <li>Сервер: <code>env=production</code></li>\n  <li>Локально: <code>env=staging</code></li>\n</ul>\n<p>При <code>git pull --rebase</code> возникнет конфликт.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните <code>git pull --rebase origin main</code>. При конфликте запишите в <code>config.txt</code> финальное содержимое <code>env=production-staging</code>, затем продолжьте rebase.</p>\n\n<h3>Как проверяется</h3>\n<p>Будет выведено содержимое <code>config.txt</code> и история коммитов:</p>\n<pre><code>env=production-staging\nInitial commit\nServer config\nLocal config\n</code></pre>",
+  "verify_code": "f8a4c67e",
+  "expected_output": "env=production-staging\nInitial commit\nServer config\nLocal config\n"
+}

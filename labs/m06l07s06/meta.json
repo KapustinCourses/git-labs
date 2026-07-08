@@ -1,0 +1,12 @@
+{
+  "id": "m06l07s06",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 7,
+  "lesson_title": "Практикум",
+  "step": 6,
+  "title": "Шаг 6: Практикум шаг 5 — push с --force-with-lease",
+  "description_html": "<p><strong>Это шаг 5 из 5 в сценарии «Причёсываем feature-ветку перед PR».</strong></p>\n<p>Ветка <code>feature/payments</code> причёсана и перебазирована на актуальный main. Теперь нужно опубликовать её в <code>origin</code>. Поскольку история была переписана (SHA изменились), обычный push не пройдёт — нужен force push.</p>\n<p>На сервере (<code>origin</code>) уже есть старая версия <code>feature/payments</code> с оригинальными SHA.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните force push с защитой: <code>git push --force-with-lease origin feature/payments</code></p>\n\n<h3>Как проверяется</h3>\n<p>Будет выведена история ветки <code>feature/payments</code> в bare-репозитории origin. Ожидается финальная история:</p>\n<pre><code>Initial commit\nAdd payment form\nAdd payment validation\nAdd payment docs\n</code></pre>",
+  "verify_code": "80cca357",
+  "expected_output": "Initial commit\nAdd payment form\nAdd payment validation\nAdd payment docs\n"
+}

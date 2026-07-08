@@ -1,0 +1,12 @@
+{
+  "id": "m03l05s12",
+  "module": 3,
+  "module_title": "Удалённые репозитории и GitHub",
+  "lesson": 5,
+  "lesson_title": "Issues теги релизы",
+  "step": 12,
+  "title": "Шаг 12: Задача — История между двумя тегами",
+  "description_html": "<p>Часто нужно увидеть, какие изменения попали в новый релиз — список коммитов между двумя тегами. Это удобно для написания changelog.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий содержит несколько коммитов с тегами <code>v1.0.0</code> и <code>v1.1.0</code>. Между тегами — два коммита: «Add user auth» и «Fix login bug».</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите сообщения коммитов между тегами <code>v1.0.0</code> и <code>v1.1.0</code> (не включая коммит тега <code>v1.0.0</code>).</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код сравнивает вывод с эталоном. Ожидается:</p>\n<pre><code>Add user auth\nFix login bug\n</code></pre>",
+  "verify_code": "302d45ce",
+  "expected_output": "Add user auth\nFix login bug\n"
+}

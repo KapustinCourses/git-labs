@@ -1,0 +1,12 @@
+{
+  "id": "m06l01s11",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 1,
+  "lesson_title": "Зачем rebase",
+  "step": 11,
+  "title": "Шаг 11: После rebase SHA коммитов feature меняются",
+  "description_html": "<p>После rebase коммиты ветки <code>feature</code> получают новые SHA — старые остаются только в reflog.</p>\n<p>В репозитории подготовлены:</p>\n<ul>\n  <li>ветка <code>main</code> с двумя коммитами (Initial + Update main)</li>\n  <li>ветка <code>feature</code> с двумя коммитами поверх initial (Add feature)</li>\n</ul>\n<p>Переменная <code>BEFORE_SHA</code> содержит SHA верхушки <code>feature</code> <em>до</em> rebase.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните <code>git rebase main</code>. Затем проверьте, что HEAD ветки <code>feature</code> стал <strong>другим</strong>: выведите слово <code>changed</code>, если SHA изменился, или <code>same</code>, если нет.</p>\n\n<h3>Как проверяется</h3>\n<p>Ожидается вывод:</p>\n<pre><code>changed\n</code></pre>",
+  "verify_code": "7f8b1dfc",
+  "expected_output": "changed\n"
+}

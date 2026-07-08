@@ -1,0 +1,12 @@
+{
+  "id": "m02l05s09",
+  "module": 2,
+  "module_title": "Ветки и слияние",
+  "lesson": 5,
+  "lesson_title": "Detached HEAD",
+  "step": 9,
+  "title": "Шаг 9: Переключиться в detached HEAD и вернуться на main",
+  "description_html": "<p>В репозитории есть ветка <code>main</code> с двумя коммитами: «First commit» и «Second commit».</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Переключитесь в режим detached HEAD на предыдущий коммит (<code>HEAD~1</code>).</li>\n  <li>Вернитесь обратно на ветку <code>main</code>.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет историю <code>main</code> (от старого к новому) и имя текущей ветки через перенос строки. Ожидается:</p>\n<pre><code>First commit\nSecond commit\nmain\n</code></pre>",
+  "verify_code": "15d80dd6",
+  "expected_output": "First commit\nSecond commit\nmain\n"
+}

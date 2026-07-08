@@ -1,0 +1,12 @@
+{
+  "id": "m08l08s04",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 8,
+  "lesson_title": "Практикум",
+  "step": 4,
+  "title": "Шаг 4: Практикум — Шаг 3 из 6: Сделать hotfix в worktree",
+  "description_html": "<p><em>Это шаг 3 из 6 в практикуме «Параллельная работа и hotfix».</em></p>\n\n<p>Worktree для hotfix создан. Нужно перейти в него, создать файл с фиксом и закоммитить. Основная рабочая директория с feature не затронута.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Worktree <code>../hotfix-wt</code> с веткой <code>hotfix/csrf</code> уже создан.</p>\n\n<h3>Что нужно сделать</h3>\n<p>В директории <code>../hotfix-wt</code> создайте файл <code>csrf_fix.py</code> с содержимым <code>csrf protection</code> и сделайте коммит с сообщением <code>Fix CSRF vulnerability</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет последний коммит ветки <code>hotfix/csrf</code>. Ожидается:</p>\n<pre><code>Fix CSRF vulnerability\n</code></pre>",
+  "verify_code": "f2b7c63d",
+  "expected_output": "Fix CSRF vulnerability\n"
+}

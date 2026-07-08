@@ -1,0 +1,12 @@
+{
+  "id": "m09l01s12",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 1,
+  "lesson_title": "Workflow модели",
+  "step": 12,
+  "title": "Шаг 12: Настройка CODEOWNERS",
+  "description_html": "<p>В командах, работающих с monorepo, важно знать, кто отвечает за каждую часть кода. Файл <code>.github/CODEOWNERS</code> позволяет объявить владельцев путей — они будут автоматически добавлены как reviewers к каждому PR, затрагивающему их область.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит две директории: <code>services/</code> и <code>libs/</code>, каждая с одним файлом. Директория <code>.github/</code> отсутствует.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Создайте директорию <code>.github/</code>.</li>\n  <li>Создайте файл <code>.github/CODEOWNERS</code> со следующим содержимым (строго в таком порядке):\n    <pre><code># Владельцы по умолчанию\n* @team-core\n\n# Сервисы ревьюирует команда backend\n/services/ @team-backend\n\n# Библиотеки ревьюирует команда platform\n/libs/ @team-platform\n</code></pre>\n  </li>\n  <li>Добавьте файл в индекс и создайте коммит с сообщением <code>Add CODEOWNERS</code>.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После выполнения ваших команд проверяющий код выведет содержимое <code>.github/CODEOWNERS</code> и список отслеживаемых файлов. Ожидается:</p>\n<pre><code># Владельцы по умолчанию\n* @team-core\n\n# Сервисы ревьюирует команда backend\n/services/ @team-backend\n\n# Библиотеки ревьюирует команда platform\n/libs/ @team-platform\n.github/CODEOWNERS\nlibs/utils.js\nservices/api.js\n</code></pre>",
+  "verify_code": "683b7688",
+  "expected_output": "# Владельцы по умолчанию\n* @team-core\n\n# Сервисы ревьюирует команда backend\n/services/ @team-backend\n\n# Библиотеки ревьюирует команда platform\n/libs/ @team-platform\n.github/CODEOWNERS\nlibs/utils.js\nservices/api.js\n"
+}

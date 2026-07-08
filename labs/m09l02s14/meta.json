@@ -1,0 +1,12 @@
+{
+  "id": "m09l02s14",
+  "module": 9,
+  "module_title": "Workflow и внутренности Git",
+  "lesson": 2,
+  "lesson_title": "Объектная модель",
+  "step": 14,
+  "title": "Шаг 14: Вывести содержимое корневого tree",
+  "description_html": "<p>Каждый коммит хранит ссылку на корневой tree — снимок директории проекта в момент коммита. Команда <code>git cat-file -p HEAD^{tree}</code> выводит содержимое этого tree: права, тип, sha и имя каждого объекта.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит один коммит «Initial commit» с тремя файлами в корне:</p>\n<ul>\n  <li><code>README.md</code></li>\n  <li><code>app.js</code></li>\n  <li><code>config.json</code></li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Выведите содержимое корневого tree последнего коммита, а затем из этого вывода извлеките только имена файлов (четвёртое поле), отсортировав их.</p>\n\n<p>Итоговые команды:</p>\n<pre><code>git cat-file -p HEAD^{tree} | awk '{print $4}' | LC_ALL=C sort\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>Ожидается:</p>\n<pre><code>README.md\napp.js\nconfig.json\n</code></pre>",
+  "verify_code": "0ed32b23",
+  "expected_output": "README.md\napp.js\nconfig.json\n"
+}

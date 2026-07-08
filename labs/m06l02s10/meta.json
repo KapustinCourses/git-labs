@@ -1,0 +1,12 @@
+{
+  "id": "m06l02s10",
+  "module": 6,
+  "module_title": "Rebase и переписывание истории",
+  "lesson": 2,
+  "lesson_title": "Базовый rebase",
+  "step": 10,
+  "title": "Шаг 10: Rebase с конфликтом: разрешить и продолжить",
+  "description_html": "<p>Ветки <code>main</code> и <code>feature</code> правят <strong>одну и ту же строку</strong> в файле <code>app.txt</code>. При rebase возникнет конфликт.</p>\n<ul>\n  <li><code>main</code>: <code>app.txt</code> содержит строку <code>version=2</code></li>\n  <li><code>feature</code>: <code>app.txt</code> содержит строку <code>version=feature</code></li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<p>Выполните <code>git rebase main</code>. При возникновении конфликта запишите в <code>app.txt</code> финальное содержимое <code>version=2-feature</code>, добавьте файл и продолжите rebase.</p>\n\n<h3>Как проверяется</h3>\n<p>Будет выведено содержимое <code>app.txt</code> и история коммитов:</p>\n<pre><code>version=2-feature\nInitial commit\nUpdate app\nAdd feature change\n</code></pre>",
+  "verify_code": "6c759c73",
+  "expected_output": "version=2-feature\nInitial commit\nUpdate app\nAdd feature change\n"
+}

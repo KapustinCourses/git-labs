@@ -1,0 +1,12 @@
+{
+  "id": "m07l07s03",
+  "module": 7,
+  "module_title": "Конфликты и стратегии слияния",
+  "lesson": 7,
+  "lesson_title": "Практикум",
+  "step": 3,
+  "title": "Шаг 3: Практикум — Шаг 2 из 5: modify/delete конфликт",
+  "description_html": "<p><strong>Это шаг 2 из 5 в практикуме «Конфликтные сценарии».</strong></p>\n\n<p>Modify/delete конфликт: в ветке <code>main</code> файл <code>deprecated-api.txt</code> был удалён как устаревший. В ветке <code>feature/updates</code> в тот же файл добавили важную документацию. При merge возник конфликт типа <code>deleted by us</code>.</p>\n\n<p>Принято решение: <strong>сохранить файл</strong> с изменениями из <code>feature/updates</code> — документация важна.</p>\n\n<h3>Начальное состояние</h3>\n<ul>\n  <li>Merge <code>feature/updates</code> в <code>main</code> запущен и остановлен</li>\n  <li>Файл <code>deprecated-api.txt</code> удалён в <code>main</code>, но изменён в <code>feature/updates</code></li>\n</ul>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Восстановите файл из ветки <code>feature/updates</code>: <code>git checkout feature/updates -- deprecated-api.txt</code></li>\n  <li>Добавьте в staging: <code>git add deprecated-api.txt</code></li>\n  <li>Создайте merge-коммит: <code>git commit --no-edit</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код проверит, что файл присутствует в HEAD. Ожидается:</p>\n<pre><code>deprecated-api.txt\n</code></pre>",
+  "verify_code": "fd728947",
+  "expected_output": "deprecated-api.txt\n"
+}

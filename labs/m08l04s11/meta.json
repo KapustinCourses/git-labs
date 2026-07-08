@@ -1,0 +1,12 @@
+{
+  "id": "m08l04s11",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 4,
+  "lesson_title": "submodule",
+  "step": 11,
+  "title": "Шаг 11: Инициализировать submodule после clone",
+  "description_html": "<p>Репозиторий был клонирован обычным образом (без <code>--recurse-submodules</code>). Папка <code>vendor/lib</code> пуста. Нужно инициализировать и обновить submodule двумя отдельными командами.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Клон репозитория с зарегистрированным submodule в <code>vendor/lib</code>. Папка <code>vendor/lib</code> пустая (submodule не инициализирован).</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Выполните <code>git submodule init</code></li>\n  <li>Выполните <code>git submodule update</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет список файлов в <code>vendor/lib</code>. Ожидается:</p>\n<pre><code>lib.txt\n</code></pre>",
+  "verify_code": "abd3c09f",
+  "expected_output": "lib.txt\n"
+}

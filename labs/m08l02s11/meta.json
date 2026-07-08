@@ -1,0 +1,12 @@
+{
+  "id": "m08l02s11",
+  "module": 8,
+  "module_title": "Продвинутые инструменты",
+  "lesson": 2,
+  "lesson_title": "cherry-pick углублённо",
+  "step": 11,
+  "title": "Шаг 11: Cherry-pick с пометкой -x",
+  "description_html": "<p>В репозитории есть ветка <code>main</code> с коммитом «Fix CSRF». Нужно перенести этот коммит на ветку <code>release</code> с помощью cherry-pick и пометкой <code>-x</code>, чтобы в сообщении коммита на <code>release</code> было видно, что это бэкпорт.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Ветка <code>release</code> отстаёт от <code>main</code> на один коммит «Fix CSRF». Текущая ветка — <code>release</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Находясь на ветке <code>release</code>, выполните cherry-pick коммита «Fix CSRF» с флагом <code>-x</code>.</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код выведет список сообщений коммитов ветки <code>release</code>. Ожидается два коммита:</p>\n<pre><code>Initial commit\nFix CSRF\n</code></pre>",
+  "verify_code": "a35c946c",
+  "expected_output": "Initial commit\nFix CSRF\n"
+}

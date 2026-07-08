@@ -1,0 +1,12 @@
+{
+  "id": "m11l11s04",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 11,
+  "lesson_title": "Практикум production workflow",
+  "step": 4,
+  "title": "Шаг 4: Практикум — Шаг 3 из 6: Docker build и push в GHCR",
+  "description_html": "<p>Matrix-тесты настроены. Теперь добавим Docker-сборку: собираем образ только после успешных тестов и пушим в GHCR.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий содержит workflow с job <code>test</code> (matrix Go, cache: true). В корне есть Dockerfile и go.mod.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Добавьте в <code>.github/workflows/release.yml</code> job <code>docker</code> с:</p>\n<ul>\n  <li><code>needs: [test]</code></li>\n  <li><code>permissions: packages: write, contents: read</code></li>\n  <li><code>runs-on: ubuntu-latest</code></li>\n  <li>Шагами: <code>actions/checkout@v6</code>, <code>docker/setup-buildx-action@v3</code>, <code>docker/login-action@v3</code> с <code>registry: ghcr.io</code>, <code>docker/build-push-action@v6</code> с <code>push: true</code> и тегом <code>ghcr.io/myorg/myapp:latest</code></li>\n</ul>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что docker-job зависит от test, имеет packages: write, использует buildx + login-action (ghcr.io) + build-push-action.</p>",
+  "verify_code": "14588ddf",
+  "expected_output": "needs_test_ok\npackages_write_ok\nbuildx_ok\nlogin_ghcr_ok\nbuild_push_ok\n"
+}

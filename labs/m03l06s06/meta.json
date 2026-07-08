@@ -1,0 +1,12 @@
+{
+  "id": "m03l06s06",
+  "module": 3,
+  "module_title": "Удалённые репозитории и GitHub",
+  "lesson": 6,
+  "lesson_title": "Практикум fork and PR",
+  "step": 6,
+  "title": "Шаг 6: Практикум — Шаг 5 из 5: синхронизировать fork и удалить feature-ветку",
+  "description_html": "<p><strong>Это шаг 5 из 5 в сценарии «open-source contribution» — финальная уборка.</strong></p>\n\n<p>После слияния PR и синхронизации main (шаг 4) нужно завершить цикл: обновить main в своём форке и убрать feature-ветку — локально и из форка.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Вы находитесь на <code>main</code>, который уже содержит коммит «Add Russian translation» (после шага 4). Feature-ветка <code>feature/translate</code> ещё существует локально и в форке (<code>origin</code>).</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n  <li>Обновите main в форке: <code>git push origin main</code></li>\n  <li>Удалите локальную ветку: <code>git branch -d feature/translate</code></li>\n  <li>Удалите ветку в форке: <code>git push origin --delete feature/translate</code></li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код проверяет историю и ветки в форке. Ожидается:</p>\n<pre><code>Initial project\nAdd Russian translation\nmain\n</code></pre>",
+  "verify_code": "f433fb37",
+  "expected_output": "Initial project\nAdd Russian translation\nmain\n"
+}

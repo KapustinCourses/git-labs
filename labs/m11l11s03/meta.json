@@ -1,0 +1,12 @@
+{
+  "id": "m11l11s03",
+  "module": 11,
+  "module_title": "CI CD на проде",
+  "lesson": 11,
+  "lesson_title": "Практикум production workflow",
+  "step": 3,
+  "title": "Шаг 3: Практикум — Шаг 2 из 6: matrix lint+test",
+  "description_html": "<p>Каркас workflow готов. Теперь добавим реальный job для тестирования кода на двух версиях Go.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий содержит каркас workflow <code>.github/workflows/release.yml</code> с <code>permissions: {}</code> и пустым placeholder-job.</p>\n\n<h3>Что нужно сделать</h3>\n<p>Добавьте в <code>.github/workflows/release.yml</code> job <code>test</code> с:</p>\n<ul>\n  <li><code>permissions: contents: read</code></li>\n  <li><code>strategy.matrix.go: ['1.23', '1.24']</code></li>\n  <li><code>runs-on: ubuntu-latest</code></li>\n  <li>Шагами: <code>actions/checkout@v6</code>, <code>actions/setup-go@v6</code> с <code>go-version: ${{ matrix.go }}</code> и <code>cache: true</code>, и шагом <code>run: go test ./...</code></li>\n</ul>\n<p>Сохраните <code>permissions: {}</code> на уровне workflow. Добавьте только job <code>test</code> (можно оставить placeholder или заменить его).</p>\n\n<h3>Как проверяется</h3>\n<p>Проверяющий код убедится, что test-job имеет matrix с двумя версиями Go, setup-go@v6 с <code>cache: true</code> и permissions.contents: read.</p>",
+  "verify_code": "4cadbf63",
+  "expected_output": "matrix_go_ok\nsetup_go_ok\ncache_ok\ncontents_read_ok\n"
+}

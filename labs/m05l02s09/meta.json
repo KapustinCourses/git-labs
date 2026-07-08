@@ -1,0 +1,12 @@
+{
+  "id": "m05l02s09",
+  "module": 5,
+  "module_title": "Изменение прошлого",
+  "lesson": 2,
+  "lesson_title": "git commit amend",
+  "step": 9,
+  "title": "Шаг 9: Исправить сообщение последнего коммита",
+  "description_html": "<p>Разработчик закоммитил изменения с опечаткой в сообщении — «WIP add login» вместо «Add login form». Коммит ещё не запушен.</p>\n\n<h3>Стартовое состояние репо</h3>\n<p>Репозиторий содержит один коммит с сообщением «WIP add login».</p>\n\n<h3>Что нужно сделать</h3>\n<p>Исправьте сообщение последнего коммита на «Add login form»:</p>\n<pre><code>git commit --amend -m \"Add login form\"\n</code></pre>\n\n<h3>Как проверяется</h3>\n<p>После выполнения вашей команды проверяющий код выведет сообщение последнего коммита. Ожидается:</p>\n<pre><code>Add login form\n</code></pre>",
+  "verify_code": "939cab60",
+  "expected_output": "Add login form\n"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "m01l04s03",
+  "module": 1,
+  "module_title": "Введение в Git",
+  "lesson": 4,
+  "lesson_title": "Практикум",
+  "step": 3,
+  "title": "Шаг 3: Практикум — Шаг 2 из 5: первый коммит с README",
+  "description_html": "<p>Это шаг 2 из 5 в сценарии «Стартовый проект». Репозиторий инициализирован, <code>todo.py</code> лежит в рабочей директории. Следующий шаг — добавить <code>README.md</code> и сделать первый коммит.</p>\n\n<h3>Стартовое состояние</h3>\n<p>Репозиторий инициализирован на ветке <code>main</code>, коммитов нет. В рабочей директории есть <code>todo.py</code>.</p>\n\n<h3>Что нужно сделать</h3>\n<ol>\n<li>Создайте файл <code>README.md</code> с любым содержимым (например: <code># Todo CLI</code>).</li>\n<li>Добавьте <code>README.md</code> в staging.</li>\n<li>Создайте коммит с сообщением <code>Add README</code>.</li>\n</ol>\n\n<h3>Как проверяется</h3>\n<p>После ваших команд проверяющий код выполнит:</p>\n<pre><code>git log --pretty='%s'\n</code></pre>\n<p>Ожидаемый вывод:</p>\n<pre><code>Add README\n</code></pre>",
+  "verify_code": "15516636",
+  "expected_output": "Add README\n"
+}
